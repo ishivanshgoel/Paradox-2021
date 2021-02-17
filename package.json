@@ -1,0 +1,23 @@
+{
+  "name": "cryptic-hunt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishivanshgoel/Cryptic-Hunt-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ishivanshgoel/Cryptic-Hunt-/issues"
+  },
+  "homepage": "https://github.com/ishivanshgoel/Cryptic-Hunt-#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.16"
+  }
+}
