@@ -14,7 +14,7 @@ In order to to start the Development , clone the repository change to your branc
   <ol>
   <li> /rules for Rules</li>
   <li> /user/play for Play Area</li>
-  <li> /Leaderboard for Leader board</li>
+  <li> /user/leaderboard for Leader board</li>
   <li> /admin for Admin section </li>
   </ol>
 
