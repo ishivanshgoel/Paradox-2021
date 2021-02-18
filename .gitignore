@@ -1,5 +1,9 @@
 # Server
 node_modules
 
+# Database credentials
+/Database/Config/credentials.json 
+
+
 # Client
 /client/node_modules
