@@ -39,7 +39,7 @@ const User = new mongoose.model(
         type: Date,
         default: null
     },
-    questionsPlayed:{
+    levelsPlayed:{
         type: Object,
         default: []
     },
