@@ -1,0 +1,45 @@
+.Rules_body{
+font-family: 'Tomorrow';
+    font-weight: 500;
+    height: 100%;
+    margin-top: 5%;
+    
+}
+body{
+    background-color:#0F1020;
+    color: #fff;
+}
+.Side_Heading{
+    font-family: 'Tomorrow';
+    font-weight:bolder;
+    font-size: 4em;
+    animation: glow 1s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.SideHead{
+    width: 0.2vw;
+    padding-right: -0.2vw;
+    
+}
+.Rules_List{
+    border-left: -5%;
+    font-size:x-large;
+    color: #fff
+}
+.Side_Heading:hover{
+    
+        transform: scale(1.5); 
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #2FD8D8, 0 0 20px #2FD8D8, 0 0 25px #2FD8D8, 0 0 30px #2FD8D8, 0 0 35px;
+}
+.ListCont
+{
+    animation: glow 1s ease-in-out;
+    transition: all .3s ease-in-out;
+
+}
+.ListCont:hover
+{
+    transform: scale(1.2); 
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #2FD8D8, 0 0 20px #2FD8D8, 0 0 25px #2FD8D8, 0 0 30px #2FD8D8, 0 0 35px;
+    
+}
