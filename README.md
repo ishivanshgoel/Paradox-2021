@@ -1,6 +1,6 @@
 # Cryptic Hunt Website
-<<<<<<< HEAD
-=======
+
+
 In order to to start the Development , clone the repository change to your branch (keep the branch name as your page on which you are working)
  After cloning the repo in your system do the following-:
  <ol>
@@ -14,7 +14,7 @@ In order to to start the Development , clone the repository change to your branc
   <ol>
   <li> /rules for Rules</li>
   <li> /user/play for Play Area</li>
-  <li> /Leaderboard for Leader board</li>
+  <li> /user/Leaderboard for Leader board</li>
   <li> /admin for Admin section </li>
   </ol>
->>>>>>> eeb8bd61e0cc8528566b7644af34851da613bbf2
+
