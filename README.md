@@ -17,6 +17,7 @@ In order to to start the Development , clone the repository change to your branc
   <li> /Leaderboard for Leader board</li>
   <li> /admin for Admin section </li>
   </ol>
+<<<<<<< HEAD
 
 ### Server Setup
 
