@@ -1,4 +1,6 @@
 # Cryptic Hunt Website
+
+### Client Setup
 In order to to start the Development , clone the repository change to your branch (keep the branch name as your page on which you are working)
  After cloning the repo in your system do the following-:
  <ol>
@@ -15,3 +17,31 @@ In order to to start the Development , clone the repository change to your branc
   <li> /Leaderboard for Leader board</li>
   <li> /admin for Admin section </li>
   </ol>
+
+### Server Setup
+
+#### Requirements
+
+For development, you will only need ```Node.js``` and a node global package, ```npm```, installed in your environement.
+
+#### Project Dependecnies
+* express
+* mongoose
+* bcrypt
+
+#### Development Dependencies
+* nodemon
+
+#### Install
+
+    $ git clone https://github.com/ishivanshgoel/Cryptic-Hunt
+    $ cd Cryptic-Hunt
+    $ npm install
+
+## Running the project for development
+
+    $ npm run dev
+
+## Running the project for production
+
+    $ npm start
