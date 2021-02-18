@@ -2,6 +2,10 @@ const mongoose = require('mongoose')
 
 const User = new mongoose.model(
     'user', {
+    username: { 
+        type: String, 
+        required: true
+    },
     email: { 
         type: String, 
         required: true
@@ -11,6 +15,10 @@ const User = new mongoose.model(
         require: true
     },
     discord: {
+        type: String,
+        require: true
+    },
+    institutionName: {
         type: String,
         require: true
     },
