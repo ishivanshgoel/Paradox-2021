@@ -1,5 +1,10 @@
 const mongoose = require('mongoose')
 
+const role = {
+    USER : 'user',
+    ADMIN : 'admin'
+}
+
 const User = new mongoose.model(
     'user', {
     username: { 
@@ -41,6 +46,10 @@ const User = new mongoose.model(
     isActive: {
         type: Boolean,
         default: true
+    },
+    role: {
+        type: String,
+        default: role.USER
     }
 });
 
