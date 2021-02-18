@@ -4,7 +4,7 @@ import './Rules.css'
 import { Button,Container,Row,Col } from 'react-bootstrap';
 function Text(props) {
   return (
-    <div className="Side_Heading">
+    <div className="Side__Heading">
       {props.text}
     </div>
   );
