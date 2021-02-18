@@ -15,7 +15,7 @@ db.once('open', function() {
 
 // middlewares
 app.use(bodyparser.json())
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyparser.urlencoded({ extended: false }));
 
 // Routes
 const user = require('./Router/User/user')
