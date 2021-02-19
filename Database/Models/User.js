@@ -5,15 +5,18 @@ const role = {
     ADMIN : 'admin'
 }
 
-const User = new mongoose.model(
+const UserSchema = new mongoose.model(
     'user', {
     username: { 
         type: String, 
-        required: true
+        required: true,
+        unique: true
     },
     email: { 
         type: String, 
-        required: true
+        required: true,
+        unique: true,
+        lowecase: true
     },
     password:{
         type: String,
@@ -21,7 +24,8 @@ const User = new mongoose.model(
     },
     discord: {
         type: String,
-        require: true
+        require: true,
+        unique: true
     },
     institutionName: {
         type: String,
@@ -52,5 +56,7 @@ const User = new mongoose.model(
         default: role.USER
     }
 });
+
+const User = mongoose.model('user', UserSchema)
 
 module.exports = User
