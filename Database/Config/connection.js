@@ -14,4 +14,4 @@ const uri = `mongodb+srv://${username}:${password}@cluster0.oinug.mongodb.net/${
 
 const connectDatabase = async () => { await mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }); }
 
-module.exports = connectDatabase
+module.exports = connectDatabase 
