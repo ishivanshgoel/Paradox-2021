@@ -1,5 +1,8 @@
 const express = require('express')
 const router = express.Router()
+const createError = require('http-errors') 
+const User = require('../../Database/Models/User')
+const UserValidationSchema = require('../../Database/Validation Schemas/User') 
 
 /**
  * @param {/login}
@@ -9,8 +12,7 @@ const router = express.Router()
  * @param {/nextlevel} 
  */
 
-// define the home page route
-router.post('/login', function (req, res) {
+router.post('/login', async function (req, res) {
 
     let auth = false // testing
 
@@ -22,8 +24,44 @@ router.post('/login', function (req, res) {
 
   
 })
-// define the about route
-router.post('/register', function (req, res) {
+
+
+router.post('/register',async  function (req, res, next) {
+
+    try{
+
+        const result = await UserValidationSchema.validateAsync(req.body)
+
+        const ifExists = await User.find(
+            {$or:[
+                {userName: req.body.userName},
+                {email: req.body.email},
+                {discord: req.body.discord}
+            ]}
+        )
+        
+        if(ifExists.length > 0) throw createError.Conflict(`${req.body.email} or ${req.body.userName} or ${req.body.discord} is already registered with another account`)
+
+        const newuser = new User(
+            {
+                userName: req.body.userName,
+                email: req.body.email,
+                password: req.body.password,
+                discord: req.body.discord,
+                institutionName: req.body.institutionName
+            })
+
+        const savedUser = await newuser.save()
+
+        res.send(savedUser)
+
+    } catch(error){
+        next(error)
+    }
+
+})
+
+router.post('/refresh-token',async  function (req, res) {
 
     let registerSuccess = true // testing
 
@@ -36,7 +74,7 @@ router.post('/register', function (req, res) {
 })
 
 
-router.get('/leaderboard', function (req, res) {
+router.get('/leaderboard', async function (req, res) {
     
     let auth = true // testing
     
@@ -57,7 +95,7 @@ router.get('/leaderboard', function (req, res) {
 })
 
 
-router.post('/evaluate', function (req, res) {
+router.post('/evaluate', async function (req, res) {
     
     let auth = true // testing
     
@@ -71,7 +109,7 @@ router.post('/evaluate', function (req, res) {
     
 })
 
-router.get('/nextlevel', function (req, res) {
+router.get('/nextlevel', async function (req, res) {
     
     let auth = true // testing
     
