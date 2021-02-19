@@ -5,12 +5,12 @@ const role = {
     ADMIN : 'admin'
 }
 
-const UserSchema = new mongoose.model(
-    'user', {
-    username: { 
+const UserSchema = new mongoose.Schema({
+    userName: { 
         type: String, 
         required: true,
-        unique: true
+        unique: true,
+        lowecase: true
     },
     email: { 
         type: String, 
