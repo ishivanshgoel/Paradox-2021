@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const bcrypt = require('bcrypt')
 
 const role = {
     USER : 'user',
@@ -56,6 +57,19 @@ const UserSchema = new mongoose.Schema({
         default: role.USER
     }
 });
+
+UserSchema.pre('save',async function(next){
+
+    try{
+        const salt = await bcrypt.genSalt(10)
+        const hashedPassword = await bcrypt.hash(this.password, salt)
+        this.password = hashedPassword
+        next()
+    } catch(error){
+        next(error)
+    }
+
+})
 
 const User = mongoose.model('user', UserSchema)
 
