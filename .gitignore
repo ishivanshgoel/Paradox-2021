@@ -1,5 +1,6 @@
 # Server
 node_modules
+.env
 
 # Database credentials
 /Database/Config/credentials.json 
