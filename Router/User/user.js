@@ -3,6 +3,7 @@ const router = express.Router()
 const createError = require('http-errors') 
 const User = require('../../Database/Models/User')
 const UserValidationSchema = require('../../Database/Validation Schemas/User') 
+const sigendAccessToken = require('./jwt_helper')
 
 /**
  * @param {/login}
@@ -52,9 +53,9 @@ router.post('/register',async  function (req, res, next) {
             })
 
         const savedUser = await newuser.save()
-
-        res.send(savedUser)
-
+        const accessToken = await sigendAccessToken(savedUser.id)
+        res.send({accessToken})
+        
     } catch(error){
         next(error)
     }
