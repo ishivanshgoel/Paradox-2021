@@ -81,8 +81,6 @@ window.addEventListener('load', () => {
     
     }
     
-    
-    
     function setTimeLeft() {
         timeLeft.d = Math.floor(totalSeconds / (60 * 60 * 24));
         timeLeft.h = Math.floor(totalSeconds / (60 * 60) % 24);
@@ -92,3 +90,4 @@ window.addEventListener('load', () => {
     
     init();
 });
+

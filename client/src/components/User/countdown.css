@@ -5,7 +5,7 @@
 }
 
 body {
-  font: 700 14px/1 'Red Hat Text', sans-serif;
+  font: 700 14px/1 "Red Hat Text", sans-serif;
   background: #1b1924;
   height: 100vh;
   margin: 0;
@@ -20,14 +20,14 @@ main {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   padding-top: 15vh;
   position: relative;
 }
@@ -46,8 +46,8 @@ h1 {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
 }
 
 .title {
@@ -63,11 +63,11 @@ h1 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-right: 30px;
 }
 
@@ -89,11 +89,12 @@ h1 {
   margin-bottom: 27px;
   line-height: 138px;
   -webkit-box-shadow: 0px 8px 0px 0px #16151d;
-          box-shadow: 0px 8px 0px 0px #16151d;
+  box-shadow: 0px 8px 0px 0px #16151d;
 }
 
-.time-elem::before, .time-elem::after {
-  content: '';
+.time-elem::before,
+.time-elem::after {
+  content: "";
   position: absolute;
   z-index: 6;
   top: calc(50% - 5px);
@@ -121,13 +122,14 @@ h1 {
   z-index: 3;
   background-color: #2a2a41;
   -webkit-transform-origin: 50% 100%;
-          transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
   -webkit-transform: perspective(200px);
-          transform: perspective(200px);
+  transform: perspective(200px);
 }
 
-.time-elem .top::after, .time-elem .bottom-back::after {
-  content: '';
+.time-elem .top::after,
+.time-elem .bottom-back::after {
+  content: "";
   position: absolute;
   z-index: -1;
   left: 0;
@@ -142,7 +144,7 @@ h1 {
 }
 
 .bottom::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   top: 0;
@@ -169,21 +171,22 @@ h1 {
   margin: auto;
 }
 
-.top, .top-back {
+.top,
+.top-back {
   height: 50%;
   overflow: hidden;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .top-back {
   z-index: 4;
   bottom: 0;
   -webkit-transform-origin: 50% 0;
-          transform-origin: 50% 0;
+  transform-origin: 50% 0;
   background-color: #33354d;
   -webkit-transform: perspective(200px) rotateX(180deg);
-          transform: perspective(200px) rotateX(180deg);
+  transform: perspective(200px) rotateX(180deg);
 }
 
 .top-back span {
@@ -203,8 +206,8 @@ h1 {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row;
   padding: 0;
 }
 
@@ -213,8 +216,8 @@ h1 {
 }
 
 .social li a path {
-  -webkit-transition: fill .3s ease;
-  transition: fill .3s ease;
+  -webkit-transition: fill 0.3s ease;
+  transition: fill 0.3s ease;
 }
 
 .social li:last-child {
