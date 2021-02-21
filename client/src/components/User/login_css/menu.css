@@ -1,0 +1,88 @@
+body{
+	background: #191919;
+}
+.leafimg{
+  animation: none;
+}
+.menuhead{
+	color: #46db46;
+	font-family: 'Fredoka One', cursive;
+	border-bottom: 3px solid;
+}
+.card{
+	width: 20rem;
+}
+.categorycard{
+	width: 16rem;
+}
+.card .card-header{
+	background-color: #dbff3d;
+	font-weight: bold;
+	font-size: 105%;
+}
+.card  .list-group a{
+	text-decoration: none;
+	color: black;
+	border-bottom: 1px solid rgb(210,210,210);
+}
+.card .list-group-item:hover{
+	background: rgb(230,230,230);
+}
+.card #veg:hover{
+	background: #5cb85c;
+}
+.card #nonveg:hover{
+	background: #d9534f;
+}
+.card #both:hover{
+	background: #949494;
+}
+.card .card-title{
+	font-size: 22px;
+}
+.card .card-img-top{
+	height: 200px;
+	width: auto;
+}
+.card .card-text{
+	font-size: 12px;
+	height: 4.5em;
+	line-height: 1.5em;
+	overflow: auto;
+	transition: 0.5s;
+}
+.card .card-text::-webkit-scrollbar {
+    display: none;
+}
+.card select{
+	color: white;
+	border: 1px solid transparent;
+    padding: .37rem .5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+}
+#backtotop{
+	position: fixed;
+	font-size: 40px;
+	right: 30px;
+	bottom: 50px;
+	color: #46db46;
+	display: none;
+}
+#backtotop:hover{
+	text-decoration: none;
+	color: #f0ad4e;
+}
+
+@media (max-width:992px) {
+	.card{
+		margin: 0 auto;
+	}
+   .categorycard{
+		width: auto;
+	}
+   .menuhead{
+   	margin: 0 auto;
+   }
+}
