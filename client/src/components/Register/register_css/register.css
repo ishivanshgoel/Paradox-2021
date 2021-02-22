@@ -1,0 +1,83 @@
+.register__box{
+  margin: 110px 0 170px 0;  
+  text-align: center;
+}
+
+.register__boxtwo{
+  margin: 80px 0;
+}
+
+.register__box > h1{
+  color: #46db46;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 40px;
+  margin: 40px 0;
+}
+
+.register__box > input{
+  border:0;
+  background: none;
+  display: block;
+  margin: 25px auto;
+  text-align: center;
+  border: 2px solid #f0ad4e ;
+  padding: 12px 10px;
+  width: 280px;
+  outline: none;
+  color: white;
+  font-size: 14px;
+  border-radius: 30px;
+  transition: 0.25s;
+}
+
+.register__box > input:focus{
+  width: 350px;
+  border-color: #46db46;
+}
+
+.register__box > input[type = "submit"]{
+  width: 130px;
+  border:0;
+  background: none;
+  display: block;
+  margin: 35px auto;
+  text-align: center;
+  border: 2px solid #46db46;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.register__box > input[type = "submit"]:hover{
+  background: #46db46;
+  color: black;
+}
+
+.register__boxtwo > input[type = "submit"]{
+  margin: 40px auto 100px;
+}
+
+.register__box > a{
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  margin: 20px 40px;
+}
+
+.register__box > a:hover{
+  color: rgb(220,220,220);
+}
+
+
+@media (max-width:576px){
+  .box input[type = "text"]:focus,.box input[type = "password"]:focus{
+    width: 320px;
+  }
+}
+/**
+@author: TanayBhadula
+*/
