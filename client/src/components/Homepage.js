@@ -5,7 +5,7 @@ import './homepage.css'
 
 /**
  * @author TejasV58
- */
+*/
 
 function Homepage() {
 
@@ -22,9 +22,15 @@ function Homepage() {
                     <text x="50%" y="50%" fill="transparent" text-anchor="middle">PARADOX</text>
                 </svg>
                 <div className="button-outer-box d-flex justify-content-center">
-                    <button className="btn  mx-5 my-3 px-5 py-2 homebtn" name="user" onClick={handleRedirect}>SIGNUP</button>
-                    <button className="btn  mx-5 my-3 px-5 py-2 homebtn" name="register" onClick={handleRedirect}>REGISTER</button>
-                    <button className="btn  mx-5 my-3 px-5 py-2 homebtn">DISCORD</button>
+                    <div class="col-md-2 col-lg-2">
+                        <button class="btn homebtn" onClick={handleRedirect}>Sign up</button>
+                    </div>
+                     <div class="col-md-2 col-lg-2">
+                        <button class="btn homebtn" onClick={handleRedirect}>Register</button>
+                    </div>
+                     <div class="col-md-2 col-lg-2">
+                        <button class="btn homebtn">Discord</button>
+                    </div>
                 </div>
             </div>
             <div className="col-12 homepage__about-section">
