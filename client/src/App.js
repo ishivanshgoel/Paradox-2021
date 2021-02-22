@@ -54,11 +54,8 @@ function App() {
             </div>
           </div>
         </nav>
-        <div className="row">
-          <div className="col-sm">
+        <div>
             <Switch>
-
-
               {/* level 1 routes */}
               <Route exact path="/">
                 <Homepage/>
@@ -86,7 +83,6 @@ function App() {
               </Route>
 
             </Switch>
-          </div>
         </div>
       </Router>
     </div>
