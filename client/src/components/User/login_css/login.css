@@ -1,16 +1,7 @@
 body{
   background: #191919;
 }
-.login__navbar-brand{
-  padding: 10px 40px;
-  font-family: 'Fredoka One', cursive;
-  color: red;
-  font-size: 200%;
-  z-index: 300;
-}
-.login__navbar-brand:hover{
-  color: #ffffff;
-}
+
 .login__box{
   margin: 110px 0 170px 0;  
   text-align: center;
@@ -76,33 +67,13 @@ body{
 .login__box > a:hover{
   color: rgb(220,220,220);
 }
-nav a:hover{
-  color: white;
-}
-nav button div {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 6px 0;
-}
-.login__navbar-toggler{
-  padding: 0;
-}
-.login__navbar-nav{
-  padding: 10px 40px;
-}
-.navbar-expand-lg .navbar-nav .nav-link{
-  color: white;
-  padding: 0;
-  margin-left: 40px;
-  position: relative;
-}
-.navbar-nav .nav-link:hover ,.navbar-expand-lg .navbar-nav .active{
-  color: #f0ad4e;
-}
+
 
 @media (max-width:576px){
   .box input[type = "text"]:focus,.box input[type = "password"]:focus{
     width: 320px;
   }
 }
+/**
+ * @author TanayBhadula
+ */
