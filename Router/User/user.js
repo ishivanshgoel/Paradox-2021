@@ -3,7 +3,10 @@ const router = express.Router()
 const createError = require('http-errors') 
 const User = require('../../Database/Models/User')
 const UserValidationSchema = require('../../Database/Validation Schemas/User') 
-const sigendAccessToken = require('./jwt_helper')
+const LoginValidationSchema = require('../../Database/Validation Schemas/Login')
+const jwt_helper = require('./jwt_helper')
+const { signAcessToken, verifyAccessToken, signRefreshToken } = require('./jwt_helper')
+
 
 /**
  * @param {/login}
@@ -13,17 +16,27 @@ const sigendAccessToken = require('./jwt_helper')
  * @param {/nextlevel} 
  */
 
-router.post('/login', async function (req, res) {
+router.post('/login', async function (req, res, next) {
 
-    let auth = false // testing
+    try{
+        const result = await LoginValidationSchema.validateAsync(req.body)
+        const user = await User.findOne({email: result.email})
 
-    if(auth){
-        res.send({message: 'Success'})
-    } else{
-        res.send({message: 'Fail'})
+        if(!user) throw createError.NotFound("User is not registered")
+
+        const isMatch = await user.isValidPassword(result.password)
+
+        if(!isMatch) throw createError.Unauthorized('Username/password not valid')
+
+        const accessToken = await signAcessToken(user.id)
+        const refreshToken = await jwt_helper.signRefreshToken(savedUser.id)
+        res.send({accessToken, refreshToken})
+
+    } catch(error){
+        if(error.isJoi == true) return next(createError.BadRequest("Invalid Username/Password"))
+        next(error)
     }
 
-  
 })
 
 
@@ -53,8 +66,9 @@ router.post('/register',async  function (req, res, next) {
             })
 
         const savedUser = await newuser.save()
-        const accessToken = await sigendAccessToken(savedUser.id)
-        res.send({accessToken})
+        const accessToken = await jwt_helper.signAcessToken(savedUser.id)
+        const refreshToken = await jwt_helper.signRefreshToken(savedUser.id)
+        res.send({accessToken, refreshToken})
         
     } catch(error){
         next(error)
@@ -75,7 +89,7 @@ router.post('/refresh-token',async  function (req, res) {
 })
 
 
-router.get('/leaderboard', async function (req, res) {
+router.get('/leaderboard', verifyAccessToken, async function (req, res, next) {
     
     let auth = true // testing
     
@@ -96,13 +110,13 @@ router.get('/leaderboard', async function (req, res) {
 })
 
 
-router.post('/evaluate', async function (req, res) {
+router.post('/evaluate', verifyAccessToken,async function (req, res, next) {
     
     let auth = true // testing
     
     if(auth){
         // if evaluation == true
-            res.josn({message:'Success',eval: true })
+            res.json({message:'Success',eval: true })
         // else eval : false
     } else{
         res.json({message: 'Fail'})
@@ -110,7 +124,7 @@ router.post('/evaluate', async function (req, res) {
     
 })
 
-router.get('/nextlevel', async function (req, res) {
+router.get('/nextlevel', verifyAccessToken,async function (req, res, next) {
     
     let auth = true // testing
     
