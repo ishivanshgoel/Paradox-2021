@@ -1,6 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import './homepage.css'
+import discordlogo from './discord.png'
 
 
 /**
@@ -22,18 +23,18 @@ function Homepage() {
                     <text x="50%" y="50%" fill="transparent" text-anchor="middle">PARADOX</text>
                 </svg>
                 <div className="button-outer-box d-flex justify-content-center">
-                    <div class="col-md-2 col-lg-2">
-                        <button class="btn homebtn" onClick={handleRedirect}>Sign up</button>
+                    <div class="col-md-2 col-lg-2 ">
+                        <button class=" homebtn" onClick={handleRedirect}>LOGIN</button>
                     </div>
                      <div class="col-md-2 col-lg-2">
-                        <button class="btn homebtn" onClick={handleRedirect}>Register</button>
+                        <button class=" homebtn d-flex  justify-content-center" id="discord"><img src={discordlogo} id="DiscordLogo" alt=""/>Discord</button>
                     </div>
                      <div class="col-md-2 col-lg-2">
-                        <button class="btn homebtn">Discord</button>
+                        <button class=" homebtn" onClick={handleRedirect}>Register</button>
                     </div>
                 </div>
             </div>
-            <div className="col-12 homepage__about-section">
+            <div className="col-10 homepage__about-section">
                 <h1>ABOUT</h1>
             </div>
         </div>
