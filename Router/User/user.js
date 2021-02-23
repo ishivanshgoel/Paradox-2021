@@ -91,49 +91,31 @@ router.post('/refresh-token',async  function (req, res) {
 
 router.get('/leaderboard', verifyAccessToken, async function (req, res, next) {
     
-    let auth = true // testing
-    
-    if(auth){
-        // send usernames and scores
-        res.josn({message:'Success',data: [{
-            username: 'Shivansh',
-            level: 10
-        },{
-            username: 'Pratyush',
-            level: 11
-        }]})
-
-    } else{
-        res.json({message: 'Fail'})
-    }
+    /**
+     * Send back the scores of all the users with their usernames
+     */
     
 })
 
 
 router.post('/evaluate', verifyAccessToken,async function (req, res, next) {
     
-    let auth = true // testing
-    
-    if(auth){
-        // if evaluation == true
-            res.json({message:'Success',eval: true })
-        // else eval : false
-    } else{
-        res.json({message: 'Fail'})
-    }
+    /**
+     *  req.body.data : {
+     *   id
+     *   answer
+     * }
+     * 
+     *  Instructions:
+     * 
+     *  1. 'id' is the id provided to the particular question, the user has attempted to get evaluated for his/ her answer 'answer'.
+     *  2. Return true/ false as evaluation status.
+     */
     
 })
 
 router.get('/nextlevel', verifyAccessToken,async function (req, res, next) {
     
-    let auth = true // testing
-    
-    if(auth){
-        // send next question
-        res.josn({message:'Success',data: ['123']})
-    } else{
-        res.json({message: 'Fail'})
-    }
     
 })
 
