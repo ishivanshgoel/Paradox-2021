@@ -24,6 +24,7 @@ svg.paradox text{
 
 .homebtn{
     border: 0 solid;
+    padding:5% 20%;
     box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
     outline: 1px solid;
     outline-color: rgba(255, 255, 255, .5);
@@ -35,6 +36,7 @@ svg.paradox text{
 
 .homebtn:hover{
     border: 1px solid;
+    padding:5% 20%;
     box-shadow: 0 0 8px rgba(115, 19, 233, 0.582), 0 0 20px rgba(43, 3, 95, 0.24);
     outline-color: rgba(255, 255, 255, 0);
     outline-offset: 15px;
@@ -43,4 +45,4 @@ svg.paradox text{
 
 /**
 @author: TejasV58
-*/
+**/
