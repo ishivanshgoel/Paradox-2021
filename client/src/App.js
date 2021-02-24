@@ -31,8 +31,8 @@ function App() {
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse d-flex justify-content-center" id="navbarNavDropdown">
-              <ul className="navbar-nav d-flex justify-content-center nav-container">
+            <div className="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul className="navbar-nav">
                  <li className="nav-item nav__item">
                   <Link to="/">Home</Link>
                 </li>

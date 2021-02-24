@@ -28,6 +28,9 @@ li.nav__item a{
     font-family: 'Rajdhani', sans-serif;
 }
 
+.navbar-toggler-icon{
+    background-image: url("https://cdn2.iconfinder.com/data/icons/menu-white/64/menu_white_buttom__navbar-512.png")!important;
+}
 
 
 #DiscordLogo{
