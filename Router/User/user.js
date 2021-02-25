@@ -29,8 +29,7 @@ router.post('/login', async function (req, res, next) {
         if(!isMatch) throw createError.Unauthorized('Username/password not valid')
 
         const accessToken = await signAcessToken(user.id)
-        const refreshToken = await jwt_helper.signRefreshToken(savedUser.id)
-        res.send({accessToken, refreshToken})
+        res.send({accessToken})
 
     } catch(error){
         if(error.isJoi == true) return next(createError.BadRequest("Invalid Username/Password"))
@@ -67,25 +66,12 @@ router.post('/register',async  function (req, res, next) {
 
         const savedUser = await newuser.save()
         const accessToken = await jwt_helper.signAcessToken(savedUser.id)
-        const refreshToken = await jwt_helper.signRefreshToken(savedUser.id)
-        res.send({accessToken, refreshToken})
+        res.send({accessToken})
         
     } catch(error){
         next(error)
     }
 
-})
-
-router.post('/refresh-token',async  function (req, res) {
-
-    let registerSuccess = true // testing
-
-    if(registerSuccess){
-        res.send({message: 'Success'})
-    } else{
-        res.send({message: 'Fail'})
-    }
-    
 })
 
 
@@ -111,6 +97,8 @@ router.post('/evaluate', verifyAccessToken,async function (req, res, next) {
      *  1. 'id' is the id provided to the particular question, the user has attempted to get evaluated for his/ her answer 'answer'.
      *  2. Return true/ false as evaluation status.
      */
+
+    res.send({message: 'Evaluate'})
     
 })
 
