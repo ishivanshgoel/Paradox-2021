@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./register_css/register.css";
+import "bootstrap/dist/css/bootstrap.min.css"
+import "./register_css/register.css"
+
+// Requests
+import POST_Request from '../../Helper/PostRequest'
+
 /**
  * Level 1 Route - /register
  * @author TanayBhadula, ishivanshgoel
@@ -10,7 +14,7 @@ function Register() {
 
   // state variables
   const [name, setName] = useState(null)
-  const [username, setUsername] = useState(null)
+  const [userName, setuserName] = useState(null)
   const [email, setEmail] = useState(null)
   const [discord, setDiscord] = useState(null)
   const [institutionName, setinstitutionName] = useState(null)
@@ -18,9 +22,25 @@ function Register() {
   const [cpassword, setcPassword] = useState(null)
 
   // handle form submission
-  let handleSubmit = (event) => {
+  let handleSubmit = async (event) => {
     event.preventDefault()
-    console.log(name, username, email, discord, institutionName, password, cpassword)
+    console.log(name, userName, email, discord, institutionName, password, cpassword)
+
+    const data = {
+      name: name,
+      userName: userName,
+      email: email,
+      discord: discord,
+      institutionName: institutionName,
+      password: password
+    }
+
+    try{
+      const response = await POST_Request('register', data);
+    } catch(err){
+      console.log(err)
+    }
+       
   }
 
   return (
@@ -30,9 +50,9 @@ function Register() {
           <form class="register__box">
             <h1>Register</h1>
             <input type="text" name="name" placeholder="Name" required onChange={(event) => setName(event.target.value)} />
-            <input type="text" name="userName" placeholder="Username" required onChange={(event) => setUsername(event.target.value)} />
+            <input type="text" name="userName" placeholder="username" required onChange={(event) => setuserName(event.target.value)} />
             <input type="text" name="email" placeholder="Email" required onChange={(event) => setEmail(event.target.value)} />
-            <input type="text" name="discord" placeholder="Discord Username" required onChange={(event) => setDiscord(event.target.value)} />
+            <input type="text" name="discord" placeholder="Discord userName" required onChange={(event) => setDiscord(event.target.value)} />
             <input type="text" name="institutionName" placeholder="Institution Name" required onChange={(event) => setinstitutionName(event.target.value)} />
             <input type="password" name="password" placeholder="Password" required onChange={(event) => setPassword(event.target.value)} />
             <input type="password" name="cpassword" placeholder="Confirm Password" required onChange={(event) => setcPassword(event.target.value)} />
