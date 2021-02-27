@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./login_css/loginstyle.css";
 
+// Requests
+import POST_Request from '../../Helper/PostRequest'
+
 /**
  * Level 1 Route - /user
  * @author TanayBhadula, ishivanshgoel
@@ -15,9 +18,23 @@ function Login() {
     const[password, setPassword] = useState(null)
 
     // form submission
-    let handleSubmit = (event)=>{
+    let handleSubmit = async (event)=>{
       event.preventDefault()
       console.log(email,password)
+
+      let data = {
+        email,
+        password
+      }
+
+      const response = await POST_Request('login', data);
+
+      if(response.data.accessToken){
+        localStorage.setItem("token", response.data.accessToken)
+      } else{
+        alert('error')
+      }
+
     }
 
     return (
