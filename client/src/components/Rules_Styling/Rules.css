@@ -3,6 +3,14 @@
   font-weight: 500;
   height: 100%;
   margin-top: 5%;
+  transition: all 0.3s ease-in-out;
+}
+.Rules__body:hover {
+  transform: scale(1.02);
+  box-shadow: 0 2.8px 2.2px rgba(115, 19, 233, 0.582),
+    0 6.7px 5.3px rgba(115, 19, 233, 0.582), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
 }
 body {
   background-color: #0f1020;
@@ -11,31 +19,38 @@ body {
 .Side__Heading {
   font-family: "Tomorrow";
   font-weight: bolder;
-  font-size: 4em;
-  animation: glow 1s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  font-size: 6.7vh;
+  -webkit-text-stroke: 1px #0f1020;
+  color: #0f100f;
+  text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 rgba(115, 19, 233, 0.582),
+    0 -2px 0 rgba(115, 19, 233, 0.582), 1px 1px rgba(115, 19, 233, 0.582),
+    -1px -1px 0 rgba(115, 19, 233, 0.582), 1px -1px 0 #fff,
+    -1px 1px 0 rgba(115, 19, 233, 0.582);
+  /* animation: glow 1s ease-in-out;
+  transition: all 0.3s ease-in-out; */
 }
 .Rules__SideHead {
-  width: 0.2vw;
-  padding-right: -0.2vw;
+  width: 0.2 vw;
+  padding-right: -0.2 vw;
 }
 .Rules__List {
   border-left: -5%;
   font-size: x-large;
   color: #fff;
 }
-.Side__Heading:hover {
+/* .Side__Heading:hover {
   transform: scale(1.5);
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #2fd8d8, 0 0 20px #2fd8d8,
-    0 0 25px #2fd8d8, 0 0 30px #2fd8d8, 0 0 35px;
-}
-.Rules__ListCont {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px rgba(115, 19, 233, 0.582), 0 0 20px rgba(115, 19, 233, 0.582),
+    0 0 25px rgba(115, 19, 233, 0.582), 0 0 30px rgba(115, 19, 233, 0.582), 0 0 35px;
+}*/
+/* .Rules__ListCont {
   animation: glow 1s ease-in-out;
   transition: all 0.3s ease-in-out;
   padding-top: 0.5vh;
 }
 .Rules__ListCont:hover {
   transform: scale(1.02);
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #2fd8d8, 0 0 20px #2fd8d8,
-    0 0 25px #2fd8d8, 0 0 30px #2fd8d8, 0 0 35px;
-}
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px rgba(115, 19, 233, 0.582),
+    0 0 20px rgba(115, 19, 233, 0.582), 0 0 15px rgba(115, 19, 233, 0.582),
+    0 0 20px rgba(115, 19, 233, 0.582), 0 0 15px;
+} */
