@@ -1,3 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+body{
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top, #070714,#071e30,#070714);
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+    color:#230730;
+}
+
+.dark-navbar{
+    background:#071e30d3;
+    margin:0%;
+    border-bottom:1px solid rgba(144, 233, 255, 0.637);
+    box-shadow: 0px 0px 30px #070714;
+}
+
+li.nav__item a{
+    color:rgba(177, 231, 245, 0.637);
+}
+
 .nav__item{
-    margin: 10px;
+    font-size:1.3rem;
+    margin: 5% 10%;
+    color:rgba(144, 233, 255, 0.637);
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.navbar-toggler-icon{
+    background-image: url("https://cdn2.iconfinder.com/data/icons/menu-white/64/menu_white_buttom__navbar-512.png")!important;
 }
