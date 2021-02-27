@@ -2,6 +2,7 @@ const express = require('express')
 const bodyparser = require('body-parser')
 const morgan = require('morgan')
 const createErrors = require('http-errors')
+const cors = require('cors')
 require('dotenv').config()
 const mongoose = require('mongoose')
 const connection = require('./Database/Config/connection')
@@ -29,6 +30,7 @@ process.on('SIGINT', async ()=>{
 // middlewares
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({ extended: false }));
+app.use(cors())
 
 // logs
 app.use(morgan('dev'))
