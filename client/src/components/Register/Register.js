@@ -37,6 +37,9 @@ function Register() {
 
     try{
       const response = await POST_Request('register', data);
+      if(response.data && response.data.accessToken){
+        alert('True')
+      }
     } catch(err){
       console.log(err)
     }
