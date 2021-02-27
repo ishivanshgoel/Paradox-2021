@@ -1,0 +1,35 @@
+.Playarea_heading{
+
+   
+}
+.play{
+ 
+    
+}
+.play_question{
+    background:linear-gradient(0,0,0,0.5);
+   margin:2% auto;
+   align-items: center;
+   justify-content: center;
+   display:flex;
+   flex-direction:column;
+}
+.play_answer{
+    margin:auto;
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    flex-direction:column;
+}
+.play_answer button{
+    margin:2% auto;
+}
+.play_img{
+    margin:2% auto;
+    padding:2%;
+    width:90%;
+}
+.play_para{
+    margin:2% auto;
+    width:90%;
+}

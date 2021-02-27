@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   BrowserRouter as Router,
   Switch,
@@ -22,7 +23,6 @@ import Alogin from './components/Admin/Alogin'
 // Level 2 Components
 import Play from './components/User/Play'
 import Leaderboard from './components/User/Leaderboard'
-import CountDown from "./components/User/countdownreact";
 
 
 function App() {
@@ -78,9 +78,6 @@ function App() {
               {/* level 2 routes */}
               <Route exact path="/user/play">
                 <Play/>
-              </Route>
-              <Route exact path="/user/countdown">
-                <CountDown/>
               </Route>
               <Route exact path="/user/leaderboard">
                 <Leaderboard/>

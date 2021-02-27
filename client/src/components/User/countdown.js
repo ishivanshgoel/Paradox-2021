@@ -1,93 +1,73 @@
-window.addEventListener('load', () => {
-    const days = document.querySelector('.days')
-    const hours = document.querySelector('.hours')
-    const minutes = document.querySelector('.minutes')
-    const seconds = document.querySelector('.seconds')
-    
-    let timeLeft = {
-        d: 0,
-        h: 0,
-        m: 0,
-        s: 0,
-    }
-    
-    let totalSeconds;
-    
-    function init() {
-        totalSeconds = Math.floor((new Date('03.03.2021') - new Date()) / 1000); 
-        setTimeLeft();
-        let interval = setInterval(() => {
-            if (totalSeconds < 0) {
-                clearInterval(interval);
+import React, {useEffect,useRef,useState} from 'react'
+import './countdown.css'
+const Countdown = () => {
+    const [timerDays,setTimerDays]=useState('00');
+    const[timerHours,setTimerHours]=useState('00');
+    const[timerMinutes,setTimerMinutes]=useState('00');
+    const[timerSeconds,setTimerSeconds]=useState('00');
+    let interval=useRef();
+    const startTimer= () => {
+        const countdownDate=new Date('February 28, 2021 00:00:00').getTime();
+        interval=setInterval(()=>{
+            const now =new Date().getTime();
+            const distance=countdownDate-now;
+            const days=Math.floor(distance/(1000*60*60*24));
+            const hours=Math.floor((distance%(1000*60 *60*24)/(1000*60*60)));
+            const minutes=Math.floor((distance%(1000*60 *60))/(1000*60));
+            const seconds=Math.floor((distance%(1000*60))/1000);
+            if(distance<0){
+                //stop timer and load Play Area
+                clearInterval(interval.current);
+                window.location.reload();
             }
-            countTime();
-        }, 1000);
-    }
-    
-    function countTime() {
-        if (totalSeconds > 0) {
-            --timeLeft.s;
-            if (timeLeft.m >= 0 && timeLeft.s < 0) {
-                timeLeft.s = 59;
-                --timeLeft.m;
-                if (timeLeft.h >= 0 && timeLeft.m < 0) {
-                    timeLeft.m = 59;
-                    --timeLeft.h;
-                    if (timeLeft.d >= 0 && timeLeft.h < 0) {
-                        timeLeft.h = 23;
-                        --timeLeft.d;
-                    }
-                }
+            else
+            {
+                //update timer
+                setTimerDays(days);
+                setTimerHours(hours);
+                setTimerMinutes(minutes);
+                setTimerSeconds(seconds);
             }
-        }
-        --totalSeconds;
-        printTime();
+        },1000);
     }
-    
-    function printTime() {
-        animateFlip(days, timeLeft.d);
-        animateFlip(hours, timeLeft.h);
-        animateFlip(minutes, timeLeft.m);
-        animateFlip(seconds, timeLeft.s);
-    }
-    
-    function animateFlip(element, value) {
-        const valueInDom = element.querySelector('.bottom-back').innerText;
-        const currentValue = value < 10 ? '0' + value : '' + value;
-    
-        if (valueInDom === currentValue) return;
-    
-        element.querySelector('.top-back span').innerText = currentValue;
-        element.querySelector('.bottom-back span').innerText = currentValue;
-    
-    
-        gsap.to(element.querySelector('.top'), 0.7, {
-            rotationX: '-180deg',
-            transformPerspective: 300,
-            ease: Quart.easeOut,
-            onComplete: function() {
-                element.querySelector('.top').innerText = currentValue; 
-                element.querySelector('.bottom').innerText = currentValue; 
-                gsap.set(element.querySelector('.top'), {rotationX: 0});
-            }
-        });
-    
-        gsap.to(element.querySelector('.top-back'), 0.7, {
-            rotationX: 0,
-            transformPerspective: 300,
-            ease: Quart.easeOut,
-            clearProps: 'all'
-        });
-    
-    }
-    
-    function setTimeLeft() {
-        timeLeft.d = Math.floor(totalSeconds / (60 * 60 * 24));
-        timeLeft.h = Math.floor(totalSeconds / (60 * 60) % 24);
-        timeLeft.m = Math.floor(totalSeconds / (60) % 60);
-        timeLeft.s = Math.floor(totalSeconds % 60);
-    }
-    
-    init();
-});
+    useEffect(()=>{
+        startTimer();
+        return ()=>{
+            clearInterval(interval.current);
+        };
+    })
+    return (
+        <section className="Countdown_heading">
+            <section className="timer">
+                <div>
+                    <h2>Paradox is coming soon...</h2>
+                    <p>Just few more days left!</p>
+                </div>
+                <div>
+                    <section className="timer_section">
+                        <p>{timerDays}</p>
+                        <p><small>Days</small></p>
+                    </section>
+                    <span>:</span>
+                    <section className="timer_section">
+                        <p>{timerHours}</p>
+                        <p><small>Hours</small></p>
+                    </section>
 
+                    <span>:</span>
+                    <section className="timer_section">
+                        <p>{timerMinutes}</p>
+                        <p><small>Minutes</small></p>
+                    </section>
+
+                    <span>:</span>
+                    <section className="timer_section">
+                        <p>{timerSeconds}</p>
+                        <p><small>Seconds</small></p>
+                    </section>
+                </div>
+            </section>
+        </section>
+    )
+}
+export default Countdown;
