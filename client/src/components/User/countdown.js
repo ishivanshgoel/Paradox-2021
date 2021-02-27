@@ -1,13 +1,18 @@
 import React, {useEffect,useRef,useState} from 'react'
+
+//CSS
 import './countdown.css'
-const Countdown = () => {
+
+/**
+ * @author Sanika
+ */
+const Countdown = ({countdownDate}) => {
     const [timerDays,setTimerDays]=useState('00');
     const[timerHours,setTimerHours]=useState('00');
     const[timerMinutes,setTimerMinutes]=useState('00');
     const[timerSeconds,setTimerSeconds]=useState('00');
     let interval=useRef();
     const startTimer= () => {
-        const countdownDate=new Date('February 28, 2021 00:00:00').getTime();
         interval=setInterval(()=>{
             const now =new Date().getTime();
             const distance=countdownDate-now;
