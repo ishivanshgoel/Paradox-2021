@@ -3,22 +3,32 @@ body{
     background-size: cover;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(to top, #070714,#071e30,#070714);
+    background-image: linear-gradient(to top, #070714,#071a30,#070714);
     font-family: "Rajdhani", sans-serif;
     font-weight: 400;
     box-sizing: border-box;
     color:#230730;
 }
 
+#mainlogo{
+    height:40px;
+    width:40px;
+}
+
 .dark-navbar{
-    background:#071e30d3;
+    background:#041b30d3;
     margin:0%;
-    border-bottom:1px solid rgba(144, 233, 255, 0.637);
+    border-bottom:1px solid rgba(102, 222, 252, 0.637);
     box-shadow: 0px 0px 30px #070714;
 }
 
 li.nav__item a{
-    color:rgba(177, 231, 245, 0.637);
+    color:rgba(119, 215, 241, 0.726);
+}
+
+li.nav__item a:hover{
+    color:rgba(185, 237, 252, 0.623);
+    text-decoration: none;
 }
 
 .nav__item{

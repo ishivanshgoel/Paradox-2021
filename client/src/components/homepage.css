@@ -3,14 +3,9 @@
     margin-top:8%;
 }
 
-svg.paradox text{
-    font-family:Robodron;
-    stroke:rgb(182, 234, 247);
-    text-shadow: 0 0 6px rgb(182, 234, 247), 0 0 12px rgba(12, 106, 160, 0.58), 0 0 35px rgba(16, 119, 160, 0.88), 0 0 50px rgba(14, 110, 165, 0.76);
-    outline-color: rgba(255, 255, 255, 0);
-    font-size:180px;
-    font-weight:700;
-    stroke-width: 5;
+.paradox_logo{
+    margin:5% auto;
+    margin-bottom:0%;
 }
 
 .homepage__main{
@@ -24,9 +19,69 @@ svg.paradox text{
 
 .homepage__about-section{
     width:70%;
-    height:60vh;
-    margin:10% auto;
-    background-color: transparent;
+    margin:2% auto;
+    margin-top:12%;
+    margin-bottom:0%;
+    background-color:#04c2fc11;
+    background:transparent;
+    display:block;
+}
+
+/*
+h2.about-heading span {
+    padding-right: 10px;
+}
+
+h2.about-heading:after {
+    content:"";
+    display: inline-block;
+    height: 0.5em;
+    vertical-align: bottom;
+    width: 100%;
+    margin-right: -100%;
+    margin-left: 10px;
+    border-top: 2.5px solid rgba(2, 173, 224, 0.712);
+}
+*/
+
+h2.about-heading {
+  overflow: hidden;
+  text-align: center;
+  text-shadow: 0px 0px 50px 20px rgb(3, 121, 121),0px 0px 50px 30px #0ff;
+}
+
+h2.about-heading:before,
+h2.about-heading:after {
+    background-color: rgba(118, 223, 255, 0.877);
+    content: "";
+    display: inline-block;
+    height: 5px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+    text-shadow: 0px 0px 50px 20px rgb(3, 121, 121),0px 0px 50px 30px #0ff;
+}
+
+h2.about-heading:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+h2.about-heading:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.section-description{
+    font-size:22px;
+    margin:3%;
+    padding:2%;
+    white-space: pre-line;
+    word-break: break-word;
+}
+
+.about-heading{
+    font-size:45px;
 }
 
 .homebtn{
@@ -53,6 +108,52 @@ svg.paradox text{
     outline-color: rgba(255, 255, 255, 0);
     outline-offset: 15px;
     color : rgba(213, 247, 255, 0.966);
+}
+
+.homepage__sponsors-section{
+    margin-top:5%;
+    background:transparent;
+}
+
+.sponsors-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width:100%;
+}
+
+#ieeelogo{
+    width:30rem;
+    margin:2% 20%;
+    text-align: center;
+    
+}
+#ieeelogo h3{
+    font-weight: 700;
+    margin:2%;
+    font-size:40px;
+}
+
+
+.sponsor-tiles
+{
+    width:16rem;
+    margin:2%;
+    padding:1%;
+    justify-content: center;
+    background:transparent;
+    opacity:0.5;
+    transition: 0.3s ease-in-out;
+    border:none;
+    filter: saturate(0) brightness(2);
+    box-shadow: none;
+    color:#eee;
+}
+
+.sponsor-tiles:hover{
+    opacity:1;
+    transform:scale(1.1);
+    filter:none;
 }
 
 /**
