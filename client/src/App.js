@@ -24,67 +24,78 @@ import Play from './components/User/Play'
 import Leaderboard from './components/User/Leaderboard'
 
 function App() {
+
+  // fetch user from store
+  const user = false
+
   return (
     <div className="App">
       <Router>
         <nav className="navbar dark-navbar navbar-expand-lg">
           <div className="container-fluid">
-          <a className="navbar-brand" href=''></a>
+            <a className="navbar-brand" href=''></a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
               <ul className="navbar-nav">
-                 <li className="nav-item nav__item">
+                <li className="nav-item nav__item">
                   <Link to="/">Home</Link>
                 </li>
                 <li className="nav-item nav__item">
                   <Link to="/rules">Rules</Link>
                 </li>
-                <li className="nav-item nav__item">
-                  <Link to="/user/play">Play</Link>
-                </li>
-                <li className="nav-item nav__item">
-                  <Link to="/user/leaderboard">Leaderboard</Link>
-                </li>
+                {
+                  user ? (
+                      <li className="nav-item nav__item">
+                        <Link to="/user/play">Play</Link>
+                      </li>
+                  ) : (null)
+                }
+                {
+                  user ? (
+                      <li className="nav-item nav__item">
+                        <Link to="/user/leaderboard">Leaderboard</Link>
+                      </li>
+                  ) : (null)
+                }
 
-                {/* remove this button later */}
+                {/* remove this button later
                 <li className="nav-item nav__item">
                   <Link to="/admin">Admin</Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
         </nav>
         <div>
-            <Switch>
-              {/* level 1 routes */}
-              <Route exact path="/">
-                <Homepage/>
-              </Route>
-              <Route exact path="/rules">
-                <Rules/>
-              </Route>
-              <Route exact path="/user">
-                <Login/>
-              </Route>
-              <Route exact path="/register">
-                <Register/>
-              </Route>
-              <Route exact path="/admin">
-                <Alogin/>
-              </Route>
+          <Switch>
+            {/* level 1 routes */}
+            <Route exact path="/">
+              <Homepage />
+            </Route>
+            <Route exact path="/rules">
+              <Rules />
+            </Route>
+            <Route exact path="/user">
+              <Login />
+            </Route>
+            <Route exact path="/register">
+              <Register />
+            </Route>
+            <Route exact path="/admin">
+              <Alogin />
+            </Route>
 
+            {/* level 2 routes */}
+            <Route exact path="/user/play">
+              <Play />
+            </Route>
+            <Route exact path="/user/leaderboard">
+              <Leaderboard />
+            </Route>
 
-              {/* level 2 routes */}
-              <Route exact path="/user/play">
-                <Play/>
-              </Route>
-              <Route exact path="/user/leaderboard">
-                <Leaderboard/>
-              </Route>
-
-            </Switch>
+          </Switch>
         </div>
       </Router>
     </div>

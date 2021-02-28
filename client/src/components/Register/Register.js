@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./register_css/register.css"
 
@@ -11,6 +12,11 @@ import POST_Request from '../../Helper/PostRequest'
  */
 
 function Register() {
+
+  //fetch from store
+  const user = false
+
+  const history = useHistory()
 
   // state variables
   const [name, setName] = useState(null)
@@ -50,6 +56,9 @@ function Register() {
   }
 
   return (
+
+    !user?(
+
     <div class="container p-0" onSubmit={handleSubmit}>
       <div class="row">
         <div class="col-12 offset-lg-3 col-lg-6 offset-md-2 col-md-8 p-0">
@@ -67,6 +76,13 @@ function Register() {
         </div>
       </div>
     </div>
+    ):(
+      <div>
+        {
+          history.push("/user/play")
+        }
+      </div>
+    )
   )
 }
 
