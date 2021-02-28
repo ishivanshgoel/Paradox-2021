@@ -2,7 +2,7 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 import './homepage.css'
 
-// import discordlogo from './logos/discord.png'
+import discordlogo from './logos/discord.png'
 import { ReactComponent as ParadoxLogo } from "./logos//logo1_wobg1.svg";
 import IEEElogo from './logos/IEEE_CS1.png';
 import cnlogo from './logos/CNLOGO.svg'
@@ -13,7 +13,7 @@ import noobarmy from "./logos/noob-army.png";
 import offsec from "./logos/offsec-logo.svg";
 import spyse from "./logos/spyse.png";
 
-import discordlogo from './discordblack.svg'
+// import discordlogo from './discordblack.svg'
 import paradoxlogo from './logo2_wobg.svg'
 
 /**
@@ -30,8 +30,8 @@ function Homepage() {
 
     return (
       <div className="row">
-        <div class="col-12">
-          <div class="col-md-12 col-lg-12 d-flex justify-content-center">
+        <div className="col-12">
+          <div className="col-md-12 col-lg-12 d-flex justify-content-center">
             <ParadoxLogo
               viewBox="0 0 2500 530"
               height="300"
@@ -40,22 +40,22 @@ function Homepage() {
             />
           </div>
           <div className="button-outer-box d-flex justify-content-center">
-            <div class="col-md-2 col-lg-2 ">
-              <button class=" homebtn" onClick={handleRedirect}  name="user">
+            <div className="col-md-2 col-lg-2 ">
+              <button className=" homebtn" onClick={handleRedirect} name="user">
                 LOGIN
               </button>
             </div>
-            <div class="col-md-2 col-lg-2">
+            <div className="col-md-2 col-lg-2">
               <button
-                class=" homebtn d-flex  justify-content-center"
-                id="discord" 
+                className=" homebtn d-flex  justify-content-center"
+                id="discord"
               >
                 <img src={discordlogo} id="DiscordLogo" alt="" />
                 Discord
               </button>
             </div>
-            <div class="col-md-2 col-lg-2">
-              <button class=" homebtn" onClick={handleRedirect} name="register">
+            <div className="col-md-2 col-lg-2">
+              <button className=" homebtn" onClick={handleRedirect} name="register">
                 Register
               </button>
             </div>
