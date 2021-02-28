@@ -23,6 +23,9 @@ import Alogin from './components/Admin/Alogin'
 import Play from './components/User/Play'
 import Leaderboard from './components/User/Leaderboard'
 
+// images
+import Mainlogo from './components/logos/logo5.png'
+
 function App() {
 
   // fetch user from store
@@ -87,6 +90,7 @@ function App() {
               <Alogin />
             </Route>
 
+
             {/* level 2 routes */}
             <Route exact path="/user/play">
               <Play />
@@ -94,7 +98,6 @@ function App() {
             <Route exact path="/user/leaderboard">
               <Leaderboard />
             </Route>
-
           </Switch>
         </div>
       </Router>
