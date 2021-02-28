@@ -95,6 +95,8 @@ function Homepage() {
             <Sponsors src={spyse}></Sponsors>
           </div>
         </div>
+        <Footer />
+        <p className="copyright">Paradox 2021 | © IEEE </p>
       </div>
     );
 }
@@ -106,5 +108,108 @@ function Sponsors(props){
       </div>
   );
 }
+
+
+function Footer() {
+  return (
+    <div className="d-flex justify-content-center">
+      <footer id="contact" className="footer">
+        <div className="footer-main container d-flex col-8">
+          <div className="panel-2">
+            <ul className="site-nav">
+              <h2>Site Navigation</h2>
+
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <a href="#sponsors">Sponsors</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://ieee.org">
+                  IEEE
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://computer.org">
+                  IEEE CS
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://ieee.ncuindia.edu">
+                  IEEE NCU
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="contact-info">
+            <ul>
+              <h2>Contact Us</h2>
+              <li>
+                <i className="fa fa-user-circle c-icons"></i>Vibhuti Dahiya -
+                <em>Program Chair</em>
+              </li>
+              <li>
+                <i className="fa fa-envelope-square c-icons"></i>
+                vibhutidahiya@ieee.org
+              </li>
+              <hr />
+              <li>
+                <i className="fa fa-user-circle c-icons"></i>Anant Gulia -
+                <em>Program Manager</em>
+              </li>
+              <li>
+                <i className="fa fa-envelope-square c-icons"></i>
+                anantgulia@ieee.org
+              </li>
+              <hr />
+              <li>
+                <i className="fa fa-user-circle c-icons"></i>Animesh Das -
+                <em>Program Manager</em>
+              </li>
+              <li>
+                <i className="fa fa-envelope-square c-icons"></i>
+                animeshxdas@gmail.com
+              </li>
+            </ul>
+          </div>
+
+          <div className="social-panel">
+            <h2>Social Links</h2>
+            <div className="socials">
+              <a href="https://www.facebook.com/ieee.ncu/">
+                <i
+                  className="fa fa-facebook social-icon"
+                  aria-hidden="true"
+                ></i>
+              </a>
+
+              <a href="https://twitter.com/ieeencu">
+                <i className="fa fa-twitter social-icon" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/ieee-ncu">
+                <i
+                  className="fa fa-linkedin social-icon"
+                  aria-hidden="true"
+                ></i>
+              </a>
+
+              <a href="https://www.instagram.com/ieee_ncu/">
+                <i
+                  className="fa fa-instagram social-icon"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
 
 export default Homepage
