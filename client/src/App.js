@@ -29,9 +29,10 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <nav className="navbar dark-navbar navbar-expand-lg ">
+        <nav className="navbar dark-navbar navbar-expand-lg " role="navigation">
           <div className="container-fluid ">
             <button
+              data-toggle="collapse"
               className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
@@ -42,6 +43,7 @@ function App() {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
+            
             <div
               className="collapse navbar-collapse d-flex justify-content-center"
               id="navbarNavDropdown"
@@ -55,7 +57,9 @@ function App() {
                   <Link to="/user/play">Play</Link>
                 </li>
                 <li className="nav-item nav__item">
-                  <Link to="/"><img src={Mainlogo} id="mainlogo" alt=""/></Link>
+                  <Link to="/">
+                    <img src={Mainlogo} id="mainlogo" alt="" />
+                  </Link>
                 </li>
                 <li className="nav-item nav__item">
                   <Link to="/user/leaderboard">Leaderboard</Link>
