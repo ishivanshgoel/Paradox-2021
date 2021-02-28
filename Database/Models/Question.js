@@ -26,7 +26,7 @@ const QuestionSchema = new mongoose.Schema({
     }
 });
 
-UserSchema.pre('save',async function(next){
+QuestionSchema.pre('save',async function(next){
 
     try{
         const salt = await bcrypt.genSalt(10)
@@ -39,7 +39,7 @@ UserSchema.pre('save',async function(next){
 
 })
 
-UserSchema.methods.isValidPassword = async function (answer) {
+QuestionSchema.methods.isValidPassword = async function (answer) {
 
     try{
         return await bcrypt.compare(answer, this.answer)

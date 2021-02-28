@@ -1,6 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import './homepage.css'
+
 import discordlogo from './logos/discord.png'
 import { ReactComponent as ParadoxLogo } from "./logos//logo1_wobg1.svg";
 import IEEElogo from './logos/IEEE_CS1.png';
@@ -11,6 +12,10 @@ import meusec from "./logos/meusec.jpeg";
 import noobarmy from "./logos/noob-army.png";
 import offsec from "./logos/offsec-logo.svg";
 import spyse from "./logos/spyse.png";
+
+import discordlogo from './discordblack.svg'
+import paradoxlogo from './logo2_wobg.svg'
+
 /**
  * @author TejasV58
 */
@@ -203,6 +208,7 @@ function Footer() {
                   aria-hidden="true"
                 ></i>
               </a>
+
             </div>
           </div>
         </div>

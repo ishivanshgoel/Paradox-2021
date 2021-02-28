@@ -8,6 +8,11 @@
     margin-bottom:0%;
 }
 
+#ParadoxLogo{
+    width: 100%;
+    height: 100%;
+}   
+
 .homepage__main{
     height: 100vh;
 }
@@ -82,8 +87,11 @@ h2.about-heading:after {
 
 .about-heading{
     font-size:45px;
-}
+    height:60vh;
+    margin:10% auto;
+    background-color: transparent;
 
+}
 .homebtn{
     border: 0 solid;
     padding:5% 20%;
@@ -98,6 +106,15 @@ h2.about-heading:after {
     font-size:0.7rem;
     width:14vw;
     text-align: center;
+    /*font-family:robodron;*/
+    font-size:0.7rem;
+    width: 100%;
+    text-align: center;
+}
+#DiscordLogo{
+    width: 45px;
+    height: 45px;
+
 }
 
 
@@ -109,6 +126,7 @@ h2.about-heading:after {
     outline-offset: 15px;
     color : rgba(213, 247, 255, 0.966);
 }
+
 
 .homepage__sponsors-section{
     margin-top:5%;
@@ -198,7 +216,19 @@ h2.about-heading:after {
     text-align:center;
     font-size:24px;
 
+
 }
+#discord:hover{
+    color : rgba(213, 247, 255, 0.966);
+}
+#discord:hover #DiscordLogo{
+    width: 44px;
+    height: 44px;
+}
+#discord:hover .colorchange{
+    filter: invert(80%) sepia(25%) saturate(229%) hue-rotate(163deg) brightness(108%) contrast(108%);
+}
+
 
 /**
 @author: TejasV58

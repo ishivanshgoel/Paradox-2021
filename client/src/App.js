@@ -47,6 +47,7 @@ function App() {
               id="navbarNavDropdown"
             >
               <ul className="navbar-nav d-flex justify-content-center">
+
                 <li className="nav-item nav__item">
                   <Link to="/rules">Rules</Link>
                 </li>
