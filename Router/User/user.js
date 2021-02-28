@@ -3,7 +3,10 @@ const router = express.Router()
 const createError = require('http-errors') 
 const User = require('../../Database/Models/User')
 const UserValidationSchema = require('../../Database/Validation Schemas/User') 
-const sigendAccessToken = require('./jwt_helper')
+const LoginValidationSchema = require('../../Database/Validation Schemas/Login')
+const jwt_helper = require('./jwt_helper')
+const { signAcessToken, verifyAccessToken, signRefreshToken } = require('./jwt_helper')
+
 
 /**
  * @param {/login}
@@ -13,17 +16,26 @@ const sigendAccessToken = require('./jwt_helper')
  * @param {/nextlevel} 
  */
 
-router.post('/login', async function (req, res) {
+router.post('/login', async function (req, res, next) {
 
-    let auth = false // testing
+    try{
+        const result = await LoginValidationSchema.validateAsync(req.body)
+        const user = await User.findOne({email: result.email})
 
-    if(auth){
-        res.send({message: 'Success'})
-    } else{
-        res.send({message: 'Fail'})
+        if(!user) throw createError.NotFound("User is not registered")
+
+        const isMatch = await user.isValidPassword(result.password)
+
+        if(!isMatch) throw createError.Unauthorized('Username/password not valid')
+
+        const accessToken = await signAcessToken(user.id)
+        res.send({accessToken})
+
+    } catch(error){
+        if(error.isJoi == true) return next(createError.BadRequest("Invalid Username/Password"))
+        next(error)
     }
 
-  
 })
 
 
@@ -53,7 +65,7 @@ router.post('/register',async  function (req, res, next) {
             })
 
         const savedUser = await newuser.save()
-        const accessToken = await sigendAccessToken(savedUser.id)
+        const accessToken = await jwt_helper.signAcessToken(savedUser.id)
         res.send({accessToken})
         
     } catch(error){
@@ -62,64 +74,36 @@ router.post('/register',async  function (req, res, next) {
 
 })
 
-router.post('/refresh-token',async  function (req, res) {
 
-    let registerSuccess = true // testing
-
-    if(registerSuccess){
-        res.send({message: 'Success'})
-    } else{
-        res.send({message: 'Fail'})
-    }
+router.get('/leaderboard', verifyAccessToken, async function (req, res, next) {
+    
+    /**
+     * Send back the scores of all the users with their usernames
+     */
     
 })
 
 
-router.get('/leaderboard', async function (req, res) {
+router.post('/evaluate', verifyAccessToken,async function (req, res, next) {
     
-    let auth = true // testing
-    
-    if(auth){
-        // send usernames and scores
-        res.josn({message:'Success',data: [{
-            username: 'Shivansh',
-            level: 10
-        },{
-            username: 'Pratyush',
-            level: 11
-        }]})
+    /**
+     *  req.body.data : {
+     *   id
+     *   answer
+     * }
+     * 
+     *  Instructions:
+     * 
+     *  1. 'id' is the id provided to the particular question, the user has attempted to get evaluated for his/ her answer 'answer'.
+     *  2. Return true/ false as evaluation status.
+     */
 
-    } else{
-        res.json({message: 'Fail'})
-    }
+    res.send({message: 'Evaluate'})
     
 })
 
-
-router.post('/evaluate', async function (req, res) {
+router.get('/nextlevel', verifyAccessToken,async function (req, res, next) {
     
-    let auth = true // testing
-    
-    if(auth){
-        // if evaluation == true
-            res.josn({message:'Success',eval: true })
-        // else eval : false
-    } else{
-        res.json({message: 'Fail'})
-    }
-    
-})
-
-router.get('/nextlevel', async function (req, res) {
-    
-    let auth = true // testing
-    
-    if(auth){
-        // send next question
-        res.josn({message:'Success',data: ['123']})
-    } else{
-        res.json({message: 'Fail'})
-    }
     
 })
 
