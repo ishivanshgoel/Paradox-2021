@@ -36,7 +36,6 @@
 h2.about-heading span {
     padding-right: 10px;
 }
-
 h2.about-heading:after {
     content:"";
     display: inline-block;
@@ -87,7 +86,6 @@ h2.about-heading:after {
 
 .about-heading{
     font-size:45px;
-    height:60vh;
     margin:10% auto;
     background-color: transparent;
 

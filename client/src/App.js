@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   BrowserRouter as Router,
   Switch,
@@ -26,6 +27,10 @@ import Leaderboard from './components/User/Leaderboard'
 import Mainlogo from './components/logos/logo5.png'
 
 function App() {
+
+  // fetch user from store
+  const user = false
+
   return (
     <div className="App">
       <Router>
@@ -53,22 +58,35 @@ function App() {
                 <li className="nav-item nav__item">
                   <Link to="/rules">Rules</Link>
                 </li>
+
                 <li className="nav-item nav__item">
-                  <Link to="/user/play">Play</Link>
+                  <Link to="/">Home</Link>
                 </li>
                 <li className="nav-item nav__item">
                   <Link to="/">
                     <img src={Mainlogo} id="mainlogo" alt="" />
                   </Link>
                 </li>
-                <li className="nav-item nav__item">
-                  <Link to="/user/leaderboard">Leaderboard</Link>
-                </li>
+                
+                {
+                  user ? (
+                      <li className="nav-item nav__item">
+                        <Link to="/user/play">Play</Link>
+                      </li>
+                  ) : (null)
+                }
+                {
+                  user ? (
+                      <li className="nav-item nav__item">
+                        <Link to="/user/leaderboard">Leaderboard</Link>
+                      </li>
+                  ) : (null)
+                }
 
-                {/* remove this button later */}
+                {/* remove this button later
                 <li className="nav-item nav__item">
                   <Link to="/admin">Admin</Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -91,6 +109,7 @@ function App() {
             <Route exact path="/admin">
               <Alogin />
             </Route>
+
 
             {/* level 2 routes */}
             <Route exact path="/user/play">

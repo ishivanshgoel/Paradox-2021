@@ -39,7 +39,7 @@ QuestionSchema.pre('save',async function(next){
 
 })
 
-QuestionSchema.methods.isValidPassword = async function (answer) {
+QuestionSchema.methods.isValidAnswer = async function (answer) {
 
     try{
         return await bcrypt.compare(answer, this.answer)

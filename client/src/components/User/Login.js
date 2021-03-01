@@ -1,5 +1,5 @@
 import React,{ useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./login_css/loginstyle.css";
 
@@ -12,6 +12,11 @@ import POST_Request from '../../Helper/PostRequest'
  */
 
 function Login() {
+
+    // fetch from store
+    const user = false
+
+    const history = useHistory()
 
     // state variables
     const[email, setEmail] = useState(null)
@@ -38,6 +43,9 @@ function Login() {
     }
 
     return (
+
+      !user ? (
+
       /*
           <div className="container p-0">
             <div className="row">
@@ -63,7 +71,7 @@ function Login() {
 
               <div className="editor-field__container">
                 <input type="text" className="editor-field__input" onfocus="generateNoise(this, 'input')"
-                  onblur="removeNoise(this, 'input')" />
+                  onblur="removeNoise(this, 'input')" required/>
               </div>
               <span className="editor-field__bottom"></span>
               <div className="editor-field__noise"></div>
@@ -75,7 +83,7 @@ function Login() {
 
               <div className="editor-field__container">
                 <input type="password" className="editor-field__input" onfocus="generateNoise(this, 'input')"
-                  onblur="removeNoise(this, 'input')" />
+                  onblur="removeNoise(this, 'input')" required/>
               </div>
               <span className="editor-field__bottom"></span>
               <div className="editor-field__noise"></div>
@@ -89,7 +97,13 @@ function Login() {
               <div className="btn__noise"></div>
             </div>
         </div>
-
+      ):(
+        <div>
+          {
+            history.push("/user/play")
+          }
+        </div>
+      )
     )
 }
 

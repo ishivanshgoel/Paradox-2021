@@ -3,8 +3,9 @@ const router = express.Router()
 const createError = require('http-errors')
 const User = require('../../Database/Models/User')
 const Question = require('../../Database/Models/Question')
-const UserValidationSchema = require('../../Database/Validation Schemas/User')
+const UserValidationSchema = require('../../Database/Validation Schemas/User') 
 const LoginValidationSchema = require('../../Database/Validation Schemas/Login')
+const EvaluateValidationSchema = require('../../Database/Validation Schemas/Evaluate')
 const jwt_helper = require('./jwt_helper')
 const { signAcessToken, verifyAccessToken, signRefreshToken } = require('./jwt_helper')
 
@@ -91,22 +92,24 @@ router.get('/leaderboard', verifyAccessToken, async function (req, res, next) {
 })
 
 
-router.post('/evaluate', verifyAccessToken, async function (req, res, next) {
+router.post('/evaluate', verifyAccessToken,async function (req, res, next) {
+    
+    try {
+        const result = await EvaluateValidationSchema.validateAsync(req.body)
+        const question = await Question.findOne({id: result.id})
 
-    /**
-     *  req.body.data : {
-     *   id
-     *   answer
-     * }
-     * 
-     *  Instructions:
-     * 
-     *  1. 'id' is the id provided to the particular question, the user has attempted to get evaluated for his/ her answer 'answer'.
-     *  2. Return true/ false as evaluation status.
-     */
+        if(!question) throw createError.NotFound("Question id is invalid")
 
-    res.send({ message: 'Evaluate' })
+        const isMatch = await user.isValidAnswer(result.answer)
 
+        if(isMatch) res.send({message:'true'}) 
+
+        else if(!isMatch) res.send({message:'false'})
+
+    } catch (error) {
+        next(error)
+    }
+    
 })
 
 router.get('/nextlevel', verifyAccessToken, async function (req, res, next) {
