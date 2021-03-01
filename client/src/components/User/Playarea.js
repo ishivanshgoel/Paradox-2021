@@ -4,13 +4,13 @@ import demo from './demo.jpg';
 import youtube from './youtube.jpg'
 
 const Playarea = ()=>{
-    window.onload=function(){
-        add_class();
-    }
+    // window.onload=function(){
+    //     add_class();
+    // }
     function add_class()
     {
-        var input_tag=document.getElementsByClassName("play_input");
-        var input_value=input_tag.val;
+        let input_tag=document.getElementsByClassName("play_input")[0];
+        let input_value=input_tag.value;
         if(input_value!=="")
         {
             input_tag.classList.add("has-content");
@@ -37,7 +37,7 @@ const Playarea = ()=>{
                 </section>
             </section>
                 <section className="play_answer">
-                    <div className="input_div input-effect" onFocusOut={add_class()}>
+                    <div className="input_div input-effect" onBlur={add_class}>
                         <input className="play_input" type="text" placeholder="" />
                         <label>Your Answer Here</label>
                         <span className="focus-border"></span>
