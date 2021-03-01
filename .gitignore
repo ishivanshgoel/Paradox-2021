@@ -1,6 +1,7 @@
 # Server
 node_modules
 .env
+package-lock.json
 
 # Database credentials
 /Database/Config/credentials.json 
@@ -8,3 +9,4 @@ node_modules
 
 # Client
 /client/node_modules
+/client/package-lock.json
