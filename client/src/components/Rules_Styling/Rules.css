@@ -1,16 +1,15 @@
 .Rules__body {
   font-family: "Tomorrow";
+  font-family: "rajdhani",sans-serif;
+  font-size:2.5vh;
   font-weight: 500;
   height: 100%;
-  margin-top: 5%;
+  padding-top:2%;
   transition: all 0.3s ease-in-out;
 }
-.Rules__body:hover {
-  transform: scale(1.02);
-  box-shadow: 0 2.8px 2.2px rgba(115, 19, 233, 0.582),
-    0 6.7px 5.3px rgba(115, 19, 233, 0.582), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12);
+
+.Rules__body ul li{
+  margin:2%;
 }
 body {
   background-color: #0f1020;
@@ -19,7 +18,7 @@ body {
 .Side__Heading {
   font-family: "Tomorrow";
   font-weight: bolder;
-  font-size: 6.7vh;
+  font-size: 10vh;
   -webkit-text-stroke: 1px #0f1020;
   color: #0f100f;
   text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 rgba(115, 19, 233, 0.582),

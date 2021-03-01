@@ -32,21 +32,6 @@
     display:block;
 }
 
-/*
-h2.about-heading span {
-    padding-right: 10px;
-}
-h2.about-heading:after {
-    content:"";
-    display: inline-block;
-    height: 0.5em;
-    vertical-align: bottom;
-    width: 100%;
-    margin-right: -100%;
-    margin-left: 10px;
-    border-top: 2.5px solid rgba(2, 173, 224, 0.712);
-}
-*/
 
 h2.about-heading {
   overflow: hidden;
@@ -86,35 +71,27 @@ h2.about-heading:after {
 
 .about-heading{
     font-size:45px;
-    margin:10% auto;
+    margin:5% auto;
+    margin-bottom:3%;
     background-color: transparent;
 
 }
 .homebtn{
     border: 0 solid;
     padding:5% 20%;
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
     outline: 1px solid;
     outline-color: rgba(213, 247, 255, 0.644);
     outline-offset: 0px;
     transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
     color:rgba(213, 247, 255, 0.712);
     background:rgba(34, 34, 34, 0.068);
-    font-family:robodron;
-    font-size:0.7rem;
+    font-size:1.3rem;
     width:14vw;
     text-align: center;
-    /*font-family:robodron;*/
-    font-size:0.7rem;
+    font-family:"rajdhani", sans-serif;
     width: 100%;
     text-align: center;
 }
-#DiscordLogo{
-    width: 45px;
-    height: 45px;
-
-}
-
 
 .homebtn:hover{
     border: 1px solid;
@@ -126,12 +103,48 @@ h2.about-heading:after {
 }
 
 
-.homepage__sponsors-section{
-    margin-top:5%;
+#discord{
+    background:rgba(115, 8, 255, 0.39);
+    background: rgb(115, 121, 207);
+    outline:none;
+    color:rgba(10, 10, 10, 0.829);
+    border-radius:5px;
+    font-weight: 600;
+     transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+     padding:4% 1%;
+}
+
+#DiscordLogo{
+    width:30px;
+    height:30px;
+    margin:2px 5px;
+    color:black;
+}
+
+#discord:hover{
+    outline:none;
+    color : rgba(233, 213, 255, 0.966);
+}
+
+
+#discord:hover .colorchange{
+    filter: invert(80%) sepia(25%) saturate(229%) hue-rotate(163deg) brightness(108%) contrast(108%);
+}
+
+
+.socials {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+
+.homepage__sponsors-section , .homepage__rules-section{
+    margin-top:2%;
     background:transparent;
 }
 
-.sponsors-section{
+.sponsors-section,.Rules-section{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -155,6 +168,10 @@ h2.about-heading:after {
     font-size:40px;
 }
 
+.bullet{
+    height:15px;
+    width:15px;
+}
 
 .sponsor-tiles
 {
@@ -185,7 +202,7 @@ h2.about-heading:after {
     justify-content: center;
     border-top: rgba(118, 223, 255, 0.877) 2px solid;
     border-bottom: rgba(118, 223, 255, 0.877) 2px solid;
-    padding:2%;
+    padding:1%;
     color:rgba(255, 255, 255, 0.527);
 }
 
@@ -229,24 +246,6 @@ h2.about-heading:after {
     display:flex;
     justify-content: space-between;
     align-items: center;
-}
-
-
-
-#discord:hover{
-    color : rgba(213, 247, 255, 0.966);
-}
-#discord:hover #DiscordLogo{
-    width: 44px;
-    height: 44px;
-}
-.socials {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-#discord:hover .colorchange{
-    filter: invert(80%) sepia(25%) saturate(229%) hue-rotate(163deg) brightness(108%) contrast(108%);
 }
 
 

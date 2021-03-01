@@ -1,11 +1,12 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
+import Rules from "./Rules";
 
 // css import
 import './homepage.css'
 
 // images and logos import
-import discordlogo from './logos/discord.png'
+import { ReactComponent as DiscordLogo } from './logos/discord.svg'
 import { ReactComponent as ParadoxLogo } from "./logos//logo1_wobg1.svg";
 import  ParadoxLogo1  from "./logos//logo1_wobg1.svg";
 import IEEElogo from './logos/IEEE_CS1.png';
@@ -41,7 +42,7 @@ function Homepage() {
         <div className="col-12">
           <div className="col-md-12 col-lg-12 d-flex justify-content-center">
             <ParadoxLogo
-              viewBox="0 0 2500 530"
+              viewBox="0 0 2600 500"
               height="300"
               width="1200"
               className="paradox_logo"
@@ -58,12 +59,16 @@ function Homepage() {
                 className=" homebtn d-flex  justify-content-center"
                 id="discord"
               >
-                <img src={discordlogo} id="DiscordLogo" alt="" />
-                Discord
+                <DiscordLogo id="DiscordLogo" />
+                JOIN DISCORD
               </button>
             </div>
             <div className="col-md-2 col-lg-2">
-              <button className=" homebtn" onClick={handleRedirect} name="register">
+              <button
+                className=" homebtn"
+                onClick={handleRedirect}
+                name="register"
+              >
                 Register
               </button>
             </div>
@@ -88,6 +93,14 @@ function Homepage() {
             intellects on the globe. The competitor who completes all 50
             questions or ends at the top of the leaderboard when the event ends,
             shall be declared as the winner of Halocrypt 2020.
+          </div>
+        </div>
+        <div className="col-8 homepage__rules-section container">
+          <h2 className="about-heading">
+            <span>RULES</span>
+          </h2>
+          <div className="Rules-section text-wrap">
+            <Rules/>
           </div>
         </div>
         <div className="col-8 homepage__sponsors-section container">

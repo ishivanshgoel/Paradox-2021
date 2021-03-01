@@ -54,29 +54,23 @@ function App() {
               id="navbarNavDropdown"
             >
               <ul className="navbar-nav d-flex justify-content-center">
-
                 <li className="nav-item nav__item">
-                  <Link to="/">Home</Link>
+                  <Link to="#">About</Link>
                 </li>
                 <li className="nav-item nav__item">
-                  <Link to="/rules">Rules</Link>
+                  <Link to="#">Rules</Link>
                 </li>
                 <li className="nav-item nav__item">
                   <Link to="/">
                     <img src={Mainlogo} id="mainlogo" alt="" />
                   </Link>
                 </li>
-
-
                 <li className="nav-item nav__item">
                   <Link to="/user/play">Play</Link>
                 </li>
-
-
                 <li className="nav-item nav__item">
                   <Link to="/user/leaderboard">Leaderboard</Link>
                 </li>
-
 
                 {/* remove this button later
                 <li className="nav-item nav__item">
@@ -104,7 +98,6 @@ function App() {
             <Route exact path="/admin">
               <Alogin />
             </Route>
-
 
             {/* level 2 routes */}
             <Route exact path="/user/play">
