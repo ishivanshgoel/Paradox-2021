@@ -9,7 +9,7 @@ const Countdown = () => {
     const[timerSeconds,setTimerSeconds]=useState('00');
     let interval=useRef();
     const startTimer= () => {
-        const countdownDate=new Date('March 3, 2021 00:00:00').getTime();
+        const countdownDate=new Date('March 1, 2021 00:00:00').getTime();
         interval=setInterval(()=>{
             var now =new Date().getTime();
             var distance=countdownDate-now;

@@ -19,9 +19,6 @@ const Playarea = ()=>{
                     <div className="play_img img-fluid">
                         <img src={demo} alt=""/>
                     </div>
-                    <div className="play_para">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsam iure quae facilis, rerum dolore perferendis vel nulla. Obcaecati saepe maxime nostrum dolores eum. Soluta vero ut quis ullam amet?
-                    </div>
                 </section>
             </section>
                 <section className="play_answer">
