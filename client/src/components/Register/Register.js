@@ -27,6 +27,23 @@ function Register() {
   const [password, setPassword] = useState(null)
   const [cpassword, setcPassword] = useState(null)
 
+  //messages
+  const [message, setMessage] = useState({
+    display: false,
+    color: 'red',
+    message: ''
+  })
+
+  function validatePassword() {
+    var regex=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,32}$/
+    if(regex.test(password)) { 
+        if(password!==cpassword)
+            return 404
+        return true
+    }
+    else return false;
+  }
+
   // handle form submission
   let handleSubmit = async (event) => {
     event.preventDefault()
@@ -41,16 +58,44 @@ function Register() {
       password: password
     }
 
+    if(validatePassword()==404){
+      setMessage({
+        display: true,
+        color: 'yellow',
+        message: 'Password and confirm password does not match.'
+      })
+      return
+    } else if(validatePassword()==false){
+      setMessage({
+        display: true,
+        color: 'red',
+        message: 'Your password is too weak. Please enter a new password.'
+      })
+      return
+    }
+
     try{
       const response = await POST_Request('register', data);
       if(response.data && response.data.accessToken) {
-        alert("True");
+        setMessage({
+          display: true,
+          color: 'green',
+          message: 'Registered Successfully!!'
+        })
       }
       else {
-        alert("Error");
+        setMessage({
+          display: true,
+          color: 'blue',
+          message: 'You are already registered!! Please try logging in'
+        })
       }
     } catch(err){
-      console.log(err)
+      setMessage({
+        display: true,
+        color: 'red',
+        message: 'Sorry, We are facing some Internal Server Error.'
+      })
     }
        
   }
@@ -64,6 +109,9 @@ function Register() {
         <div class="col-12 offset-lg-3 col-lg-6 offset-md-2 col-md-8 p-0">
           <form class="register__box">
             <h1>Register</h1>
+            {
+              message.display?(<p style={ {color: message.color} }>{message.message}</p>):(null)
+            }
             <input type="text" name="name" placeholder="Name" required onChange={(event) => setName(event.target.value)} />
             <input type="text" name="userName" placeholder="username" required onChange={(event) => setuserName(event.target.value)} />
             <input type="text" name="email" placeholder="Email" required onChange={(event) => setEmail(event.target.value)} />
