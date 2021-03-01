@@ -48,7 +48,7 @@ function App() {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            
+
             <div
               className="collapse navbar-collapse d-flex justify-content-center"
               id="navbarNavDropdown"
@@ -56,32 +56,27 @@ function App() {
               <ul className="navbar-nav d-flex justify-content-center">
 
                 <li className="nav-item nav__item">
-                  <Link to="/rules">Rules</Link>
-                </li>
-
-                <li className="nav-item nav__item">
                   <Link to="/">Home</Link>
+                </li>
+                <li className="nav-item nav__item">
+                  <Link to="/rules">Rules</Link>
                 </li>
                 <li className="nav-item nav__item">
                   <Link to="/">
                     <img src={Mainlogo} id="mainlogo" alt="" />
                   </Link>
                 </li>
-                
-                {
-                  user ? (
-                      <li className="nav-item nav__item">
-                        <Link to="/user/play">Play</Link>
-                      </li>
-                  ) : (null)
-                }
-                {
-                  user ? (
-                      <li className="nav-item nav__item">
-                        <Link to="/user/leaderboard">Leaderboard</Link>
-                      </li>
-                  ) : (null)
-                }
+
+
+                <li className="nav-item nav__item">
+                  <Link to="/user/play">Play</Link>
+                </li>
+
+
+                <li className="nav-item nav__item">
+                  <Link to="/user/leaderboard">Leaderboard</Link>
+                </li>
+
 
                 {/* remove this button later
                 <li className="nav-item nav__item">
