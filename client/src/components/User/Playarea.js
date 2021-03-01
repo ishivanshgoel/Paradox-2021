@@ -10,7 +10,7 @@ const Playarea = ()=>{
     function add_class()
     {
         var input_tag=document.getElementsByClassName("play_input");
-        var input_value=input_tag.val;
+        var input_value=input_tag.value;
         if(input_value!=="")
         {
             input_tag.classList.add("has-content");
