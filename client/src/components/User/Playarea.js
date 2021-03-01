@@ -11,6 +11,7 @@ const Playarea = ()=>{
     {
         let input_tag=document.getElementsByClassName("play_input")[0];
         let input_value=input_tag.value;
+
         if(input_value!=="")
         {
             input_tag.classList.add("has-content");
