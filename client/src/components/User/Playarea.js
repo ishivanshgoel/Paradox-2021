@@ -4,6 +4,21 @@ import demo from './demo.jpg';
 import youtube from './youtube.jpg'
 
 const Playarea = ()=>{
+    window.onload=function(){
+        add_class();
+    }
+    function add_class()
+    {
+        var input_tag=document.getElementsByClassName("play_input");
+        var input_value=input_tag.val;
+        if(input_value!=="")
+        {
+            input_tag.classList.add("has-content");
+        }
+        else{
+            input_tag.classList.remove("has-content");
+        }
+    }
     return(
         <section className="Playarea_heading">
             <section className="play">
@@ -22,8 +37,8 @@ const Playarea = ()=>{
                 </section>
             </section>
                 <section className="play_answer">
-                    <div className="input_div input-effect">
-                        <input className="play_input" type="text" placeholder=""/>
+                    <div className="input_div input-effect" onFocusOut={add_class()}>
+                        <input className="play_input" type="text" placeholder="" />
                         <label>Your Answer Here</label>
                         <span className="focus-border"></span>
                     </div>
