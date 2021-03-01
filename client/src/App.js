@@ -82,7 +82,6 @@ function App() {
               <Route exact path="/user/leaderboard">
                 <Leaderboard/>
               </Route>
-
             </Switch>
         </div>
       </Router>
