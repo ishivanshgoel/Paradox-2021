@@ -15,7 +15,7 @@ function Play() {
 
     const history = useHistory()
 
-    const countdownDate = new Date('March 10, 2021 00:00:00').getTime()
+    const countdownDate = new Date('March 1, 2021 00:00:00').getTime()
     const now = new Date().getTime()
     const distance = countdownDate - now
 
