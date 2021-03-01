@@ -1,47 +1,254 @@
+
 .paradox{
     margin-top:8%;
 }
 
-svg.paradox text{
-    font-family:Robodron;
-    stroke:aliceblue;
-    font-size:180px;
-    font-weight:700;
-    stroke-width: 5;
-    
+.paradox_logo{
+    margin:5% auto;
+    margin-bottom:0%;
+}
+
+#ParadoxLogo{
+    width: 100%;
+    height: 100%;
+}   
+
+.homepage__main{
+    height: 100vh;
 }
 
 .button-outer-box{
     margin:2% auto;
+    display:inline-block;
 }
 
 .homepage__about-section{
-    width:100%;
-    height:60vh;
-    margin:10% 0%;
-    background-color: #111227;
+    width:70%;
+    margin:2% auto;
+    margin-top:12%;
+    margin-bottom:0%;
+    background-color:#04c2fc11;
+    background:transparent;
+    display:block;
 }
 
+/*
+h2.about-heading span {
+    padding-right: 10px;
+}
+h2.about-heading:after {
+    content:"";
+    display: inline-block;
+    height: 0.5em;
+    vertical-align: bottom;
+    width: 100%;
+    margin-right: -100%;
+    margin-left: 10px;
+    border-top: 2.5px solid rgba(2, 173, 224, 0.712);
+}
+*/
+
+h2.about-heading {
+  overflow: hidden;
+  text-align: center;
+  text-shadow: 0px 0px 50px 20px rgb(3, 121, 121),0px 0px 50px 30px #0ff;
+}
+
+h2.about-heading:before,
+h2.about-heading:after {
+    background-color: rgba(118, 223, 255, 0.877);
+    content: "";
+    display: inline-block;
+    height: 5px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+    text-shadow: 0px 0px 50px 20px rgb(3, 121, 121),0px 0px 50px 30px #0ff;
+}
+
+h2.about-heading:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+h2.about-heading:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.section-description{
+    font-size:22px;
+    margin:3%;
+    padding:2%;
+    white-space: pre-line;
+    word-break: break-word;
+}
+
+.about-heading{
+    font-size:45px;
+    margin:10% auto;
+    background-color: transparent;
+
+}
 .homebtn{
     border: 0 solid;
     padding:5% 20%;
     box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
     outline: 1px solid;
-    outline-color: rgba(255, 255, 255, .5);
+    outline-color: rgba(213, 247, 255, 0.644);
     outline-offset: 0px;
-    text-shadow: none;
     transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
-    color:rgba(255, 255, 255, .5);
+    color:rgba(213, 247, 255, 0.712);
+    background:rgba(34, 34, 34, 0.068);
+    font-family:robodron;
+    font-size:0.7rem;
+    width:14vw;
+    text-align: center;
+    /*font-family:robodron;*/
+    font-size:0.7rem;
+    width: 100%;
+    text-align: center;
 }
+#DiscordLogo{
+    width: 45px;
+    height: 45px;
+
+}
+
 
 .homebtn:hover{
     border: 1px solid;
     padding:5% 20%;
-    box-shadow: 0 0 8px rgba(115, 19, 233, 0.582), 0 0 20px rgba(43, 3, 95, 0.24);
+    box-shadow: 0 0 10px rgba(116, 227, 255, 0.966), 0 0 20px rgba(43, 3, 95, 0.24);
     outline-color: rgba(255, 255, 255, 0);
     outline-offset: 15px;
-    color : rgba(115, 19, 233, 0.829);
+    color : rgba(213, 247, 255, 0.966);
 }
+
+
+.homepage__sponsors-section{
+    margin-top:5%;
+    background:transparent;
+}
+
+.sponsors-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width:100%;
+}
+
+.sponsors-section a{
+    margin:2%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+#ieeelink{
+    margin:2% 20%;
+}
+#ieeelogo{
+    width:30rem;
+}
+#ieeelogo h3{
+    font-weight: 700;
+    font-size:40px;
+}
+
+
+.sponsor-tiles
+{
+    width:16rem;
+    padding:1%;
+    justify-content: center;
+    background:transparent;
+    opacity:0.5;
+    transition: 0.3s ease-in-out;
+    border:none;
+    filter: saturate(0) brightness(2);
+    box-shadow: none;
+    color:#eee;
+}
+
+.sponsor-tiles:hover{
+    opacity:1;
+    transform:scale(1.1);
+    filter:none;
+}
+
+.footer{
+    margin:5% auto;
+    margin-bottom:1%;
+    width: 100%;
+    background-color:transparent;
+    display: flex;
+    justify-content: center;
+    border-top: rgba(118, 223, 255, 0.877) 2px solid;
+    border-bottom: rgba(118, 223, 255, 0.877) 2px solid;
+    padding:2%;
+    color:rgba(255, 255, 255, 0.527);
+}
+
+.footer div{
+    margin:1%;
+    width:30%;
+}
+
+.site-nav {
+    list-style: none;
+    color:rgba(255, 255, 255, 0.527);
+}
+.site-nav h2, .contact-info h2, .social-panel h2{
+    color:rgb(255, 255, 255);
+}
+.contact-info ul{
+    list-style: none;
+    padding:0;
+}
+
+.site-nav li a{
+    color:rgba(255, 255, 255, 0.527);
+    text-decoration: none;
+}
+.copyright{
+    text-align:center;
+    font-size:24px;
+}
+.social-logos{
+    height:30px;
+    width:30px;
+    margin:5%;
+}
+.social-panel{
+    width:100%;
+}
+#social-outer-div{
+    width:100%;
+    padding:0;
+    margin:0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+#discord:hover{
+    color : rgba(213, 247, 255, 0.966);
+}
+#discord:hover #DiscordLogo{
+    width: 44px;
+    height: 44px;
+}
+.socials {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+#discord:hover .colorchange{
+    filter: invert(80%) sepia(25%) saturate(229%) hue-rotate(163deg) brightness(108%) contrast(108%);
+}
+
 
 /**
 @author: TejasV58

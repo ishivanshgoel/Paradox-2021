@@ -30,7 +30,7 @@ function POST_Request(endPoint, data, id = null) {
     }).then((response) => {
         return response
     }).catch((err) => {
-        return err.message
+        return err
     });
 
 }

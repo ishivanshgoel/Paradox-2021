@@ -1,15 +1,18 @@
 import React, {useEffect,useRef,useState} from 'react'
+
+//CSS
 import './countdown.css'
-// import FOG from 'vanta/dist/vanta.fog.min'
-// import * as THREE from "three"
-const Countdown = () => {
+
+/**
+ * @author Sanika
+ */
+const Countdown = ({countdownDate}) => {
     const [timerDays,setTimerDays]=useState('00');
     const[timerHours,setTimerHours]=useState('00');
     const[timerMinutes,setTimerMinutes]=useState('00');
     const[timerSeconds,setTimerSeconds]=useState('00');
     let interval=useRef();
     const startTimer= () => {
-        const countdownDate=new Date('March 1, 2021 00:00:00').getTime();
         interval=setInterval(()=>{
             var now =new Date().getTime();
             var distance=countdownDate-now;
@@ -46,21 +49,7 @@ const Countdown = () => {
             clearInterval(interval.current);
         };
     })
-    // const[vantaEffect, setVantaEffect]=useState(0);
-    // const vantaRef = useRef(null);
-    // useEffect(() => {
-    //     if(!vantaEffect){
-    //         setVantaEffect(
-    //             FOG({
-    //                 el:vantaRef.current,
-    //                 THREE,
-    //             })
-    //         );
-    //     }
-    //     return () => {
-    //         if(vantaEffect) {vantaEffect.destroy();}
-    //     };
-    // }, [vantaEffect]);
+
     return (
         <section className="Countdown_heading">
             <section className="timer">
