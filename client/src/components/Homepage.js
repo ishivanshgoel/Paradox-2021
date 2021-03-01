@@ -39,7 +39,7 @@ function Homepage() {
 
     return (
       <div className="row">
-        <div className="col-12">
+        <div className="col-12 homepage__top">
           <div className="col-md-12 col-lg-12 d-flex justify-content-center">
             <ParadoxLogo
               viewBox="0 0 2600 500"

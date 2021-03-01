@@ -80,7 +80,7 @@ function App() {
             </div>
           </div>
         </nav>
-        <div>
+        <div className="app__body">
           <Switch>
             {/* level 1 routes */}
             <Route exact path="/">

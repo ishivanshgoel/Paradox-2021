@@ -248,6 +248,9 @@ h2.about-heading:after {
     align-items: center;
 }
 
+.homepage__top{
+    min-height: 100vh;
+}
 
 /**
 @author: TejasV58
