@@ -252,6 +252,18 @@ h2.about-heading:after {
     min-height: 100vh;
 }
 
+
+/*##### mobile view ###### */
+@media only screen and (max-width: 600px) {
+    #DiscordLogo__text{
+        display: none;
+    }
+
+    .button-outer-box{
+        margin-top: 80px;
+    }
+}
+
 /**
 @author: TejasV58
 **/

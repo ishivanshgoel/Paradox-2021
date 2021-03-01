@@ -60,7 +60,7 @@ function Homepage() {
                 id="discord"
               >
                 <DiscordLogo id="DiscordLogo" />
-                JOIN DISCORD
+                <span id="DiscordLogo__text">JOIN DISCORD</span>  
               </button>
             </div>
             <div className="col-md-2 col-lg-2">
