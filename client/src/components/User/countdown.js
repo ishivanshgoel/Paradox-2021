@@ -14,12 +14,20 @@ const Countdown = ({countdownDate}) => {
     let interval=useRef();
     const startTimer= () => {
         interval=setInterval(()=>{
-            const now =new Date().getTime();
-            const distance=countdownDate-now;
-            const days=Math.floor(distance/(1000*60*60*24));
-            const hours=Math.floor((distance%(1000*60 *60*24)/(1000*60*60)));
-            const minutes=Math.floor((distance%(1000*60 *60))/(1000*60));
-            const seconds=Math.floor((distance%(1000*60))/1000);
+            var now =new Date().getTime();
+            var distance=countdownDate-now;
+            var days=String(Math.floor(distance/(1000*60*60*24)));
+            var hours=String(Math.floor((distance%(1000*60 *60*24)/(1000*60*60))));
+            var minutes=String(Math.floor((distance%(1000*60 *60))/(1000*60)));
+            var seconds=String(Math.floor((distance%(1000*60))/1000));
+            if(days.length==1)
+            days="0"+days;
+            if(hours.length==1)
+            hours="0"+hours;
+            if(minutes.length==1)
+            minutes="0"+minutes;
+            if(seconds.length==1)
+            seconds="0"+seconds;
             if(distance<0){
                 //stop timer and load Play Area
                 clearInterval(interval.current);
@@ -41,34 +49,34 @@ const Countdown = ({countdownDate}) => {
             clearInterval(interval.current);
         };
     })
+
     return (
         <section className="Countdown_heading">
             <section className="timer">
                 <div>
                     <h2>Paradox is coming soon...</h2>
-                    <p>Just few more days left!</p>
                 </div>
                 <div>
                     <section className="timer_section">
                         <p>{timerDays}</p>
-                        <p><small>Days</small></p>
+                        <p><small className="timer_label">Days</small></p>
                     </section>
                     <span>:</span>
                     <section className="timer_section">
                         <p>{timerHours}</p>
-                        <p><small>Hours</small></p>
+                        <p><small className="timer_label">Hours</small></p>
                     </section>
 
                     <span>:</span>
                     <section className="timer_section">
                         <p>{timerMinutes}</p>
-                        <p><small>Minutes</small></p>
+                        <p><small className="timer_label">Minutes</small></p>
                     </section>
 
                     <span>:</span>
                     <section className="timer_section">
                         <p>{timerSeconds}</p>
-                        <p><small>Seconds</small></p>
+                        <p><small className="timer_label">Seconds</small></p>
                     </section>
                 </div>
             </section>
