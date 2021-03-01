@@ -50,10 +50,10 @@ function App() {
             </button>
 
             <div
-              className="collapse navbar-collapse d-flex justify-content-center"
+              className="collapse navbar-collapse"
               id="navbarNavDropdown"
             >
-              <ul className="navbar-nav d-flex justify-content-center">
+              <ul className="navbar-nav mx-auto">
                 <li className="nav-item nav__item">
                   <Link to="#">About</Link>
                 </li>

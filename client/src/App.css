@@ -33,7 +33,8 @@ li.nav__item a:hover{
 
 .nav__item{
     font-size:1.3rem;
-    margin: 5% 10%;
+    /* margin: 5% 10%; */
+    margin: 10px;
     color:rgba(144, 233, 255, 0.637);
     font-family: 'Rajdhani', sans-serif;
 }
