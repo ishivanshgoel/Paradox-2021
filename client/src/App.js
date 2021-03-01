@@ -60,7 +60,7 @@ function App() {
                 <li className="nav-item nav__item">
                   <Link to="#">Rules</Link>
                 </li>
-                <li className="nav-item nav__item">
+                <li className="nav-item nav__item navbar__logo">
                   <Link to="/">
                     <img src={Mainlogo} id="mainlogo" alt="" />
                   </Link>
