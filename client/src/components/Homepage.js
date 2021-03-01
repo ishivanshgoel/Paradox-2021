@@ -1,9 +1,13 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
+
+// css import
 import './homepage.css'
 
+// images and logos import
 import discordlogo from './logos/discord.png'
 import { ReactComponent as ParadoxLogo } from "./logos//logo1_wobg1.svg";
+import  ParadoxLogo1  from "./logos//logo1_wobg1.svg";
 import IEEElogo from './logos/IEEE_CS1.png';
 import cnlogo from './logos/CNLOGO.svg'
 import commudle from "./logos/commudlelogo.png";
@@ -12,6 +16,10 @@ import meusec from "./logos/meusec.jpeg";
 import noobarmy from "./logos/noob-army.png";
 import offsec from "./logos/offsec-logo.svg";
 import spyse from "./logos/spyse.png";
+import instagram from "./logos/instagram.svg";
+import facebook from "./logos/facebook.svg";
+import linkedin from "./logos/linkedin.svg"; 
+import twitter from "./logos/twitter.svg";
 
 // import discordlogo from './discordblack.svg'
 import paradoxlogo from './logo2_wobg.svg'
@@ -87,10 +95,12 @@ function Homepage() {
             <span>SPONSORS</span>
           </h2>
           <div className="sponsors-section text-wrap">
-            <div className="card sponsor-tiles" id="ieeelogo">
-              <img src={IEEElogo} alt="" />
-              {/*<h3>Title sponsor</h3>*/}
-            </div>
+            <a href="" id="ieee-link" className="col-8">
+              <div className="card sponsor-tiles" id="ieeelogo">
+                <img src={IEEElogo} alt="" />
+                {/*<h3>Title sponsor</h3>*/}
+              </div>
+            </a>
             <Sponsors src={offsec}></Sponsors>
             <Sponsors src={cnlogo}></Sponsors>
             <Sponsors src={interviewCake}></Sponsors>
@@ -101,16 +111,18 @@ function Homepage() {
           </div>
         </div>
         <Footer />
-        <p className="copyright">Paradox 2021 | © IEEE </p>
+        <p className="copyright">Paradox 2021 | © IEEE VITC </p>
       </div>
     );
 }
 
 function Sponsors(props){
   return (
+    <a href="">
       <div className="card sponsor-tiles">
         <img src={props.src} alt="" />
       </div>
+    </a>
   );
 }
 
@@ -119,94 +131,50 @@ function Footer() {
   return (
     <div className="d-flex justify-content-center">
       <footer id="contact" className="footer">
-        <div className="footer-main container d-flex col-8">
-          <div className="panel-2">
-            <ul className="site-nav">
-              <h2>Site Navigation</h2>
-
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="#sponsors">Sponsors</a>
-              </li>
-              <li>
-                <a target="_blank" href="https://ieee.org">
-                  IEEE
-                </a>
-              </li>
-              <li>
-                <a target="_blank" href="https://computer.org">
-                  IEEE CS
-                </a>
-              </li>
-              <li>
-                <a target="_blank" href="https://ieee.ncuindia.edu">
-                  IEEE NCU
-                </a>
-              </li>
-            </ul>
+        <div className="footer-main container d-flex col-12 justify-content-between">
+          <div className="panel-1 d-flex justify-content-center">
+            <img src={ParadoxLogo1} width="400px" alt="" />
           </div>
+          
           <div className="contact-info">
             <ul>
               <h2>Contact Us</h2>
               <li>
-                <i className="fa fa-user-circle c-icons"></i>Vibhuti Dahiya -
-                <em>Program Chair</em>
+                Vibhuti Dahiya -<em>Program Chair</em>
               </li>
-              <li>
-                <i className="fa fa-envelope-square c-icons"></i>
-                vibhutidahiya@ieee.org
-              </li>
+              <li>vibhutidahiya@ieee.org</li>
               <hr />
               <li>
-                <i className="fa fa-user-circle c-icons"></i>Anant Gulia -
-                <em>Program Manager</em>
+                Anant Gulia -<em>Program Manager</em>
               </li>
-              <li>
-                <i className="fa fa-envelope-square c-icons"></i>
-                anantgulia@ieee.org
-              </li>
+              <li>anantgulia@ieee.org</li>
               <hr />
               <li>
-                <i className="fa fa-user-circle c-icons"></i>Animesh Das -
-                <em>Program Manager</em>
+                Animesh Das -<em>Program Manager</em>
               </li>
-              <li>
-                <i className="fa fa-envelope-square c-icons"></i>
-                animeshxdas@gmail.com
-              </li>
+              <li>animeshxdas@gmail.com</li>
             </ul>
           </div>
 
           <div className="social-panel">
             <h2>Social Links</h2>
-            <div className="socials">
-              <a href="https://www.facebook.com/ieee.ncu/">
-                <i
-                  className="fa fa-facebook social-icon"
-                  aria-hidden="true"
-                ></i>
+            <div id="socials social-outer-div">
+              <a target="_BLANK" href="#">
+                <img src={facebook} className="social-logos" alt="" />
               </a>
 
-              <a href="https://twitter.com/ieeencu">
-                <i className="fa fa-twitter social-icon" aria-hidden="true"></i>
+              <a href="#" target="_BLANK">
+                <img src={twitter} className="social-logos" alt="" />
               </a>
-              <a href="https://www.linkedin.com/company/ieee-ncu">
-                <i
-                  className="fa fa-linkedin social-icon"
-                  aria-hidden="true"
-                ></i>
+              <a
+                target="_BLANK"
+                href="https://www.linkedin.com/company/ieee-computer-society-vit-chennai/?originalSubdomain=in"
+              >
+                <img src={linkedin} className="social-logos" alt="" />
               </a>
 
-              <a href="https://www.instagram.com/ieee_ncu/">
-                <i
-                  className="fa fa-instagram social-icon"
-                  aria-hidden="true"
-                ></i>
+              <a target="_BLANK" href="https://www.instagram.com/comsoc.vitcc/">
+                <img src={instagram} className="social-logos" alt="" />
               </a>
 
             </div>

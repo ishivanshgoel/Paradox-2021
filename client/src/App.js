@@ -34,20 +34,40 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <nav className="navbar dark-navbar navbar-expand-lg">
-          <div className="container-fluid">
-            <a className="navbar-brand" href=''></a>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <nav className="navbar dark-navbar navbar-expand-lg " role="navigation">
+          <div className="container-fluid ">
+            <button
+              data-toggle="collapse"
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul className="navbar-nav">
+            
+            <div
+              className="collapse navbar-collapse d-flex justify-content-center"
+              id="navbarNavDropdown"
+            >
+              <ul className="navbar-nav d-flex justify-content-center">
+
+                <li className="nav-item nav__item">
+                  <Link to="/rules">Rules</Link>
+                </li>
+
                 <li className="nav-item nav__item">
                   <Link to="/">Home</Link>
                 </li>
                 <li className="nav-item nav__item">
-                  <Link to="/rules">Rules</Link>
+                  <Link to="/">
+                    <img src={Mainlogo} id="mainlogo" alt="" />
+                  </Link>
                 </li>
+                
                 {
                   user ? (
                       <li className="nav-item nav__item">
