@@ -20,19 +20,17 @@ const Playarea = ()=>{
     return(
         <section className="Playarea_heading">
             <section className="play">
-                <section className="play_profile">
-                    <div className="profile_name">
-                        saniikakulkarni
-                    </div>
-                    <div className="profile_level">
-                        Level:10
-                    </div>
-                </section>
+                <div className="profile_level">
+                    Level: 10
+                </div>
                 <section className="play_question">
                     <div className="play_img img-fluid">
                         <img src={demo} alt=""/>
                     </div>
                 </section>
+                <div className="profile_rank">
+                    Rank: 20
+                </div>
             </section>
                 <section className="play_answer">
                     <div className="input_div input-effect" onBlur={add_class}>
