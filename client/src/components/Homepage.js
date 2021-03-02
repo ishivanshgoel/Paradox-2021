@@ -7,26 +7,17 @@ import './homepage.css'
 
 // images and logos import
 import { ReactComponent as DiscordLogo } from './logos/discord.svg'
-import { ReactComponent as ParadoxLogo } from "./logos//logo1_wobg1.svg";
-import  ParadoxLogo1  from "./logos//logo1_wobg1.svg";
+import { ReactComponent as ParadoxLogo } from "./logos/logo1_wobg1.svg";
+import ParadoxLogo1 from "./logos/logo1_wobg1.svg";
 import IEEElogo from './logos/IEEE_CS1.png';
-import cnlogo from './logos/CNLOGO.svg'
-import commudle from "./logos/commudlelogo.png";
-import interviewCake from "./logos/Interview-cake.png";
-import meusec from "./logos/meusec.jpeg";
-import noobarmy from "./logos/noob-army.png";
-import offsec from "./logos/offsec-logo.svg";
-import spyse from "./logos/spyse.png";
-import instagram from "./logos/instagram.svg";
-import facebook from "./logos/facebook.svg";
-import linkedin from "./logos/linkedin.svg"; 
-import twitter from "./logos/twitter.svg";
-
-// import discordlogo from './discordblack.svg'
-import paradoxlogo from './logo2_wobg.svg'
+import Symbol from './logos/logo5.png';
+import instagram from "./logos/instagram.png";
+import github from "./logos/github.png";
+import linkedin from "./logos/linkedin.png"; 
+import ieeecsvit from "./logos/ieeecsvit.png";
 
 /**
- * @author TejasV58
+ * @author TejasV58, samankgupta
 */
 
 function Homepage() {
@@ -38,72 +29,61 @@ function Homepage() {
     }
 
     return (
-      <div className="row">
+      <div className="row m-0 wrapper">
         <div className="col-12 homepage__top">
           <div className="col-md-12 col-lg-12 d-flex justify-content-center">
-            <ParadoxLogo
-              viewBox="0 0 2600 500"
-              height="300"
-              width="1200"
-              className="paradox_logo"
-            />
+          <ParadoxLogo className="d-none"/>
+            <div className="logo">
+              <img src={Symbol} alt="" id="symbol" />
+              <h1 class="center__text glitch" data-text="PARADOX">PARADOX</h1>
+            </div>
           </div>
-          <div className="button-outer-box d-flex justify-content-center">
-            <div className="col-md-2 col-lg-2 ">
+          <div className="d-md-flex justify-content-center">
+            <div className="col-12 col-md-3 col-lg-2 my-5 my-md-0 ">
               <button className=" homebtn" onClick={handleRedirect} name="user">
                 LOGIN
               </button>
             </div>
-            <div className="col-md-2 col-lg-2">
+            <div className="col-12 col-md-3 col-lg-2 my-5 my-md-0 ">
               <button
-                className=" homebtn d-flex  justify-content-center"
+                className=" homebtn d-flex justify-content-center"
                 id="discord"
               >
-                <DiscordLogo id="DiscordLogo" />
-                <span id="DiscordLogo__text">JOIN DISCORD</span>  
+                <DiscordLogo id="DiscordLogo" className="colorchange"/>
+                JOIN DISCORD
               </button>
             </div>
-            <div className="col-md-2 col-lg-2">
+            <div className="col-12 col-md-3 col-lg-2 my-5 my-md-0 ">
               <button
                 className=" homebtn"
                 onClick={handleRedirect}
                 name="register"
               >
-                Register
+                REGISTER
               </button>
             </div>
           </div>
         </div>
-        <div className="col-8 homepage__about-section">
+        <div className="col-12 col-md-8 homepage__about-section" id="aboutnav">
           <h2 className="about-heading">
             <span>ABOUT</span>
           </h2>
-          <div className="section-description ">
-            Halocrypt is an international online cryptic hunt organized by the
-            students of DPS, Indore. The hunt consists of 50 brain wrecking
-            questions based on famous incidents, figures and internet culture.
-            The goal of the participant is to answer the questions as fast as
-            possible using the hints given to place themselves at the top of the
-            leaderboard. The top competitors who reach the highest levels in the
-            shortest amount of time shall receive the prizes. The participant is
-            free to use the internet to search for the answers. The hunt will
-            commence on the 4th of May at 12 AM IST. Halocrypt provides
-            participating students with an international platform to compete and
-            test their skills against some of the greatest cryptic hunters and
-            intellects on the globe. The competitor who completes all 50
-            questions or ends at the top of the leaderboard when the event ends,
-            shall be declared as the winner of Halocrypt 2020.
+          <div className="section-description text-justify">
+            PARADOX is a two day online cryptic hunt organised by IEEE Computer Society of VIT Chennai.
+            The 2021 edition of PARADOX will be held from 20 march 2021 12:00 AM IST to 21 march 2021 11:59 PM IST. The hunt consists of several questions in form of pictures and players would require to rack their brains to solve them and reach to an answer. <br/><br/>
+            The goal of players should be to find the answer as fast as possible to stay on top of the leaderboard. At the end of two days the player at the top of leaderboard will be declared as the winner of PARADOX 2021. 
+            This gripping competition will upskill and hone the expertise and efficiency of the competitors to solve tasks, by testing their logical and analytical skills while they search for clues all over the internet.
           </div>
         </div>
-        <div className="col-8 homepage__rules-section container">
+        <div className="col-12 col-md-8 homepage__rules-section container">
           <h2 className="about-heading">
             <span>RULES</span>
           </h2>
-          <div className="Rules-section text-wrap">
+          <div className="Rules-section text-justify" id="rulesnav">
             <Rules/>
           </div>
         </div>
-        <div className="col-8 homepage__sponsors-section container">
+        <div className="col-12 col-md-8 homepage__sponsors-section container">
           <h2 className="about-heading">
             <span>SPONSORS</span>
           </h2>
@@ -114,17 +94,16 @@ function Homepage() {
                 {/*<h3>Title sponsor</h3>*/}
               </div>
             </a>
-            <Sponsors src={offsec}></Sponsors>
-            <Sponsors src={cnlogo}></Sponsors>
-            <Sponsors src={interviewCake}></Sponsors>
-            <Sponsors src={meusec}></Sponsors>
-            <Sponsors src={commudle}></Sponsors>
-            <Sponsors src={noobarmy}></Sponsors>
-            <Sponsors src={spyse}></Sponsors>
+            <Sponsors src={ParadoxLogo1}></Sponsors>
+            <Sponsors src={ParadoxLogo1}></Sponsors>
+            <Sponsors src={ParadoxLogo1}></Sponsors>
+            <Sponsors src={ParadoxLogo1}></Sponsors>
+            <Sponsors src={ParadoxLogo1}></Sponsors>
+            <Sponsors src={ParadoxLogo1}></Sponsors>
           </div>
         </div>
         <Footer />
-        <p className="copyright">Paradox 2021 | © IEEE VITC </p>
+        <p className="copyright">Made With ❤️ by Team PARADOX | © IEEE VITC </p>
       </div>
     );
 }
@@ -142,55 +121,61 @@ function Sponsors(props){
 
 function Footer() {
   return (
-    <div className="d-flex justify-content-center">
-      <footer id="contact" className="footer">
-        <div className="footer-main container d-flex col-12 justify-content-between">
-          <div className="panel-1 d-flex justify-content-center">
-            <img src={ParadoxLogo1} width="400px" alt="" />
+    <div className="p-0">
+      <footer id="contact" className="footer text-center">
+        <div className="footer-main row m-0">
+          <div className="panel-1 d-flex justify-content-center col-12 col-md-4 my-4 my-md-0">
+            <img src={ParadoxLogo1} id="footer_logo" alt="" />
           </div>
           
-          <div className="contact-info">
+          <div className="contact-info col-12 col-md-4 my-4 my-md-0">
             <ul>
               <h2>Contact Us</h2>
               <li>
-                Vibhuti Dahiya -<em>Program Chair</em>
+                Samank Gupta - <em>cyclonite#5201</em>
               </li>
-              <li>vibhutidahiya@ieee.org</li>
+              <li>samankgupta@gmail.com</li>
               <hr />
               <li>
-                Anant Gulia -<em>Program Manager</em>
+                Tanay Bhadula - <em>davidsling#0162</em>
               </li>
-              <li>anantgulia@ieee.org</li>
+              <li>tanaybhadula2002@gmail.com </li>
               <hr />
               <li>
-                Animesh Das -<em>Program Manager</em>
+                Vedanta Trivedi - <em>vedantatrivedi#1357</em>
               </li>
-              <li>animeshxdas@gmail.com</li>
+              <li>emailid@gmail.com</li>
             </ul>
           </div>
 
-          <div className="social-panel">
+          <div className="social-panel col-12 col-md-4 my-4 my-md-0">
             <h2>Social Links</h2>
-            <div id="socials social-outer-div">
-              <a target="_BLANK" href="#">
-                <img src={facebook} className="social-logos" alt="" />
-              </a>
-
-              <a href="#" target="_BLANK">
-                <img src={twitter} className="social-logos" alt="" />
-              </a>
+            <div className="d-flex justify-content-between px-lg-5">
               <a
                 target="_BLANK"
-                href="https://www.linkedin.com/company/ieee-computer-society-vit-chennai/?originalSubdomain=in"
+                href="https://www.linkedin.com/company/ieee-computer-society-vit-chennai"
               >
                 <img src={linkedin} className="social-logos" alt="" />
               </a>
-
-              <a target="_BLANK" href="https://www.instagram.com/comsoc.vitcc/">
+              <a
+                target="_BLANK"
+                href="https://www.instagram.com/comsoc.vitcc/"
+              >
                 <img src={instagram} className="social-logos" alt="" />
               </a>
-
-            </div>
+              <a
+                target="_BLANK"
+                href="https://ieeecomsocvitcc.tk/"
+              >
+                <img src={ieeecsvit} className="social-logos" alt="" />
+              </a>
+              <a
+                target="_BLANK"
+                href="https://github.com/comsocvitc"
+              >
+                <img src={github} className="social-logos" alt="" />
+              </a>
+              </div>
           </div>
         </div>
       </footer>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import Countdown from './Countdown'
+import Countdown from './countdown'
 import Playarea from './Playarea'
 
 /**
@@ -15,7 +15,7 @@ function Play() {
 
     const history = useHistory()
 
-    const countdownDate = new Date('March 1, 2021 00:00:00').getTime()
+    const countdownDate = new Date('March 20, 2021 00:00:00').getTime()
     const now = new Date().getTime()
     const distance = countdownDate - now
 

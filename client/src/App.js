@@ -34,11 +34,12 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <nav className="navbar dark-navbar navbar-expand-lg " role="navigation">
+        <nav className="navbar dark-navbar navbar-expand-md " role="navigation">
           <div className="container-fluid ">
+          <a className="navbar-brand ml-3 d-md-none" href="/"><img src={Mainlogo} height="50" alt="" /></a>
             <button
               data-toggle="collapse"
-              className="navbar-toggler"
+              className="navbar-toggler mr-3 custom-toggler"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarNavDropdown"
@@ -53,14 +54,14 @@ function App() {
               className="collapse navbar-collapse"
               id="navbarNavDropdown"
             >
-              <ul className="navbar-nav mx-auto">
+              <ul className="navbar-nav mx-md-auto">
                 <li className="nav-item nav__item">
-                  <Link to="#">About</Link>
+                  <Link to="/#aboutnav">About</Link>
                 </li>
                 <li className="nav-item nav__item">
-                  <Link to="#">Rules</Link>
+                  <Link to="/#rulesnav">Rules</Link>
                 </li>
-                <li className="nav-item nav__item navbar__logo">
+                <li className="nav-item nav__item">
                   <Link to="/">
                     <img src={Mainlogo} id="mainlogo" alt="" />
                   </Link>

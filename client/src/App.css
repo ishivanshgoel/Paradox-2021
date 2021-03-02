@@ -15,10 +15,19 @@ body{
     width:40px;
 }
 
+.custom-toggler.navbar-toggler { 
+            border-color: rgba(118, 223, 255, 0.877);
+        }           
+        .custom-toggler .navbar-toggler-icon { 
+            background-image: url( 
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(118, 223, 255, 0.877)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
+        } 
+
 .dark-navbar{
     background:#041b30d3;
     margin:0%;
-    border-bottom:2px solid rgba(102, 222, 252, 0.637);
+    padding: 15px 0;
+    border-bottom:2px solid rgba(118, 223, 255, 0.877);
     box-shadow: 0px 0px 30px #070714;
 }
 
@@ -27,20 +36,16 @@ li.nav__item a{
 }
 
 li.nav__item a:hover{
-    color:rgba(185, 237, 252, 0.623);
+    color:rgba(118, 223, 255, 0.877);
     text-decoration: none;
 }
 
 .nav__item{
-    font-size:1.3rem;
-    /* margin: 5% 10%; */
-    margin: 10px;
+    font-size:1.35rem;
+    text-transform: uppercase;
+    margin: auto 20px;
     color:rgba(144, 233, 255, 0.637);
     font-family: 'Rajdhani', sans-serif;
-}
-
-.navbar-toggler-icon{
-    background-image: url("./components/logos/logo5.png")!important;
 }
 
 .app__body{
@@ -48,8 +53,9 @@ li.nav__item a:hover{
 }
 
 /*##### mobile view ###### */
-@media only screen and (max-width: 990px) {
-    .navbar__logo{
+@media only screen and (max-width: 767px) {
+
+    #mainlogo{
         display: none;
     }
 }
