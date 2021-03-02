@@ -14,7 +14,7 @@ import POST_Request from '../../Helper/PostRequest'
 function Login() {
 
     // fetch from store
-    const user = false
+    const user = true
 
     const history = useHistory()
 
@@ -70,8 +70,8 @@ function Login() {
               </div>
 
               <div className="editor-field__container">
-                <input type="text" className="editor-field__input" onfocus="generateNoise(this, 'input')"
-                  onblur="removeNoise(this, 'input')" required/>
+                <input type="text" className="editor-field__input" onFocus="generateNoise(this, 'input')"
+                  onBlur="removeNoise(this, 'input')" required/>
               </div>
               <span className="editor-field__bottom"></span>
               <div className="editor-field__noise"></div>
@@ -82,14 +82,14 @@ function Login() {
               </div>
 
               <div className="editor-field__container">
-                <input type="password" className="editor-field__input" onfocus="generateNoise(this, 'input')"
-                  onblur="removeNoise(this, 'input')" required/>
+                <input type="password" className="editor-field__input" onFocus="generateNoise(this, 'input')"
+                  onBlur="removeNoise(this, 'input')" required/>
               </div>
               <span className="editor-field__bottom"></span>
               <div className="editor-field__noise"></div>
             </div>
-            <div className="btn btn--primary" onmouseover="generateNoise(this, 'button')"
-              onmouseout="removeNoise(this, 'button')">
+            <div className="btn btn--primary" onMouseOver="generateNoise(this, 'button')"
+              onMouseOut="removeNoise(this, 'button')">
               <div className="btn__container">
                 Login
               </div>
