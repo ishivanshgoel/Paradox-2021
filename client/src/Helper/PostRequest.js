@@ -4,9 +4,9 @@ const BASE_URL = "http://localhost:5000"
 
 const endPoints = {
 
-    login: "/user/login",
-    register: "/user/register",
-    evaluate: "/user/evaluate",
+    login: "/userServer/login",
+    register: "/userServer/register",
+    evaluate: "/userServer/evaluate",
 
 }
 

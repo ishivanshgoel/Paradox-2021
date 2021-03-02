@@ -8,6 +8,7 @@ const mongoose = require('mongoose')
 const connection = require('./Database/Config/connection')
 const user = require('./Router/User/user')
 const admin = require('./Router/Admin/admin')
+const path = require('path');
 const app = express()
 
 //connect to database
@@ -32,14 +33,22 @@ app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(cors())
 
+//static
+app.use(express.static(path.join(__dirname, 'client/build')));
+
 // logs
 app.use(morgan('dev'))
 
 
 // Routes
 
-app.use("/user",user)
-app.use("/admin",admin)
+app.get("/*", (req, res) => {
+    console.log("Serve static")
+    res.sendFile(path.join(__dirname, '.' ,"/client/build", "index.html"));
+});
+
+app.use("/userServer",user)
+app.use("/adminServer",admin)
 
 // not found route
 app.use(async (req, res, next)=>{

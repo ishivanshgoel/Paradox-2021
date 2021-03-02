@@ -4,9 +4,9 @@ const BASE_URL = "http://localhost:5000"
 
 const endPoints = {
     // user auth
-    leaderboard: "/user/leaderboard",
-    logout: "/user/logout",
-    nextlevel: "/user/nextlevel"
+    leaderboard: "/userServer/leaderboard",
+    logout: "/userServer/logout",
+    nextlevel: "/userServer/nextlevel"
 }
 
 var urlBuilder = (endPoint, id = null) => {
