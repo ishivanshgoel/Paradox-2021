@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.28a7ad22.chunk.css",
+    "main.js": "/static/js/main.9a98b79b.chunk.js",
+    "main.js.map": "/static/js/main.9a98b79b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e2cd39fa.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e2cd39fa.js.map",
+    "static/css/2.150d169a.chunk.css": "/static/css/2.150d169a.chunk.css",
+    "static/js/2.ae84a660.chunk.js": "/static/js/2.ae84a660.chunk.js",
+    "static/js/2.ae84a660.chunk.js.map": "/static/js/2.ae84a660.chunk.js.map",
+    "static/js/3.4f637d7c.chunk.js": "/static/js/3.4f637d7c.chunk.js",
+    "static/js/3.4f637d7c.chunk.js.map": "/static/js/3.4f637d7c.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.150d169a.chunk.css.map": "/static/css/2.150d169a.chunk.css.map",
+    "static/css/main.28a7ad22.chunk.css.map": "/static/css/main.28a7ad22.chunk.css.map",
+    "static/js/2.ae84a660.chunk.js.LICENSE.txt": "/static/js/2.ae84a660.chunk.js.LICENSE.txt",
+    "static/media/CNLOGO.f97fc255.svg": "/static/media/CNLOGO.f97fc255.svg",
+    "static/media/IEEE_CS1.4ff42049.png": "/static/media/IEEE_CS1.4ff42049.png",
+    "static/media/bullet.9001d508.png": "/static/media/bullet.9001d508.png",
+    "static/media/commudlelogo.d0957e55.png": "/static/media/commudlelogo.d0957e55.png",
+    "static/media/demo.700c1f11.jpg": "/static/media/demo.700c1f11.jpg",
+    "static/media/discord.5eaf2ac5.svg": "/static/media/discord.5eaf2ac5.svg",
+    "static/media/facebook.1e19bda1.svg": "/static/media/facebook.1e19bda1.svg",
+    "static/media/instagram.561d8000.svg": "/static/media/instagram.561d8000.svg",
+    "static/media/linkedin.81abdb19.svg": "/static/media/linkedin.81abdb19.svg",
+    "static/media/logo1_wobg1.8fafc210.svg": "/static/media/logo1_wobg1.8fafc210.svg",
+    "static/media/logo2_wobg.43f97f85.svg": "/static/media/logo2_wobg.43f97f85.svg",
+    "static/media/App.css": "/static/media/logo5.0867bc11.png",
+    "static/media/meusec.9f673165.jpeg": "/static/media/meusec.9f673165.jpeg",
+    "static/media/noob-army.e9a3cccb.png": "/static/media/noob-army.e9a3cccb.png",
+    "static/media/offsec-logo.85cd9b57.svg": "/static/media/offsec-logo.85cd9b57.svg",
+    "static/media/spyse.55819f7e.png": "/static/media/spyse.55819f7e.png",
+    "static/media/twitter.2d6ea195.svg": "/static/media/twitter.2d6ea195.svg",
+    "static/media/youtube.f76d73fc.jpg": "/static/media/youtube.f76d73fc.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e2cd39fa.js",
+    "static/css/2.150d169a.chunk.css",
+    "static/js/2.ae84a660.chunk.js",
+    "static/css/main.28a7ad22.chunk.css",
+    "static/js/main.9a98b79b.chunk.js"
+  ]
+}
