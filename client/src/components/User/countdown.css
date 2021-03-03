@@ -42,10 +42,17 @@
   font-size:30px;
 }
 
-/* @media screen and (max-width: 480px) {
-  .timer div:last-child {
-    margin-left: auto;
-    padding: 2% 1%;
+ @media screen and (max-width: 480px) {
+  .timer_section p:first-child,
+  .timer div:last-child span {
+    font-size: 21vw;
   }
-} */
+  .timer_label{
+    font-size:25px;
+  }
+  .timer div:first-child h2 {
+    font-size: 45px;
+    margin-bottom: 60px;
+  }
+} 
 
