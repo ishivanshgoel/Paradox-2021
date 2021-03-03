@@ -6,17 +6,190 @@
     margin: 10% 0;
 }
 #symbol{
-    height: 150px;
+    height: 140px;
     width: auto;
-    margin-right: 50px;
 }
-.center__text {
+/*.center__text {
   margin: auto;
   font-family: Robodron;
-  font-size: 5vw;
+  font-size: 3.8vw;
   font-weight: bolder;
   text-transform: uppercase;
 }
+*/
+
+.logo h1.glitch {
+  color: #56c9d6;
+  font-family: Robodron;
+  font-weight: 800;
+  position: relative;
+  font-size: 3.9vw;
+  padding: 60px;
+}
+.logo:hover > h1.glitch::before, .logo:hover > h1.glitch::after {
+  padding: 3.9vw;
+  color: #018594;
+  content: "PARADOX";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow: hidden;
+  top: 0;
+}
+.logo:hover > h1.glitch::before {
+  left: 3px;
+  text-shadow: -2px 0 red;
+  animation-name: glitch-animation-1;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse-alternate;
+}
+.logo:hover > h1.glitch::after {
+  left: -3px;
+  text-shadow: -2px 0 blue;
+  animation-name: glitch-animation-2;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse-alternate;
+}
+
+@keyframes glitch-animation-1 {
+  0% {
+    clip: rect(88px, 1000px, 103px, 50px);
+  }
+  5% {
+    clip: rect(69px, 1000px, 49px, 50px);
+  }
+  10% {
+    clip: rect(31px, 1000px, 34px, 50px);
+  }
+  15% {
+    clip: rect(37px, 1000px, 66px, 50px);
+  }
+  20% {
+    clip: rect(60px, 1000px, 44px, 50px);
+  }
+  25% {
+    clip: rect(83px, 1000px, 39px, 50px);
+  }
+  30% {
+    clip: rect(15px, 1000px, 31px, 50px);
+  }
+  35% {
+    clip: rect(129px, 1000px, 89px, 50px);
+  }
+  40% {
+    clip: rect(49px, 1000px, 17px, 50px);
+  }
+  45% {
+    clip: rect(89px, 1000px, 72px, 50px);
+  }
+  50% {
+    clip: rect(124px, 1000px, 144px, 50px);
+  }
+  55% {
+    clip: rect(48px, 1000px, 36px, 50px);
+  }
+  60% {
+    clip: rect(34px, 1000px, 47px, 50px);
+  }
+  65% {
+    clip: rect(87px, 1000px, 110px, 50px);
+  }
+  70% {
+    clip: rect(105px, 1000px, 97px, 50px);
+  }
+  75% {
+    clip: rect(45px, 1000px, 110px, 50px);
+  }
+  80% {
+    clip: rect(1px, 1000px, 105px, 50px);
+  }
+  85% {
+    clip: rect(111px, 1000px, 78px, 50px);
+  }
+  90% {
+    clip: rect(1px, 1000px, 52px, 50px);
+  }
+  95% {
+    clip: rect(138px, 1000px, 102px, 50px);
+  }
+  100% {
+    clip: rect(44px, 1000px, 15px, 50px);
+  }
+}
+@keyframes glitch-animation-2 {
+  0% {
+    clip: rect(12px, 1000px, 107px, 50px);
+  }
+  5% {
+    clip: rect(150px, 1000px, 112px, 50px);
+  }
+  10% {
+    clip: rect(146px, 1000px, 71px, 50px);
+  }
+  15% {
+    clip: rect(46px, 1000px, 125px, 50px);
+  }
+  20% {
+    clip: rect(40px, 1000px, 6px, 50px);
+  }
+  25% {
+    clip: rect(107px, 1000px, 57px, 50px);
+  }
+  30% {
+    clip: rect(68px, 1000px, 148px, 50px);
+  }
+  35% {
+    clip: rect(117px, 1000px, 150px, 50px);
+  }
+  40% {
+    clip: rect(138px, 1000px, 70px, 50px);
+  }
+  45% {
+    clip: rect(1px, 1000px, 62px, 50px);
+  }
+  50% {
+    clip: rect(104px, 1000px, 144px, 50px);
+  }
+  55% {
+    clip: rect(29px, 1000px, 8px, 50px);
+  }
+  60% {
+    clip: rect(143px, 1000px, 115px, 50px);
+  }
+  65% {
+    clip: rect(21px, 1000px, 50px, 50px);
+  }
+  70% {
+    clip: rect(110px, 1000px, 41px, 50px);
+  }
+  75% {
+    clip: rect(51px, 1000px, 91px, 50px);
+  }
+  80% {
+    clip: rect(132px, 1000px, 134px, 50px);
+  }
+  85% {
+    clip: rect(16px, 1000px, 74px, 50px);
+  }
+  90% {
+    clip: rect(100px, 1000px, 22px, 50px);
+  }
+  95% {
+    clip: rect(66px, 1000px, 103px, 50px);
+  }
+  100% {
+    clip: rect(62px, 1000px, 50px, 50px);
+  }
+}
+
+/*
 .glitch {
   position: relative;
   color: #56c9d6;
@@ -135,7 +308,7 @@
     left: -1px;
     clip: rect(31px, 9999px, 149px, 0);
   }
-}
+}*/
 
 .homepage__main{
     height: 100vh;
@@ -184,7 +357,7 @@ h2.about-heading:after {
 }
 
 .section-description{
-    font-size:22px;
+    font-size:2.5vh;
     margin:3%;
     padding:2%;
     white-space: pre-line;
@@ -193,7 +366,7 @@ h2.about-heading:after {
 
 .about-heading{
     font-size:45px;
-    margin:5% auto;
+    margin:0 auto 5% auto;
     margin-bottom:3%;
     background-color: transparent;
 
@@ -253,8 +426,9 @@ h2.about-heading:after {
     filter: invert(85%) sepia(100%) saturate(7481%) hue-rotate(183deg) brightness(100%) contrast(100%);
 }
 
-
-
+.highlight{
+    color: rgb(118, 223, 255);
+}
 
 .homepage__sponsors-section , .homepage__rules-section{
     margin-top:2%;

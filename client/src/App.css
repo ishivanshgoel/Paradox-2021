@@ -48,7 +48,7 @@ li.nav__item a:hover{
     font-family: 'Rajdhani', sans-serif;
 }
 
-.app__body{
+.App{
     min-height: 100vh;
 }
 

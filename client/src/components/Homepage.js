@@ -29,13 +29,13 @@ function Homepage() {
     }
 
     return (
-      <div className="row m-0 wrapper">
+      <div className="row m-0">
         <div className="col-12 homepage__top">
           <div className="col-md-12 col-lg-12 d-flex justify-content-center">
           <ParadoxLogo className="d-none"/>
             <div className="logo">
               <img src={Symbol} alt="" id="symbol" />
-              <h1 class="center__text glitch" data-text="PARADOX">PARADOX</h1>
+              <h1 class="glitch" data-text="PARADOX">PARADOX</h1>
             </div>
           </div>
           <div className="d-md-flex justify-content-center">
@@ -69,17 +69,17 @@ function Homepage() {
             <span>ABOUT</span>
           </h2>
           <div className="section-description text-justify">
-            PARADOX is a two day online cryptic hunt organised by IEEE Computer Society of VIT Chennai.
-            The 2021 edition of PARADOX will be held from 20 march 2021 12:00 AM IST to 21 march 2021 11:59 PM IST. The hunt consists of several questions in form of pictures and players would require to rack their brains to solve them and reach to an answer. <br/><br/>
+            <span className="highlight">PARADOX</span> is a two day online cryptic hunt organised by IEEE Computer Society of VIT Chennai.
+            The 2021 edition of PARADOX will be held from <span className="highlight">20 march 2021</span> 12:00 AM IST to <span className="highlight">21 march 2021</span> 11:59 PM IST. The hunt consists of several questions in form of pictures and players would require to rack their brains to solve them and reach to an answer. <br/><br/>
             The goal of players should be to find the answer as fast as possible to stay on top of the leaderboard. At the end of two days the player at the top of leaderboard will be declared as the winner of PARADOX 2021. 
             This gripping competition will upskill and hone the expertise and efficiency of the competitors to solve tasks, by testing their logical and analytical skills while they search for clues all over the internet.
           </div>
         </div>
-        <div className="col-12 col-md-8 homepage__rules-section container">
+        <div className="col-12 col-md-8 homepage__rules-section container" id="rulesnav">
           <h2 className="about-heading">
             <span>RULES</span>
           </h2>
-          <div className="Rules-section text-justify" id="rulesnav">
+          <div className="Rules-section text-justify">
             <Rules/>
           </div>
         </div>
@@ -142,9 +142,9 @@ function Footer() {
               <li>tanaybhadula2002@gmail.com </li>
               <hr />
               <li>
-                Vedanta Trivedi - <em>vedantatrivedi#1357</em>
+                JS Abhishek - <em>JS ABHISHEK#7964</em>
               </li>
-              <li>emailid@gmail.com</li>
+              <li>jsabhishek2001@gmail.com</li>
             </ul>
           </div>
 
