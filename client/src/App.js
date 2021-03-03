@@ -56,10 +56,10 @@ function App() {
             >
               <ul className="navbar-nav mx-md-auto">
                 <li className="nav-item nav__item">
-                  <Link to="/#aboutnav">About</Link>
+                  <a href="/#aboutnav">About</a>
                 </li>
                 <li className="nav-item nav__item">
-                  <Link to="/#rulesnav">Rules</Link>
+                  <a href="/#rulesnav">Rules</a>
                 </li>
                 <li className="nav-item nav__item">
                   <Link to="/">
