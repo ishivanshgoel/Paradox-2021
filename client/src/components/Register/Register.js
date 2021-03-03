@@ -2,17 +2,19 @@ import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./register_css/register.css"
+import focus from '../focus';
 
 // Requests
 import POST_Request from '../../Helper/PostRequest'
 
 /**
  * Level 1 Route - /register
- * @author TanayBhadula, ishivanshgoel
+ * @author TanayBhadula, ishivanshgoel, samankgupta
  */
 
 function Register() {
 
+  focus();
   //fetch from store
   const user = false
 
@@ -104,26 +106,70 @@ function Register() {
 
     !user?(
 
-    <div class="container p-0" onSubmit={handleSubmit}>
-      <div class="row">
-        <div class="col-12 offset-lg-3 col-lg-6 offset-md-2 col-md-8 p-0">
-          <form class="register__box">
-            <h1>Register</h1>
-            {
-              message.display?(<p style={ {color: message.color} }>{message.message}</p>):(null)
-            }
-            <input type="text" name="name" placeholder="Name" required onChange={(event) => setName(event.target.value)} />
-            <input type="text" name="userName" placeholder="username" required onChange={(event) => setuserName(event.target.value)} />
-            <input type="text" name="email" placeholder="Email" required onChange={(event) => setEmail(event.target.value)} />
-            <input type="text" name="discord" placeholder="Discord userName" required onChange={(event) => setDiscord(event.target.value)} />
-            <input type="text" name="institutionName" placeholder="Institution Name" required onChange={(event) => setinstitutionName(event.target.value)} />
-            <input type="password" name="password" placeholder="Password" required onChange={(event) => setPassword(event.target.value)} />
-            <input type="password" name="cpassword" placeholder="Confirm Password" required onChange={(event) => setcPassword(event.target.value)} />
-            <input type="submit" name="login" />
-          </form>
+    <div className="register_container">
+        <h1>REGISTER</h1>
+            <div className="editor-field editor-field__textbox">
+              <div className="editor-field__label-container">
+                <label className="editor-field__label">Name</label>
+              </div>
+              <div className="editor-field__container">
+                <input type="text" className="editor-field__input" placeholder="John Doe" required onChange={(event) => setName(event.target.value)} />
+              </div>
+            </div>
+            <div className="editor-field editor-field__textbox">
+              <div className="editor-field__label-container">
+                <label className="editor-field__label">Username</label>
+              </div>
+              <div className="editor-field__container">
+                <input type="text" className="editor-field__input" placeholder="john.doe" required onChange={(event) => setuserName(event.target.value)} />
+              </div>
+            </div>
+            <div className="editor-field editor-field__textbox">
+              <div className="editor-field__label-container">
+                <label className="editor-field__label">Email</label>
+              </div>
+              <div className="editor-field__container">
+                <input type="email" className="editor-field__input" placeholder="john.doe@example.com" required onChange={(event) => setEmail(event.target.value)} />
+              </div>
+            </div>
+            <div className="editor-field editor-field__textbox">
+              <div className="editor-field__label-container">
+                <label className="editor-field__label">Discord Username</label>
+              </div>
+              <div className="editor-field__container">
+                <input type="text" className="editor-field__input" placeholder="username#1234" required onChange={(event) => setDiscord(event.target.value)} />
+              </div>
+            </div>
+            <div className="editor-field editor-field__textbox">
+              <div className="editor-field__label-container">
+                <label className="editor-field__label">Institution Name</label>
+              </div>
+              <div className="editor-field__container">
+                <input type="text" className="editor-field__input" placeholder="VIT Chennai" required onChange={(event) => setinstitutionName(event.target.value)} />
+              </div>
+            </div>
+            <div className="editor-field editor-field__textbox">
+              <div className="editor-field__label-container">
+                <label className="editor-field__label">Password</label>
+              </div>
+              <div className="editor-field__container">
+                <input type="password" className="editor-field__input" placeholder="password" required onChange={(event) => setPassword(event.target.value)} />
+              </div>
+            </div>
+            <div className="editor-field editor-field__textbox">
+              <div className="editor-field__label-container">
+                <label className="editor-field__label">Confirm Password</label>
+              </div>
+              <div className="editor-field__container">
+                <input type="password" className="editor-field__input" placeholder="password" required onChange={(event) => setcPassword(event.target.value)} />
+              </div>
+            </div>
+            <div className="btn--primary mt-4">
+              <div className="btn__container">
+                Register
+              </div>
+            </div>
         </div>
-      </div>
-    </div>
     ):(
       <div>
         {

@@ -1,83 +1,126 @@
-.register__box{
-  margin: 110px 0 170px 0;  
-  text-align: center;
+.register_container {
+  width: 300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
-
-.register__boxtwo{
-  margin: 80px 0;
+.register_container h1 {
+  font-size: 50px;
+  color: #56c9d6;
+  margin: 80px 0 40px;
+  align-self: center;
 }
-
-.register__box > h1{
-  color: #46db46;
+.editor-field {
+  width: 300px;
+  height: 64px;
+  position: relative;
+  margin: 14px 0;
+}
+.editor-field__container {
+  clip-path: polygon(0% 0%, calc(100% - 8px) 0, 100% 8px, 100% 100%, 95% 100%, calc(0% + 8px) 100%, 0% calc(100% - 8px), 0% calc(100% + 8px));
+  border: 2px solid #018594;
+  width: 100%;
+  height: 48px;
+  position: absolute;
+  bottom: 2px;
+}
+.editor-field__container:before, .editor-field__container:after {
+  content: "";
+  height: 2px;
+  width: 11.5px;
+  background: #018594;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-radius: 5px;
+}
+.editor-field__container:before {
+  right: -3.1px;
+  top: 1.6px;
+}
+.editor-field__container:after {
+  left: -3.1px;
+  bottom: 1.6px;
+}
+.editor-field__label-container {
+  position: absolute;
+  top: 0px;
+}
+.editor-field__label {
+  position: relative;
+  display: block;
+  height: 16px;
+  width: auto;
+  background: #018594;
+  left: 0px;
+  color: #0F1020;
+  font-size: 9px;
   text-transform: uppercase;
-  font-weight: 500;
-  font-size: 40px;
-  margin: 40px 0;
+  letter-spacing: 1.25px;
+  font-weight: 600;
+  padding: 0 24px 0 16px;
+  display: flex;
+  align-items: center;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 0% 100%);
 }
-
-.register__box > input{
-  border:0;
-  background: none;
-  display: block;
-  margin: 25px auto;
-  text-align: center;
-  border: 2px solid #f0ad4e ;
-  padding: 12px 10px;
-  width: 280px;
+.editor-field__input {
+  width: 100%;
+  height: 100%;
+  border: none;
   outline: none;
-  color: white;
-  font-size: 14px;
-  border-radius: 30px;
-  transition: 0.25s;
+  background: #0F1020;
+  color: #B3B5D2;
+  padding: 8px 16px;
+  letter-spacing: 0.2px;
 }
-
-.register__box > input:focus{
-  width: 350px;
-  border-color: #46db46;
+.editor-field:hover .editor-field__container, .editor-field.is-focused .editor-field__container {
+  border-color: #56c9d6;
 }
-
-.register__box > input[type = "submit"]{
-  width: 130px;
-  border:0;
+.editor-field:hover .editor-field__container:after, .editor-field:hover .editor-field__container:before, .editor-field.is-focused .editor-field__container:after, .editor-field.is-focused .editor-field__container:before {
+  background: #56c9d6 !important;
+}
+.editor-field:hover .editor-field__label-container:after, .editor-field.is-focused .editor-field__label-container:after {
+  background: #56c9d6;
+}
+.editor-field:hover .editor-field__label, .editor-field.is-focused .editor-field__label{
+  background: #56c9d6;
+}
+.btn--primary{
+  align-self: center;
+}
+.btn--primary .btn__container {
+  background: #383CAB;
+  border-color: #5054c6;
+  display: flex;
+  align-items: center;
+  line-height: 10px;
+  pointer-events: none;
+  color: #dedff4;
+  margin: 15px 0 80px;
+}
+.btn--primary:hover .btn__container {
+  background: #34389f;
+  border-color: #494dc3;
+}
+.btn--primary:active .btn__container {
+  background: #2e318c;
+  border-color: #3b3fb3;
+  color: #c3c5ec;
+}
+.btn__container {
+  height: 100%;
   background: none;
-  display: block;
-  margin: 35px auto;
-  text-align: center;
-  border: 2px solid #46db46;
-  padding: 14px 40px;
-  outline: none;
+  border: none;
   color: white;
-  border-radius: 24px;
-  transition: 0.25s;
-  cursor: pointer;
+  padding: 0 24px;
+  height: 48px;
+  border: 2px solid;
+  clip-path: polygon(0% 0%, calc(100% - 8px) 0, 100% 8px, 100% 100%, 95% 100%, calc(0% + 8px) 100%, 0% calc(100% - 8px), 0% 20%);
 }
 
-.register__box > input[type = "submit"]:hover{
-  background: #46db46;
-  color: black;
-}
-
-.register__boxtwo > input[type = "submit"]{
-  margin: 40px auto 100px;
-}
-
-.register__box > a{
-  text-decoration: none;
-  color: white;
-  font-size: 14px;
-  margin: 20px 40px;
-}
-
-.register__box > a:hover{
-  color: rgb(220,220,220);
-}
-
-
-@media (max-width:576px){
-  .box input[type = "text"]:focus,.box input[type = "password"]:focus{
-    width: 320px;
-  }
-}
 /**
-@author: TanayBhadula
+@author: samankgupta
 */

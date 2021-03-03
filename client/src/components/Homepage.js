@@ -9,6 +9,7 @@ import './homepage.css'
 import { ReactComponent as DiscordLogo } from './logos/discord.svg'
 import { ReactComponent as ParadoxLogo } from "./logos/logo1_wobg1.svg";
 import ParadoxLogo1 from "./logos/logo1_wobg1.svg";
+import ParadoxLogoMobile from "./logos/logo1_wobg1.png";
 import IEEElogo from './logos/IEEE_CS1.png';
 import Symbol from './logos/logo5.png';
 import instagram from "./logos/instagram.png";
@@ -32,11 +33,11 @@ function Homepage() {
       <div className="row m-0">
         <div className="col-12 homepage__top">
           <div className="col-md-12 col-lg-12 d-flex justify-content-center">
-          <ParadoxLogo className="d-none"/>
-            <div className="logo">
-              <img src={Symbol} alt="" id="symbol" />
-              <h1 class="glitch" data-text="PARADOX">PARADOX</h1>
-            </div>
+          <ParadoxLogo
+            viewBox="0 0 2600 500"
+            className="paradox_logo d-none d-md-block"
+          />
+          <img src={ParadoxLogoMobile} className="ParadoxLogoMobile d-md-none my-5" />
           </div>
           <div className="d-md-flex justify-content-center">
             <div className="col-12 col-md-3 col-lg-2 my-5 my-md-0 ">
@@ -70,7 +71,7 @@ function Homepage() {
           </h2>
           <div className="section-description text-justify">
             <span className="highlight">PARADOX</span> is a two day online cryptic hunt organised by IEEE Computer Society of VIT Chennai.
-            The 2021 edition of PARADOX will be held from <span className="highlight">20 march 2021</span> 12:00 AM IST to <span className="highlight">21 march 2021</span> 11:59 PM IST. The hunt consists of several questions in form of pictures and players would require to rack their brains to solve them and reach to an answer. <br/><br/>
+            The 2021 edition of PARADOX will be held from <span className="highlight">20 march 2021 12:00 AM IST</span> to <span className="highlight">21 march 2021 11:59 PM IST</span>. The hunt consists of several questions in form of pictures and players would require to rack their brains to solve them and reach to an answer. <br/><br/>
             The goal of players should be to find the answer as fast as possible to stay on top of the leaderboard. At the end of two days the player at the top of leaderboard will be declared as the winner of PARADOX 2021. 
             This gripping competition will upskill and hone the expertise and efficiency of the competitors to solve tasks, by testing their logical and analytical skills while they search for clues all over the internet.
           </div>
@@ -88,7 +89,7 @@ function Homepage() {
             <span>SPONSORS</span>
           </h2>
           <div className="sponsors-section text-wrap">
-            <a href="" id="ieee-link" className="col-8">
+            <a href="" id="ieee-link" className="col-12">
               <div className="card sponsor-tiles" id="ieeelogo">
                 <img src={IEEElogo} alt="" />
                 {/*<h3>Title sponsor</h3>*/}

@@ -2,19 +2,21 @@ import React,{ useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./login_css/loginstyle.css";
-
+import focus from '../focus';
 // Requests
 import POST_Request from '../../Helper/PostRequest'
 
 /**
  * Level 1 Route - /user
- * @author TanayBhadula, ishivanshgoel
+ * @author TanayBhadula, ishivanshgoel, samankgupta
  */
 
 function Login() {
 
+    focus();
+
     // fetch from store
-    const user = true
+    const user = false
 
     const history = useHistory()
 
@@ -64,37 +66,27 @@ function Login() {
         */
 
        <div className="login_container">
+        <h1>LOGIN</h1>
             <div className="editor-field editor-field__textbox">
               <div className="editor-field__label-container">
                 <label className="editor-field__label">Name</label>
               </div>
-
               <div className="editor-field__container">
-                <input type="text" className="editor-field__input" onFocus="generateNoise(this, 'input')"
-                  onBlur="removeNoise(this, 'input')" required/>
+                <input type="text" className="editor-field__input" required/>
               </div>
-              <span className="editor-field__bottom"></span>
-              <div className="editor-field__noise"></div>
             </div>
             <div className="editor-field editor-field__textbox">
               <div className="editor-field__label-container">
                 <label className="editor-field__label">Password</label>
               </div>
-
               <div className="editor-field__container">
-                <input type="password" className="editor-field__input" onFocus="generateNoise(this, 'input')"
-                  onBlur="removeNoise(this, 'input')" required/>
+                <input type="password" className="editor-field__input" required/>
               </div>
-              <span className="editor-field__bottom"></span>
-              <div className="editor-field__noise"></div>
             </div>
-            <div className="btn btn--primary" onMouseOver="generateNoise(this, 'button')"
-              onMouseOut="removeNoise(this, 'button')">
+            <div className="btn--primary mt-4">
               <div className="btn__container">
                 Login
               </div>
-              <div className="btn__bottom"></div>
-              <div className="btn__noise"></div>
             </div>
         </div>
       ):(
