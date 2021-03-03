@@ -1,6 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import Countdown from './Countdown'
+import Countdown from './countdown'
 import Playarea from './Playarea'
 
 /**
