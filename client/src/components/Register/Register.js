@@ -88,8 +88,8 @@ function Register() {
       else {
         setMessage({
           display: true,
-          color: 'blue',
-          message: 'You are already registered!! Please try logging in'
+          color: 'red',
+          message: 'You are already registered or Some Internal Server Error !!'
         })
       }
     } catch(err){
@@ -107,7 +107,11 @@ function Register() {
     !user?(
 
     <div className="register_container">
+      <form onSubmit={handleSubmit}>
         <h1>REGISTER</h1>
+          {
+            message.display ? (<p style={{ color:message.color }}>{message.message}</p>):(null)
+          }
             <div className="editor-field editor-field__textbox">
               <div className="editor-field__label-container">
                 <label className="editor-field__label">Name</label>
@@ -164,11 +168,12 @@ function Register() {
                 <input type="password" className="editor-field__input" placeholder="password" required onChange={(event) => setcPassword(event.target.value)} />
               </div>
             </div>
-            <div className="btn--primary mt-4">
-              <div className="btn__container">
+            {/* <div /className="btn--primary mt-4"> */}
+              <button type="submit" className="btn__container">
                 Register
-              </div>
-            </div>
+              </button>
+            {/* </div> */}
+            </form>
         </div>
     ):(
       <div>
