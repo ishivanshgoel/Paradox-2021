@@ -9,7 +9,7 @@
   font-size: 50px;
   color: #56c9d6;
   margin: 80px 0 40px;
-  align-self: center;
+  text-align: center;
 }
 .editor-field {
   width: 300px;
@@ -95,11 +95,10 @@
   background: #383CAB;
   border-color: #5054c6;
   display: flex;
-  align-items: center;
   line-height: 10px;
   pointer-events: none;
   color: #dedff4;
-  margin: 15px 0 80px;
+  margin: 40px auto 80px;
 }
 .btn--primary:hover .btn__container {
   background: #34389f;

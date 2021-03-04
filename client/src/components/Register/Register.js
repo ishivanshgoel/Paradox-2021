@@ -107,7 +107,7 @@ function Register() {
     !user?(
 
     <div className="register_container">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="btn--primary">
         <h1>REGISTER</h1>
           {
             message.display ? (<p style={{ color:message.color }}>{message.message}</p>):(null)
