@@ -24,7 +24,7 @@ import Play from './components/User/Play'
 import Leaderboard from './components/User/Leaderboard'
 
 // images
-import Mainlogo from './components/logos/logo5.png'
+import Mainlogo from './components/logos/logo6.png'
 
 function App() {
 
