@@ -4,7 +4,7 @@ node_modules
 package-lock.json
 
 # Database credentials
-/Database/Config/credentials.json 
+# /Database/Config/credentials.json 
 
 
 # Client
