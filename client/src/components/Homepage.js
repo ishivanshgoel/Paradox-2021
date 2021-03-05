@@ -7,8 +7,8 @@ import './homepage.css'
 
 // images and logos import
 import { ReactComponent as DiscordLogo } from './logos/discord.svg'
-import { ReactComponent as ParadoxLogo } from "./logos/logo1_wobg1.svg";
-import ParadoxLogo1 from "./logos/logo1_wobg1.svg";
+import { ReactComponent as ParadoxLogo } from "./logos/homepage_logo.svg";
+import ParadoxLogo1 from "./logos/homepage_logo.svg";
 import ParadoxLogoMobile from "./logos/logo1_wobg1.png";
 import IEEElogo from './logos/IEEE_CS1.png';
 import Symbol from './logos/logo5.png';
@@ -33,11 +33,11 @@ function Homepage() {
       <div className="row m-0">
         <div className="col-12 homepage__top">
           <div className="col-md-12 col-lg-12 d-flex justify-content-center">
-          <ParadoxLogo
-            viewBox="0 0 2600 500"
-            className="paradox_logo d-none d-md-block"
-          />
-          <img src={ParadoxLogoMobile} className="ParadoxLogoMobile d-md-none my-5" />
+            <ParadoxLogo
+              viewBox="0 0 530 150"
+              className="paradox_logo d-none d-md-block"
+            />
+            <img src={ParadoxLogoMobile} className="ParadoxLogoMobile d-md-none my-5" />
           </div>
           <div className="d-md-flex justify-content-center">
             <div className="col-12 col-md-3 col-lg-2 my-5 my-md-0 ">

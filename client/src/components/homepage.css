@@ -22,7 +22,7 @@
 }
 
 .button-outer-box{
-    margin:2% auto;
+    margin:1% auto;
     display:inline-block;
 }
 
@@ -225,7 +225,7 @@ h2.about-heading:after {
 }
 
 .homepage__top{
-    min-height: 100vh;
+    min-height: 90vh;
 }
 #footer_logo{
     width: 400px;
