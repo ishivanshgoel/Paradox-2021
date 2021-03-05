@@ -18,7 +18,7 @@ function Leaderboard() {
         !user ? (
             <div>
                 {
-                    history.push('/user')
+                    history.push('/user/play')
                 }
             </div>
         ) : (

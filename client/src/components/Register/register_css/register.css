@@ -91,25 +91,24 @@
 .btn--primary{
   align-self: center;
 }
-.btn--primary .btn__container {
+.btn--primary .register__button {
   background: #383CAB;
   border-color: #5054c6;
   display: flex;
   line-height: 10px;
-  pointer-events: none;
   color: #dedff4;
   margin: 40px auto 80px;
 }
-.btn--primary:hover .btn__container {
+ .btn--primary:hover .register__button {
   background: #34389f;
   border-color: #494dc3;
 }
-.btn--primary:active .btn__container {
+.btn--primary:active .register__button {
   background: #2e318c;
   border-color: #3b3fb3;
   color: #c3c5ec;
 }
-.btn__container {
+ .register__button {
   height: 100%;
   background: none;
   border: none;
@@ -117,6 +116,8 @@
   padding: 0 24px;
   height: 48px;
   border: 2px solid;
+  justify-content: center;
+  align-items: center;
   clip-path: polygon(0% 0%, calc(100% - 8px) 0, 100% 8px, 100% 100%, 95% 100%, calc(0% + 8px) 100%, 0% calc(100% - 8px), 0% 20%);
 }
 

@@ -37,11 +37,11 @@ function Register() {
   })
 
   function validatePassword() {
-    var regex=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,32}$/
-    if(regex.test(password)) { 
-        if(password!==cpassword)
-            return 404
-        return true
+    var regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,32}$/
+    if (regex.test(password)) {
+      if (password !== cpassword)
+        return 404
+      return true
     }
     else return false;
   }
@@ -60,14 +60,17 @@ function Register() {
       password: password
     }
 
-    if(validatePassword()==404){
+    // scroll to top of page
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+
+    if (validatePassword() == 404) {
       setMessage({
         display: true,
         color: 'yellow',
         message: 'Password and confirm password does not match.'
       })
       return
-    } else if(validatePassword()==false){
+    } else if (validatePassword() == false) {
       setMessage({
         display: true,
         color: 'red',
@@ -76,9 +79,9 @@ function Register() {
       return
     }
 
-    try{
+    try {
       const response = await POST_Request('register', data);
-      if(response.data && response.data.accessToken) {
+      if (response.data && response.data.accessToken) {
         setMessage({
           display: true,
           color: 'green',
@@ -92,26 +95,27 @@ function Register() {
           message: 'You are already registered or Some Internal Server Error !!'
         })
       }
-    } catch(err){
+    } catch (err) {
       setMessage({
         display: true,
         color: 'red',
         message: 'Sorry, We are facing some Internal Server Error.'
       })
     }
-       
+
   }
 
   return (
 
-    !user?(
+    !user ? (
 
-    <div className="register_container">
-      <form onSubmit={handleSubmit} className="btn--primary">
-        <h1>REGISTER</h1>
-          {
-            message.display ? (<p style={{ color:message.color }}>{message.message}</p>):(null)
-          }
+      <div className="register_container">
+        <div className="btn--primary">
+          <form onSubmit={handleSubmit}>
+            <h1>REGISTER</h1>
+            {
+              message.display ? (<p style={{ color: message.color }}>{message.message}</p>) : (null)
+            }
             <div className="editor-field editor-field__textbox">
               <div className="editor-field__label-container">
                 <label className="editor-field__label">Name</label>
@@ -168,20 +172,19 @@ function Register() {
                 <input type="password" className="editor-field__input" placeholder="password" required onChange={(event) => setcPassword(event.target.value)} />
               </div>
             </div>
-            {/* <div /className="btn--primary mt-4"> */}
-              <button type="submit" className="btn__container">
-                Register
-              </button>
-            {/* </div> */}
-            </form>
+            <button type="submit" className="register__button">
+              Register
+            </button>
+          </form>
         </div>
-    ):(
-      <div>
-        {
-          history.push("/user/play")
-        }
       </div>
-    )
+    ) : (
+        <div>
+          {
+            history.push("/user/play")
+          }
+        </div>
+      )
   )
 }
 
