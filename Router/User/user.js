@@ -7,7 +7,7 @@ const UserValidationSchema = require('../../Database/Validation Schemas/User')
 const LoginValidationSchema = require('../../Database/Validation Schemas/Login')
 const EvaluateValidationSchema = require('../../Database/Validation Schemas/Evaluate')
 const jwt_helper = require('./jwt_helper')
-const { signAcessToken, verifyAccessToken, signRefreshToken } = require('./jwt_helper')
+const { signAcessToken, verifyAccessToken } = require('./jwt_helper')
 
 
 /**
@@ -16,6 +16,7 @@ const { signAcessToken, verifyAccessToken, signRefreshToken } = require('./jwt_h
  * @param {/leaderboard}
  * @param {/evaluate}
  * @param {/nextlevel} 
+ * @param req.payload.aud id of user
  */
 
 router.post('/login', async function (req, res, next) {
@@ -78,7 +79,6 @@ router.post('/register', async function (req, res, next) {
 
 })
 
-
 router.get('/leaderboard', verifyAccessToken, async function (req, res, next) {
 
     try {
@@ -89,6 +89,15 @@ router.get('/leaderboard', verifyAccessToken, async function (req, res, next) {
         next(error)
     }
 
+})
+
+router.get('/getuser', verifyAccessToken, async function (req, res, next){
+    try{
+        const user = await User.find({_id: req.payload.aud})
+        res.send({user: user[0]})
+    } catch(error){
+        next(error)
+    }
 })
 
 
