@@ -5,6 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import {useSelector} from 'react-redux'
 
 //Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -29,7 +30,7 @@ import Mainlogo from './components/logos/logo6.png'
 function App() {
 
   // fetch user from store
-  const user = false
+  const user = useSelector(state => state.user)
 
   return (
     <div className="App">
