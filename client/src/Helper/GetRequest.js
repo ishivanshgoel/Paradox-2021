@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { getItem } from './LocalStorage'
 
 const BASE_URL = "http://localhost:5000"
 
@@ -20,8 +21,8 @@ var urlBuilder = (endPoint, id = null) => {
 
 async function GET_Request(endPoint, id = null) {
 
-    let token = localStorage.getItem("token")
-
+    let token = getItem('token')
+    console.log("GET ", token)
     return axios.get(urlBuilder(endPoint, id),{
             headers: { 'Authorization': token ? `Bearer ${token}` : '', 'Content-Type': 'application/json' }
         }).then((response) => {

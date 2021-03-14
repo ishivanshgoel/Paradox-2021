@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { getItem } from './LocalStorage'
 
 const BASE_URL = "http://localhost:5000"
 
@@ -19,7 +20,7 @@ function urlBuilder(endPoint, id = null) {
 
 function POST_Request(endPoint, data, id = null) {
 
-    let token = localStorage.getItem("token")
+    let token = getItem('token')
 
     console.log("Request URL ", urlBuilder(endPoint, id))
 
