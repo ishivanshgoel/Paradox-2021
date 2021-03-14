@@ -1,5 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 import Countdown from './Countdown'
 import Playarea from './Playarea'
 
@@ -10,14 +11,15 @@ import Playarea from './Playarea'
 
 function Play() {
 
-    // fetch from store
-    const user = true
-
+    const user = useSelector(state => state.user)
     const history = useHistory()
 
-    const countdownDate = new Date('March 20, 2021 00:00:00').getTime()
+
+    //##### countodown-timer #####
+    const countdownDate = new Date('March 10, 2021 00:00:00').getTime()
     const now = new Date().getTime()
     const distance = countdownDate - now
+    //##### end countdown-timer #####
 
 
     return (
