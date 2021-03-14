@@ -40,15 +40,15 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 app.use(morgan('dev'))
 
 
+app.use("/userServer",user)
+app.use("/adminServer",admin)
+
 // Routes
 
 app.get("/*", (req, res) => {
     console.log("Serve static")
     res.sendFile(path.join(__dirname, '.' ,"/client/build", "index.html"));
 });
-
-app.use("/userServer",user)
-app.use("/adminServer",admin)
 
 // not found route
 app.use(async (req, res, next)=>{
