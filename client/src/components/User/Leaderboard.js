@@ -1,5 +1,9 @@
-import React from 'react'
+import React,{ useState, useEffect } from 'react'
+import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
+
+// Helpers
+import GET_Request  from '../../Helper/GetRequest'
 
 /**
  * Level 2 Route - /user/leaderboard
@@ -7,26 +11,31 @@ import { useHistory } from 'react-router-dom'
  */
 
 function Leaderboard() {
+    const [data,setData] = useState(null)
+
+    useEffect(async ()=>{
+        const response = await GET_Request('leaderboard')
+        setData(response.data)
+    },[])
 
     //fetch from store
-    const user = false
+    const user = useSelector(state => state.user)
 
     const history = useHistory()
 
-    return (
-
-        !user ? (
-            <div>
-                {
-                    history.push('/user/play')
-                }
-            </div>
-        ) : (
+    if(user){
+        return(
+            data ? (
                 <div>
-                    <h1>Leaderboard</h1>
+                    TABLE
+                    { console.log(data) }
                 </div>
-            )
-    )
+            ):(null)
+        ) 
+    }
+    
+    history.push('/user')
+    return null
 }
 
 export default Leaderboard
