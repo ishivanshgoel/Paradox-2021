@@ -3,6 +3,9 @@ import { useHistory } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { SETUSER } from '../../Reducers/ActionTypes'
 
+// loading screen
+import LoaderHook from '../Loader/LoaderHook'
+
 // static
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./login_css/loginstyle.css";
@@ -22,7 +25,7 @@ import { setItem, getItem } from '../../Helper/LocalStorage'
 
 function Login() {
 
-  focus();
+  focus()
 
   // fetch from store
   const user = useSelector(state => state.user)
@@ -33,16 +36,21 @@ function Login() {
   const [email, setEmail] = useState(null)
   const [password, setPassword] = useState(null)
 
+  // loader
+  const[loader, showLoader, hideLoader] = LoaderHook()
+
   // verify-access token
   useEffect(async()=>{
 
+    // start loading screen
+    showLoader()
     let token = getItem('token')
 
     // verify token
     if(token){
       // leaderboard route verifies token before giving out data
       const leaderboard = await GET_Request('leaderboard')
-      console.log(leaderboard.data)
+      
       if(leaderboard.data){
          dispatch({
         type: SETUSER,
@@ -50,13 +58,18 @@ function Login() {
         })
       }
     }
+
+    //hide loading screen
+    hideLoader()
   },[])
 
 
   // form submission
   let handleSubmit = async (event) => {
     event.preventDefault()
-    console.log(email, password)
+    
+    // start loading screen
+    showLoader()
 
     let data = {
       email,
@@ -75,10 +88,14 @@ function Login() {
       alert('error logging you in')
     }
 
+    // hide loader
+    hideLoader()
+
   }
 
   if(!user) return (
     <div className="login_container">
+        {loader}
         <h1>LOGIN</h1>
         <div className="btn--primary">
         <form onSubmit={handleSubmit}>

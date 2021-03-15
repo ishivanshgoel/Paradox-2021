@@ -22,7 +22,7 @@ var urlBuilder = (endPoint, id = null) => {
 async function GET_Request(endPoint, id = null) {
 
     let token = getItem('token')
-    console.log("GET ", token)
+    
     return axios.get(urlBuilder(endPoint, id),{
             headers: { 'Authorization': token ? `Bearer ${token}` : '', 'Content-Type': 'application/json' }
         }).then((response) => {

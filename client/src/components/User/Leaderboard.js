@@ -2,6 +2,9 @@ import React,{ useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 
+//loading screen
+import LoaderHook from '../Loader/LoaderHook'
+
 // Helpers
 import GET_Request  from '../../Helper/GetRequest'
 
@@ -13,9 +16,14 @@ import GET_Request  from '../../Helper/GetRequest'
 function Leaderboard() {
     const [data,setData] = useState(null)
 
+    // loading screen
+    const [loading, showLoader, hideLoader] = LoaderHook()
+
     useEffect(async ()=>{
+        showLoader()
         const response = await GET_Request('leaderboard')
         setData(response.data)
+        hideLoader()
     },[])
 
     //fetch from store
@@ -27,6 +35,7 @@ function Leaderboard() {
         return(
             data ? (
                 <div>
+                    {loading}
                     TABLE
                     { console.log(data) }
                 </div>

@@ -2,10 +2,14 @@ import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./register_css/register.css"
-import focus from '../focus';
+import focus from '../focus'
+
+// loading scrren
+import LoaderHook from '../Loader/LoaderHook'
 
 // Requests
 import POST_Request from '../../Helper/PostRequest'
+import { Loader } from 'three'
 
 /**
  * Level 1 Route - /register
@@ -29,6 +33,9 @@ function Register() {
   const [password, setPassword] = useState(null)
   const [cpassword, setcPassword] = useState(null)
 
+  // loading screen
+  const [loading, showLoader, hideLoader] = LoaderHook()
+
   //messages
   const [message, setMessage] = useState({
     display: false,
@@ -49,7 +56,9 @@ function Register() {
   // handle form submission
   let handleSubmit = async (event) => {
     event.preventDefault()
-    console.log(name, userName, email, discord, institutionName, password, cpassword)
+
+    // show loading screen
+    showLoader()
 
     const data = {
       name: name,
@@ -69,6 +78,9 @@ function Register() {
         color: 'yellow',
         message: 'Password and confirm password does not match.'
       })
+
+
+      hideLoader()
       return
     } else if (validatePassword() == false) {
       setMessage({
@@ -76,6 +88,8 @@ function Register() {
         color: 'red',
         message: 'Your password is too weak. Please enter a new password.'
       })
+
+      hideLoader()
       return
     }
 
@@ -102,7 +116,7 @@ function Register() {
         message: 'Sorry, We are facing some Internal Server Error.'
       })
     }
-
+    hideLoader()
   }
 
   return (
@@ -110,6 +124,7 @@ function Register() {
     !user ? (
 
       <div className="register_container">
+        {loading}
         <div className="btn--primary">
           <form onSubmit={handleSubmit}>
             <h1>REGISTER</h1>
