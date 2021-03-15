@@ -46,7 +46,8 @@ function ALogin() {
 
     if (response.data) {
       dispatch({
-        type: SETADMIN
+        type: SETADMIN,
+        token: true
       })
     } else {
       alert('error logging you in make sure you have admin access')
@@ -88,6 +89,7 @@ function ALogin() {
       </div>
   ) 
 
+  history.push('/admin/dashboard')
   return null
 }
 
