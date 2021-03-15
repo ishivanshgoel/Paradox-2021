@@ -9,7 +9,6 @@ import LoaderHook from '../Loader/LoaderHook'
 
 // Requests
 import POST_Request from '../../Helper/PostRequest'
-import { Loader } from 'three'
 
 /**
  * Level 1 Route - /register
@@ -72,7 +71,7 @@ function Register() {
     // scroll to top of page
     window.scrollTo({ top: 0, behavior: 'smooth' })
 
-    if (validatePassword() == 404) {
+    if (validatePassword() === 404) {
       setMessage({
         display: true,
         color: 'yellow',
@@ -82,7 +81,7 @@ function Register() {
 
       hideLoader()
       return
-    } else if (validatePassword() == false) {
+    } else if (validatePassword() === false) {
       setMessage({
         display: true,
         color: 'red',
