@@ -20,13 +20,13 @@ const Countdown = ({countdownDate}) => {
             var hours=String(Math.floor((distance%(1000*60 *60*24)/(1000*60*60))));
             var minutes=String(Math.floor((distance%(1000*60 *60))/(1000*60)));
             var seconds=String(Math.floor((distance%(1000*60))/1000));
-            if(days.length==1)
+            if(days.length===1)
             days="0"+days;
-            if(hours.length==1)
+            if(hours.length===1)
             hours="0"+hours;
-            if(minutes.length==1)
+            if(minutes.length===1)
             minutes="0"+minutes;
-            if(seconds.length==1)
+            if(seconds.length===1)
             seconds="0"+seconds;
             if(distance<0){
                 //stop timer and load Play Area
