@@ -1,6 +1,9 @@
 import axios from 'axios'
 import { getItem } from './LocalStorage'
 
+// admin token
+import { ADMINTOKEN } from './Constants'
+
 const BASE_URL = "http://localhost:5000"
 
 const endPoints = {
@@ -8,6 +11,7 @@ const endPoints = {
     login: "/userServer/login",
     register: "/userServer/register",
     evaluate: "/userServer/evaluate",
+    alogin: "/adminServer/login"
 
 }
 
@@ -22,6 +26,10 @@ function POST_Request(endPoint, data, id = null) {
 
     let token = getItem('token')
 
+    if(endPoint === 'alogin'){
+        token = ADMINTOKEN
+    }
+   
     console.log("Request URL ", urlBuilder(endPoint, id))
 
     console.log("Data ", data)

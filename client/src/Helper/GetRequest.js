@@ -1,6 +1,9 @@
 import axios from 'axios'
 import { getItem } from './LocalStorage'
 
+// admin token
+import { ADMINTOKEN } from './Constants'
+
 const BASE_URL = "http://localhost:5000"
 
 const endPoints = {
@@ -26,7 +29,6 @@ async function GET_Request(endPoint, id = null) {
     return axios.get(urlBuilder(endPoint, id),{
             headers: { 'Authorization': token ? `Bearer ${token}` : '', 'Content-Type': 'application/json' }
         }).then((response) => {
-            console.log("Response in get request ", response)
             return response
         }).catch((err) => {
             return err.message

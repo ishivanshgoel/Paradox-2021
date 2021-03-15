@@ -1,26 +1,41 @@
 const express = require('express')
 const router = express.Router()
+const createError = require('http-errors')
+const User = require('../../Database/Models/User')
+const Question = require('../../Database/Models/Question')
+const validateAdmin = require('./validateAdmin')
+const LoginValidationSchema = require('../../Database/Validation Schemas/Login')
 
 /**
  * @param {/login} 
  * @param {/details} 
  * @param {/update}
+ * @author ishivanshgoel
  */
 
 // define the home page route
-router.post('/login', function (req, res) {
+router.post('/login', validateAdmin ,async function (req, res, next) { 
   
-    let auth = false // testing
+    try {
+        const result = await LoginValidationSchema.validateAsync(req.body)
+        const user = await User.findOne({ email: result.email })
 
-    if(auth){
-        res.json({message: 'Success'})
-    } else{
-        res.json({message: 'Fail'})
+        if (!user) throw createError.NotFound("User is not registered")
+
+        const isMatch = await user.isValidPassword(result.password)
+
+        if (!isMatch || !user.role == 'admin') throw createError.Unauthorized('Username/password not valid')
+
+        res.send(true)
+
+    } catch (error) {
+        if (error.isJoi == true) return next(createError.BadRequest("Invalid Username/Password"))
+        next(error)
     }
 
 })
 
-router.get('/details', function (req, res) {
+router.get('/details', validateAdmin ,function (req, res) {
     
     let auth = true // testing
     
@@ -32,7 +47,7 @@ router.get('/details', function (req, res) {
     
 })
 
-router.post('/update', function (req, res) {
+router.post('/update', validateAdmin, function (req, res) {
     
     let auth = true // testing
     
