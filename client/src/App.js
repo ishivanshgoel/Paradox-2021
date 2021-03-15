@@ -23,6 +23,7 @@ import Alogin from './components/Admin/Alogin'
 // Level 2 Components
 import Play from './components/User/Play'
 import Leaderboard from './components/User/Leaderboard'
+import Dashboard from './components/Dashboard/Dashboard'
 
 // images
 import Mainlogo from './components/logos/logo6.png'
@@ -106,7 +107,7 @@ function App() {
             </Route>
 
             <Route exact path="/admin/dashboard">
-              <Play />
+              <Dashboard />
             </Route>
           </Switch>
         </div>
