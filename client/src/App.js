@@ -74,10 +74,6 @@ function App() {
                   <Link to="/user/leaderboard">Leaderboard</Link>
                 </li>
 
-                {/* remove this button later
-                <li className="nav-item nav__item">
-                  <Link to="/admin">Admin</Link>
-                </li> */}
               </ul>
             </div>
           </div>
@@ -107,6 +103,10 @@ function App() {
             </Route>
             <Route exact path="/user/leaderboard">
               <Leaderboard />
+            </Route>
+
+            <Route exact path="/admin/dashboard">
+              <Play />
             </Route>
           </Switch>
         </div>
