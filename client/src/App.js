@@ -15,6 +15,7 @@ import './App.css';
 
 // Level 1 Components
 import Homepage from './components/Homepage'
+import Teams from './components/Teams'
 import Rules from './components/Rules'
 import Login from './components/User/Login'
 import Register from './components/Register/Register'
@@ -38,7 +39,9 @@ function App() {
       <Router>
         <nav className="navbar dark-navbar navbar-expand-md " role="navigation">
           <div className="container-fluid ">
-          <a className="navbar-brand ml-3 d-md-none" href="/"><img src={Mainlogo} height="50" alt="" /></a>
+            <a className="navbar-brand ml-3 d-md-none" href="/">
+              <img src={Mainlogo} height="50" alt="" />
+            </a>
             <button
               data-toggle="collapse"
               className="navbar-toggler mr-3 custom-toggler"
@@ -52,10 +55,7 @@ function App() {
               <span className="navbar-toggler-icon"></span>
             </button>
 
-            <div
-              className="collapse navbar-collapse"
-              id="navbarNavDropdown"
-            >
+            <div className="collapse navbar-collapse" id="navbarNavDropdown">
               <ul className="navbar-nav mx-md-auto">
                 <li className="nav-item nav__item">
                   <a href="/#aboutnav">About</a>
@@ -73,6 +73,9 @@ function App() {
                 </li>
                 <li className="nav-item nav__item">
                   <Link to="/user/leaderboard">Leaderboard</Link>
+                </li>
+                <li className="nav-item nav__item">
+                  <Link to="/teams">Teams</Link>
                 </li>
 
               </ul>
@@ -96,6 +99,9 @@ function App() {
             </Route>
             <Route exact path="/admin">
               <Alogin />
+            </Route>
+            <Route exact path="/teams">
+              <Teams />
             </Route>
 
             {/* level 2 routes */}
