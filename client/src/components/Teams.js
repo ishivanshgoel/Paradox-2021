@@ -28,17 +28,17 @@ function Member()
               </h3>
             </div>
             <ul class="sci">
-              <li style="--i: 1">
+              <li style={{"--i": 1}}>
                 <a href="#">
                   <i class="fa fa-instagram" aria-hidden="true"></i>
                 </a>
               </li>
-              <li style="--i: 2">
+              <li style={{"--i": 2}}>
                 <a href="#">
                   <i class="fa fa-github" aria-hidden="true"></i>
                 </a>
               </li>
-              <li style="--i: 3">
+              <li style={{"--i": 3}}>
                 <a href="#">
                   <i class="fa fa-linkedin" aria-hidden="true"></i>
                 </a>
