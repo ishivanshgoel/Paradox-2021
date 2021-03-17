@@ -10,43 +10,51 @@ import GithubLogo from "./logos/github-logo.png";
 import EmailLogo from "./logos/email-logo.png";
 import LinkedLogo from "./logos/linkedin-logo.png";
 
+//team data
+import team from "../Data/Teams"
+
 function Teams() {
   return (
     <div>
       <h1 className="team__heading"><span className="bluecolor">Our</span> Team</h1>
       <div className="container teams__container">
-        <Member />
-        <Member />
-        <Member />
-        <Member />
-        <Member />
-        <Member />
+        {
+          team.map(({firstname, lastname, tagline, email, github, linkedin, image})=>{return(
+            <Member firstname={firstname} 
+                    lastname={lastname}
+                    tagline={tagline}
+                    email={email}
+                    github={github}
+                    linkedin={linkedin}
+                    image={image}/>
+          )})
+        }
       </div>
     </div>
   );
 }
 
-function Member()
+function Member({firstname, lastname, tagline, email, github, linkedin, image})
 {
   return (
     <div className="card card-div">
       <img
         className="card-img-top member-image"
-        src={DefaultMember}
+        src={image || DefaultMember}
         alt="Card image cap"
       ></img>
       <div className="content-card">
-        <h5 className="card-title card-name">FirstName Lastname</h5>
-        <p className="card-text ">Some quick example </p>
+        <h5 className="card-title card-name">{firstname} {lastname}</h5>
+        <p className="card-text ">{tagline} </p>
         <div className="social-links">
           <a href="#">
-            <img src={EmailLogo} className="social-logo" alt="" />
+            <img src={EmailLogo} className="social-logo" alt={email} />
           </a>
-          <a href="#">
-            <img src={GithubLogo} className="social-logo" alt="" />
+          <a href={`https://github.com/${github}`} target="_blank">
+            <img src={GithubLogo} className="social-logo" alt={github} />
           </a>
-          <a href="#">
-            <img src={LinkedLogo} className="social-logo" alt="" />
+          <a href="#" target="_blank">
+            <img src={LinkedLogo} className="social-logo" alt={linkedin} />
           </a>
         </div>
       </div>
