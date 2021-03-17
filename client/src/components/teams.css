@@ -24,6 +24,11 @@
   box-shadow: none;
   border: none;
   transition: ease-out 0.2s;
+  opacity:0.7
+  ;
+}
+.card-div:hover{
+  opacity:1;
 }
 
 
@@ -34,7 +39,6 @@
 .content-card{
   margin:2%;
   text-align: center;
-  opacity:0.8;
 }
 
 .card-name{
