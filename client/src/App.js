@@ -75,7 +75,7 @@ function App() {
                   <Link to="/user/leaderboard">Leaderboard</Link>
                 </li>
                 <li className="nav-item nav__item">
-                  <Link to="/teams">Teams</Link>
+                  <Link to="/teams">Team</Link>
                 </li>
 
               </ul>

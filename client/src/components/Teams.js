@@ -4,49 +4,54 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./teams.css";
 
-import DefaultMember from "./TeamMembers-images/member-default.PNG";
+//images and logos
+import DefaultMember from "./TeamMembers-images/member-default1.png";
+import GithubLogo from "./logos/github-logo.png";
+import EmailLogo from "./logos/email-logo.png";
+import LinkedLogo from "./logos/linkedin-logo.png";
 
 function Teams() {
-    return (
-      <div class="teams__container">
+  return (
+    <div>
+      <h1 className="team__heading"><span className="bluecolor">Our</span> Team</h1>
+      <div className="container teams__container">
+        <Member />
+        <Member />
+        <Member />
+        <Member />
+        <Member />
         <Member />
       </div>
-    );
+    </div>
+  );
 }
 
 function Member()
 {
-    return (
-        <div class="card">
-          <div class="imgBx">
-            <img src={DefaultMember} alt="" />
-          </div>
-          <div class="content">
-            <div class="contentBx">
-              <h3>John <br />
-                <span>Web Developer</span>
-              </h3>
-            </div>
-            <ul class="sci">
-              <li style={{"--i": 1}}>
-                <a href="#">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li style={{"--i": 2}}>
-                <a href="#">
-                  <i class="fa fa-github" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li style={{"--i": 3}}>
-                <a href="#">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
+  return (
+    <div className="card card-div">
+      <img
+        className="card-img-top member-image"
+        src={DefaultMember}
+        alt="Card image cap"
+      ></img>
+      <div className="content-card">
+        <h5 className="card-title card-name">FirstName Lastname</h5>
+        <p className="card-text ">Some quick example </p>
+        <div className="social-links">
+          <a href="#">
+            <img src={EmailLogo} className="social-logo" alt="" />
+          </a>
+          <a href="#">
+            <img src={GithubLogo} className="social-logo" alt="" />
+          </a>
+          <a href="#">
+            <img src={LinkedLogo} className="social-logo" alt="" />
+          </a>
         </div>
-    );
+      </div>
+    </div>
+  );
 }
 
 export default Teams;

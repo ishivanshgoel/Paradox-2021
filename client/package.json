@@ -9,6 +9,7 @@
     "axios": "^0.21.1",
     "axois": "0.0.1-security",
     "bootstrap": "^4.6.0",
+    "constants": "^0.0.2",
     "date-and-time": "^0.14.2",
     "filename-regex": "^2.0.1",
     "gsap": "^3.6.0",
