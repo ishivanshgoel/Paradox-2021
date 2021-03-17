@@ -3,19 +3,18 @@ import { useHistory } from 'react-router-dom'
 import Rules from "./Rules";
 
 // css import
-import './homepage.css'
+import './CSS/homepage.css'
 
 // images and logos import
-import { ReactComponent as DiscordLogo } from './logos/discord.svg'
-import { ReactComponent as ParadoxLogo } from "./logos/logoTagline.svg";
-import ParadoxLogo1 from "./logos/homepage_logo.svg";
-import ParadoxLogoMobile from "./logos/logo1_wobg1.png";
-import IEEElogo from './logos/IEEE_CS1.png';
-import Symbol from './logos/logo5.png';
-import instagram from "./logos/instagram.png";
-import github from "./logos/github.png";
-import linkedin from "./logos/linkedin.png"; 
-import ieeecsvit from "./logos/ieeecsvit.png";
+import { ReactComponent as DiscordLogo } from '../logos/discord.svg'
+import { ReactComponent as ParadoxLogo } from "../logos/logoTagline.svg";
+import ParadoxLogo1 from "../logos/homepage_logo.svg";
+import ParadoxLogoMobile from "../logos/logo1_wobg1.png";
+import IEEElogo from '../logos/IEEE_CS1.png';
+import instagram from "../logos/instagram.png";
+import github from "../logos/github.png";
+import linkedin from "../logos/linkedin.png"; 
+import ieeecsvit from "../logos/ieeecsvit.png";
 
 /**
  * @author TejasV58, samankgupta
