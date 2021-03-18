@@ -17,6 +17,13 @@
   margin: 40px auto;
 }
 
+.member-2{
+  display: flex;
+  margin:2% 40%;
+  justify-content: center;
+  align-items: center;
+}
+
 .card-div{
   width:14rem;
   background:transparent;

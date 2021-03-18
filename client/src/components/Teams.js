@@ -16,19 +16,53 @@ import team from "../Data/Teams"
 function Teams() {
   return (
     <div>
-      <h1 className="team__heading"><span className="bluecolor">Our</span> Team</h1>
+      <h1 className="team__heading">
+        <span className="bluecolor">Our</span> Team
+      </h1>
       <div className="container teams__container">
-        {
-          team.map(({firstname, lastname, tagline, email, github, linkedin, image})=>{return(
-            <Member firstname={firstname} 
-                    lastname={lastname}
-                    tagline={tagline}
-                    email={email}
-                    github={github}
-                    linkedin={linkedin}
-                    image={image}/>
-          )})
-        }
+        <div className="member-2">
+          <Member
+            firstname={"firstname"}
+            lastname={"lastname"}
+            tagline={"tagline"}
+            email={""}
+            github={""}
+            linkedin={""}
+            image={""}
+          />
+          <Member
+            firstname={"firstname"}
+            lastname={"lastname"}
+            tagline={"tagline"}
+            email={""}
+            github={""}
+            linkedin={""}
+            image={""}
+          />
+        </div>
+        {team.map(
+          ({
+            firstname,
+            lastname,
+            tagline,
+            email,
+            github,
+            linkedin,
+            image,
+          }) => {
+            return (
+              <Member
+                firstname={firstname}
+                lastname={lastname}
+                tagline={tagline}
+                email={email}
+                github={github}
+                linkedin={linkedin}
+                image={image}
+              />
+            );
+          }
+        )}
       </div>
     </div>
   );
@@ -44,16 +78,18 @@ function Member({firstname, lastname, tagline, email, github, linkedin, image})
         alt="Card image cap"
       ></img>
       <div className="content-card">
-        <h5 className="card-title card-name">{firstname} {lastname}</h5>
+        <h5 className="card-title card-name">
+          {firstname} {lastname}
+        </h5>
         <p className="card-text ">{tagline} </p>
         <div className="social-links">
-          <a href="#">
+          <a href={`mailto:${email}`}>
             <img src={EmailLogo} className="social-logo" alt={email} />
           </a>
           <a href={`https://github.com/${github}`} target="_blank">
             <img src={GithubLogo} className="social-logo" alt={github} />
           </a>
-          <a href="#" target="_blank">
+          <a href={`https://www.linkedin.com/in/${linkedin}`} target="_blank">
             <img src={LinkedLogo} className="social-logo" alt={linkedin} />
           </a>
         </div>
