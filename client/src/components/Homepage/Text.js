@@ -11,3 +11,7 @@ function Text(props) {
 }
 
 export default Text;
+
+/**
+ * Remove this file if not required.
+ */

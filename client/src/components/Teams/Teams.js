@@ -5,13 +5,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./teams.css";
 
 //images and logos
-import DefaultMember from "./TeamMembers-images/member-default1.png";
-import GithubLogo from "./logos/github-logo.png";
-import EmailLogo from "./logos/email-logo.png";
-import LinkedLogo from "./logos/linkedin-logo.png";
+import DefaultMember from "../TeamMembers-images/member-default1.png"
+import GithubLogo from "../logos/github-logo.png";
+import EmailLogo from "../logos/email-logo.png";
+import LinkedLogo from "../logos/linkedin-logo.png";
 
 //team data
-import team from "../Data/Teams"
+import team from "../../Data/Teams"
 
 function Teams() {
   return (

@@ -14,9 +14,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 // Level 1 Components
-import Homepage from './components/Homepage'
-import Teams from './components/Teams'
-import Rules from './components/Rules'
+import Homepage from './components/Homepage/Homepage'
+import Teams from './components/Teams/Teams'
+import Rules from './components/Homepage/Rules'
 import Login from './components/User/Login'
 import Register from './components/Register/Register'
 import Alogin from './components/Admin/Alogin'
