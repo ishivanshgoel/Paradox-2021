@@ -168,8 +168,8 @@ h2.about-heading:after {
     color:rgba(10, 10, 10, 0.829);
     border-radius:5px;
     font-weight: 600;
-     transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
-     padding:4% 1%;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    padding:4% 1%;
 }
 
 #DiscordLogo{
@@ -187,6 +187,101 @@ h2.about-heading:after {
 
 #discord:hover .colorchange{
     filter: invert(85%) sepia(100%) saturate(7481%) hue-rotate(183deg) brightness(100%) contrast(100%);
+}
+
+/* Scroll animation */
+#sd-container {
+    position:absolute;
+    left:48%;
+    top:80%;
+    margin:auto;
+}
+
+.arrow {
+  position: relative;
+  width: 42px;
+  height: 16px;
+  opacity: 0;
+  margin:auto;
+}
+.arrow::before, .arrow::after {
+  content: "";
+  width: 21px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 2px;
+  display: inline-block;
+}
+.arrow::before {
+  transform: rotate(45deg) translateX(25%);
+}
+.arrow::after {
+  transform: rotate(-45deg) translateX(-25%);
+}
+.arrow:nth-child(1) {
+  top: -50px;
+  opacity: 1;
+  -webkit-animation: arrow2 1s ease 0s infinite;
+          animation: arrow2 1s ease 0s infinite;
+}
+.arrow:nth-child(2) {
+  top: -25px;
+  -webkit-animation: arrow1 1s ease 0.25s infinite;
+          animation: arrow1 1s ease 0.25s infinite;
+}
+
+@-webkit-keyframes arrow1 {
+  from {
+    opacity: 0;
+    top: -25px;
+  }
+  to {
+    opacity: 0;
+    top: 0px;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes arrow1 {
+  from {
+    opacity: 0;
+    top: -25px;
+  }
+  to {
+    opacity: 0;
+    top: 0px;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes arrow2 {
+  from {
+    opacity: 0;
+    top: -35px;
+  }
+  to {
+    opacity: 0;
+    top: -10px;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes arrow2 {
+  from {
+    opacity: 0;
+    top: -35px;
+  }
+  to {
+    opacity: 0;
+    top: -10px;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 .highlight{
@@ -364,6 +459,9 @@ h2.about-heading:after {
         font-weight: 400;
         font-size:3.2px;
         transform:translate(10%,8%);
+    }
+    #sd-container{
+        display:none;
     }
 }
 

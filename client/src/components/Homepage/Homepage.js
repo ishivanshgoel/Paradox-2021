@@ -57,7 +57,7 @@ function Homepage() {
               className="ParadoxLogoMobile d-md-none my-5"
             />*/}
           </div>
-          <div className="d-md-flex justify-content-center">
+          <div className="d-md-flex justify-content-center ">
             <div className="col-12 col-md-3 col-lg-2 my-5 my-md-0 ">
               <button className=" homebtn" onClick={handleRedirect} name="user">
                 LOGIN
@@ -82,6 +82,12 @@ function Homepage() {
               </button>
             </div>
           </div>
+          <a href="#aboutnav">
+            <div id="sd-container">
+              <div class="arrow"></div>
+              <div class="arrow"></div>
+            </div>
+          </a>
         </div>
         <div className="col-12 col-md-8 homepage__about-section" id="aboutnav">
           <h2 className="about-heading">
