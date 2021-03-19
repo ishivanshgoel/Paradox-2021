@@ -15,23 +15,26 @@ import GET_Request  from '../../Helper/GetRequest'
  */
 
 function Leaderboard() {
+
+    //fetch from store
+    const user = useSelector(state => state.user)
+    const history = useHistory()
+
     const [data,setData] = useState([{}])
 
     // loading screen
     const [loading, showLoader, hideLoader] = LoaderHook()
 
     useEffect(async ()=>{
-        showLoader()
-        const response = await GET_Request('leaderboard')
-        setData(response.data.leaderboard)
-        hideLoader()
+        if(user){
+            showLoader()
+            const response = await GET_Request('leaderboard')
+            setData(response.data.leaderboard)
+            hideLoader()
+        }
     },[])
 
-    //fetch from store
-    const user = useSelector(state => state.user)
-    const history = useHistory()
-
-    if(true){
+    if(user){
         return(
             <>
             {loading}
