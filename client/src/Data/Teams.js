@@ -1,8 +1,28 @@
 //images
 import shivanshgoel from '../Static/shivanshgoel.jpeg'
 import sanikakulkarni from '../Static/sanikakulkarni.jpg'
+import tanaybhadula from '../Static/tanaybhadula.jpeg'
+
 
 const team = [
+    {
+        firstname: "Samank",
+        lastname: "Gupta",
+        tagline: "Some quick example",
+        email: "example@gmail.com",
+        github: "example",
+        linkedin: "",
+        image: ""
+    },
+    {
+        firstname: "Tanay",
+        lastname: "Bhadula",
+        tagline: "Some quick example",
+        email: "tanaybhadula2002@gmail.com",
+        github: "TanayBhadula",
+        linkedin: "",
+        image: tanaybhadula
+    },
     {
         firstname: "Shivansh",
         lastname: "Goel",
@@ -47,25 +67,8 @@ const team = [
         github: "example",
         linkedin: "",
         image: ""
-    },
-    {
-        firstname: "Samank",
-        lastname: "Gupta",
-        tagline: "Some quick example",
-        email: "example@gmail.com",
-        github: "example",
-        linkedin: "",
-        image: ""
-    },
-    {
-        firstname: "Tanay",
-        lastname: "Bhadulla",
-        tagline: "Some quick example",
-        email: "example@gmail.com",
-        github: "example",
-        linkedin: "",
-        image: ""
-    },
+    }
+    
 
 
 ]
