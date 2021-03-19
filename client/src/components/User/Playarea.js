@@ -1,7 +1,6 @@
 import React from 'react'
 import './Playarea.css'
 import demo from './demo.jpg';
-import youtube from './youtube.jpg'
 
 const Playarea = ()=>{
     function add_class()

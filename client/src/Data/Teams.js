@@ -1,5 +1,6 @@
 //images
 import shivanshgoel from '../Static/shivanshgoel.jpeg'
+import sanikakulkarni from '../Static/sanikakulkarni.jpg'
 
 const team = [
     {
@@ -24,10 +25,10 @@ const team = [
         firstname: "Sanika",
         lastname: "Kulkarni",
         tagline: "Some quick example",
-        email: "example@gmail.com",
+        email: "sanika.k.goa@gmail.com",
         github: "saniikakulkarni",
         linkedin: "",
-        image: ""
+        image: sanikakulkarni
     },
     {
         firstname: "Prabhat",

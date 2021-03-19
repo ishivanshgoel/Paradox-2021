@@ -1,6 +1,7 @@
 import React,{ useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
+import './Leaderboard.css'
 
 //loading screen
 import LoaderHook from '../Loader/LoaderHook'
@@ -27,19 +28,49 @@ function Leaderboard() {
     },[])
 
     //fetch from store
-    const user = useSelector(state => state.user)
-
+    //useSelector(state => state.user)
+    const user = true
     const history = useHistory()
 
     if(user){
         return(
-            data ? (
-                <div>
-                    {loading}
-                    TABLE
-                    { console.log(data) }
+            <div className="Leaderboard_heading">
+                <div className="Leaderboard_text">
+                    <span className="blueheading">Leader</span><span>board</span>
                 </div>
-            ):(null)
+                <div className="Leaderboard_tablediv">
+                      <table className="Leaderboard_table" cellPadding="6" cellSpacing="3">
+                        <tr className="Leaderboard_head">
+                            <th scope="col">Rank</th>
+                            <th scope="col">Username</th>
+                            <th scope="col">Level</th>
+                        </tr>
+                        <tr className="Current_user Leaderboard_row">
+                            <td scope="row">1</td>
+                            <td>Mark</td>
+                            <td>50</td>
+                        </tr>
+                        <tr className="Leaderboard_row">
+                            <td scope="row">1</td>
+                            <td>Mark</td>
+                            <td>50</td>
+                        </tr>
+                        <tr className=" Leaderboard_row">
+                            <td scope="row">1</td>
+                            <td>Mark</td>
+                            <td>50</td>
+                        </tr>
+                    </table>      
+                </div>
+            </div>
+            
+
+            // data ? (
+            //     <div>
+            //         {loading}
+            //         { console.log(data.score) }
+            //     </div>
+            // ):(null)
         ) 
     }
     
