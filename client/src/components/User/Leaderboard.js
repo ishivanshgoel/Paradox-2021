@@ -15,7 +15,7 @@ import GET_Request  from '../../Helper/GetRequest'
  */
 
 function Leaderboard() {
-    const [data,setData] = useState(null)
+    const [data,setData] = useState([{}])
 
     // loading screen
     const [loading, showLoader, hideLoader] = LoaderHook()
@@ -23,54 +23,49 @@ function Leaderboard() {
     useEffect(async ()=>{
         showLoader()
         const response = await GET_Request('leaderboard')
-        setData(response.data)
+        setData(response.data.leaderboard)
         hideLoader()
     },[])
 
     //fetch from store
-    //useSelector(state => state.user)
-    const user = true
+    const user = useSelector(state => state.user)
     const history = useHistory()
 
     if(user){
         return(
-            <div className="Leaderboard_heading">
-                <div className="Leaderboard_text">
-                    <span className="blueheading">Leader</span><span>board</span>
+            <>
+            {loading}
+                <div className="Leaderboard_heading">
+                    <div className="Leaderboard_text">
+                        <span className="blueheading">Leader</span><span>board</span>
+                    </div>
+                    <div className="Leaderboard_tablediv">
+                        <table className="Leaderboard_table" cellPadding="6" cellSpacing="3">
+                            <tr className="Leaderboard_head">
+                                <th scope="col">Rank</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">Level</th>
+                            </tr>
+                            <tr className="Current_user Leaderboard_row">
+                                <td scope="row">1</td>
+                                <td>Mark</td>
+                                <td>50</td>
+                            </tr>
+                            {
+                                data && data.map((member,index)=>{
+                                    return(
+                                    <tr className="Leaderboard_row">
+                                        <td scope="row">{index+1}</td>
+                                        <td>{member.userName}</td>
+                                        <td>{member.score}</td>
+                                    </tr>
+                                )
+                                })
+                            }
+                        </table>      
+                    </div>
                 </div>
-                <div className="Leaderboard_tablediv">
-                      <table className="Leaderboard_table" cellPadding="6" cellSpacing="3">
-                        <tr className="Leaderboard_head">
-                            <th scope="col">Rank</th>
-                            <th scope="col">Username</th>
-                            <th scope="col">Level</th>
-                        </tr>
-                        <tr className="Current_user Leaderboard_row">
-                            <td scope="row">1</td>
-                            <td>Mark</td>
-                            <td>50</td>
-                        </tr>
-                        <tr className="Leaderboard_row">
-                            <td scope="row">1</td>
-                            <td>Mark</td>
-                            <td>50</td>
-                        </tr>
-                        <tr className=" Leaderboard_row">
-                            <td scope="row">1</td>
-                            <td>Mark</td>
-                            <td>50</td>
-                        </tr>
-                    </table>      
-                </div>
-            </div>
-            
-
-            // data ? (
-            //     <div>
-            //         {loading}
-            //         { console.log(data.score) }
-            //     </div>
-            // ):(null)
+            </>
         ) 
     }
     
