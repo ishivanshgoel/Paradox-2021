@@ -9,6 +9,44 @@
     height: 140px;
     width: auto;
 }
+.paradox{
+  height: 45vh;
+  width: 700px;
+  font-family: robodron;
+}
+.paradox text{
+    fill:#ffffffc5;
+    font-weight: 1000;
+    letter-spacing: 0.5px;
+    stroke:#004353;
+    stroke-width:1;
+    stroke-dasharray: 0% 100%;
+    transition:linear 0.8s;
+    transform: scaleY(1.3);
+}
+
+#outer-logo-div:hover #paradox-text{
+    stroke-width:0.8;
+    fill:rgb(122, 224, 255);
+    stroke: #005e7a;
+    stroke-dashoffset: 50%;
+    stroke-linecap:round;
+    stroke-dasharray: 70% 0%;
+    cursor:pointer;
+}
+.Pradaox__logo{
+    height:112px;
+    width:120px;
+    margin:18vh 0;
+    transition: .8s ease-in-out;
+    transform: rotate(0deg);
+    filter: invert(10%) sepia(100%) saturate(0%) hue-rotate(183deg) brightness(100%) contrast(80%);
+}
+#outer-logo-div:hover .Pradaox__logo{
+    cursor:pointer;
+    transform: rotate(-90deg);
+    filter: none;
+}
 .paradox_logo{
   height: 60vh;
   width: 1000px;
@@ -17,6 +55,23 @@
   height: 19vh;
   width: 90vw;
 }
+#cryptic_hunt{
+     fill:rgba(0, 49, 65, 0);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition:linear 0.8s;
+    font-size:5px;
+    transform: translate(-20%,20%);
+    transition: .8s linear;
+}
+
+#outer-logo-div:hover #cryptic_hunt{
+    font-size:5px;
+    transform: translate(-20%,20%);
+    fill:rgba(255, 255, 255, 0.973);
+    text-shadow:1px 10px 15px rgba(0, 0, 0, 0.822);
+}
+
 .homepage__main{
     height: 100vh;
 }
@@ -204,7 +259,7 @@ h2.about-heading:after {
     color:rgba(255, 255, 255, 0.6);
 }
 .contact-info h2, .social-panel h2{
-    color:rgb(255, 255, 255);
+    color:c;
 }
 .contact-info ul{
     list-style: none;
@@ -237,6 +292,26 @@ h2.about-heading:after {
     .social-logos{
         margin: 90px 1vw;
     }
+    .paradox_logo_div{
+        display:none;
+    }
+}
+
+@media (max-width: 1100px) {
+    .paradox{
+        height: 45vh;
+        width: 62vw;
+    }
+    .paradox text{
+        fill:#ffffffc5;
+        font-weight: 1000;
+        font-size:1.5vw;
+        stroke-width:0.7;
+    }
+    .Pradaox__logo{
+        height:27%;
+        width:12%;
+    }
 }
 
 /*##### mobile view ###### */
@@ -250,7 +325,40 @@ h2.about-heading:after {
     #footer_logo{
         width: 95vw;
     }
+    .paradox_logo_div{
+        display:none;
+    }
+    .Pradaox__logo{
+        display:none;
+    }
+    .paradox{
+        height: 45vh;
+        width: 90vw;
+    }
+    .paradox text{
+        fill:#ffffffc5;
+        font-weight: 1000;
+        font-size:2vw;
+        stroke-width:0.5;
+        transform: scaleY(1.4) translateY(-10%);
+    }
+    #outer-logo-div:hover #paradox-text{
+        stroke-width:0.4;
+    }
+    #cryptic_hunt{
+        font-weight: 400;
+        font-size:3.2px;
+        transform:translate(10%,8%);
+        transition: .8s linear;
+    }
+    #outer-logo-div:hover #cryptic_hunt{
+        font-weight: 400;
+        font-size:3.2px;
+        transform:translate(10%,8%);
+    }
 }
+
+
 
 /**
 @author: TejasV58, samankgupta

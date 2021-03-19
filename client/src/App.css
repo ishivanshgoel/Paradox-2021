@@ -41,7 +41,7 @@ li.nav__item a:hover{
 }
 
 .nav__item{
-    font-size:1.35rem;
+    font-size:1.25rem;
     text-transform: uppercase;
     margin: auto 20px;
     color:rgba(144, 233, 255, 0.637);

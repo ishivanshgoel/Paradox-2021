@@ -64,6 +64,9 @@ function App() {
                   <a href="/#rulesnav">Rules</a>
                 </li>
                 <li className="nav-item nav__item">
+                  <a href="/#sponsorsnav">Sponsors</a>
+                </li>
+                <li className="nav-item nav__item">
                   <Link to="/">
                     <img src={Mainlogo} id="mainlogo" alt="" />
                   </Link>
@@ -77,7 +80,6 @@ function App() {
                 <li className="nav-item nav__item">
                   <Link to="/teams">Team</Link>
                 </li>
-
               </ul>
             </div>
           </div>

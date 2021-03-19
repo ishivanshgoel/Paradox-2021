@@ -9,6 +9,7 @@ import './CSS/homepage.css'
 import { ReactComponent as DiscordLogo } from '../logos/discord.svg'
 import { ReactComponent as ParadoxLogo } from "../logos/logoTagline.svg";
 import ParadoxLogo1 from "../logos/homepage_logo.svg";
+import ParadoxLogo2 from "../logos/logo6.png";
 import ParadoxLogoMobile from "../logos/logo1_wobg1.png";
 import IEEElogo from '../logos/IEEE_CS1.png';
 import instagram from "../logos/instagram.png";
@@ -17,8 +18,8 @@ import linkedin from "../logos/linkedin.png";
 import ieeecsvit from "../logos/ieeecsvit.png";
 
 /**
- * @author TejasV58, samankgupta
-*/
+***@author TejasV58, samankgupta
+**/
 
 function Homepage() {
 
@@ -27,16 +28,34 @@ function Homepage() {
     let handleRedirect = (event) => {
         history.push(`/${event.target.name}`)
     }
-
     return (
       <div className="row m-0">
         <div className="col-12 homepage__top">
           <div className="col-md-12 col-lg-12 d-flex justify-content-center">
-            <ParadoxLogo
-              viewBox="0 0 640 150"
-              className="paradox_logo d-none d-md-block"
-            />
-            <img src={ParadoxLogoMobile} className="ParadoxLogoMobile d-md-none my-5" />
+            <div
+              className="paradox_logo_div d-flex justify-content-center"
+              id="outer-logo-div"
+            >
+              <img
+                src={ParadoxLogo2}
+                className="Pradaox__logo"
+                id="paradoxlogo"
+                alt=""
+              />
+              <svg viewBox="0 0 100 95" className="paradox">
+                <text x="50%" y="50%" text-anchor="middle" id="paradox-text">
+                  PARADOX
+                </text>
+                <text x="0%" y="60%" id="cryptic_hunt">
+                  The Cryptic Hunt
+                </text>
+              </svg>
+            </div>
+
+            {/*<img
+              src={ParadoxLogoMobile}
+              className="ParadoxLogoMobile d-md-none my-5"
+            />*/}
           </div>
           <div className="d-md-flex justify-content-center">
             <div className="col-12 col-md-3 col-lg-2 my-5 my-md-0 ">
@@ -49,7 +68,7 @@ function Homepage() {
                 className=" homebtn d-flex justify-content-center"
                 id="discord"
               >
-                <DiscordLogo id="DiscordLogo" className="colorchange"/>
+                <DiscordLogo id="DiscordLogo" className="colorchange" />
                 JOIN DISCORD
               </button>
             </div>
@@ -69,21 +88,39 @@ function Homepage() {
             <span>ABOUT</span>
           </h2>
           <div className="section-description text-justify">
-            <span className="highlight">PARADOX</span> is a two day online cryptic hunt organised by IEEE Computer Society of VIT Chennai.
-            The 2021 edition of PARADOX will be held from <span className="highlight">20 march 2021 12:00 AM IST</span> to <span className="highlight">21 march 2021 11:59 PM IST</span>. The hunt consists of several questions in form of pictures and players would require to rack their brains to solve them and reach to an answer. <br/><br/>
-            The goal of players should be to find the answer as fast as possible to stay on top of the leaderboard. At the end of two days the player at the top of leaderboard will be declared as the winner of PARADOX 2021. 
-            This gripping competition will upskill and hone the expertise and efficiency of the competitors to solve tasks, by testing their logical and analytical skills while they search for clues all over the internet.
+            <span className="highlight">PARADOX</span> is a two day online
+            cryptic hunt organised by IEEE Computer Society of VIT Chennai. The
+            2021 edition of PARADOX will be held from{" "}
+            <span className="highlight">20 march 2021 12:00 AM IST</span> to{" "}
+            <span className="highlight">21 march 2021 11:59 PM IST</span>. The
+            hunt consists of several questions in form of pictures and players
+            would require to rack their brains to solve them and reach to an
+            answer. <br />
+            <br />
+            The goal of players should be to find the answer as fast as possible
+            to stay on top of the leaderboard. At the end of two days the player
+            at the top of leaderboard will be declared as the winner of PARADOX
+            2021. This gripping competition will upskill and hone the expertise
+            and efficiency of the competitors to solve tasks, by testing their
+            logical and analytical skills while they search for clues all over
+            the internet.
           </div>
         </div>
-        <div className="col-12 col-md-8 homepage__rules-section container" id="rulesnav">
+        <div
+          className="col-12 col-md-8 homepage__rules-section container"
+          id="rulesnav"
+        >
           <h2 className="about-heading">
             <span>RULES</span>
           </h2>
           <div className="Rules-section text-justify">
-            <Rules/>
+            <Rules />
           </div>
         </div>
-        <div className="col-12 col-md-8 homepage__sponsors-section container">
+        <div
+          className="col-12 col-md-8 homepage__sponsors-section container"
+          id="sponsorsnav"
+        >
           <h2 className="about-heading">
             <span>SPONSORS</span>
           </h2>
