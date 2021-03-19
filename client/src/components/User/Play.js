@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import Countdown from './countdown'
+import Countdown from './Countdown'
 import Playarea from './Playarea'
 
 /**
