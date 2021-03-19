@@ -11,7 +11,7 @@
 }
 .paradox{
   height: 45vh;
-  width: 700px;
+  width: 725px;
   font-family: robodron;
 }
 .paradox text{
@@ -37,7 +37,7 @@
 .Pradaox__logo{
     height:112px;
     width:120px;
-    margin:18vh 0;
+    margin:16% 0;
     transition: .8s ease-in-out;
     transform: rotate(0deg);
     filter: invert(10%) sepia(100%) saturate(0%) hue-rotate(183deg) brightness(100%) contrast(80%);
@@ -305,12 +305,21 @@ h2.about-heading:after {
     .paradox text{
         fill:#ffffffc5;
         font-weight: 1000;
-        font-size:1.5vw;
+        font-size:1.4vw;
         stroke-width:0.7;
     }
     .Pradaox__logo{
         height:27%;
         width:12%;
+        margin:15% 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .Pradaox__logo{
+        height:22%;
+        width:12%;
+        margin:18% 0;
     }
 }
 

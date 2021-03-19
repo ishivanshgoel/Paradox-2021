@@ -31,7 +31,7 @@ function Leaderboard() {
     const user = useSelector(state => state.user)
     const history = useHistory()
 
-    if(user){
+    if(true){
         return(
             <>
             {loading}

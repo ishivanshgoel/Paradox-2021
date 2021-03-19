@@ -42,7 +42,7 @@ function Homepage() {
                 id="paradoxlogo"
                 alt=""
               />
-              <svg viewBox="0 0 100 95" className="paradox">
+              <svg viewBox="0 0 100 100" className="paradox">
                 <text x="50%" y="50%" text-anchor="middle" id="paradox-text">
                   PARADOX
                 </text>
