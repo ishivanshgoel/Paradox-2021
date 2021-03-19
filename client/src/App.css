@@ -3,7 +3,7 @@ body {
   background-size: cover;
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(to top, #070714, #071a30, #070714);
+  background-image: linear-gradient(to top, #070714, #071a30, #070714,#070714);
   font-family: "Rajdhani", sans-serif;
   font-weight: 400;
   box-sizing: border-box;
