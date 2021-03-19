@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap");
 .Countdown_heading {
   /*background-color: black;*/
   background-position: center;
-  color:rgba(118, 223, 255, 0.877);
+  color: rgba(118, 223, 255, 0.877);
   width: 100%;
   height: 90vh;
 }
@@ -11,18 +11,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin:2% auto;
-  margin-top:0;
+  margin: 2% auto;
+  margin-top: 0;
   justify-content: center;
   width: 100%;
   height: 100%;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
 }
 .timer div:first-child {
   text-align: center;
   padding: 0.5%;
-  margin:2% auto;
-
+  margin: 2% auto;
 }
 .timer div:first-child h2 {
   font-size: 40px;
@@ -31,28 +30,27 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   padding: 0.5%;
-  margin:2% auto;
+  margin: 2% auto;
   text-align: center;
 }
 .timer_section p:first-child,
 .timer div:last-child span {
   font-size: 100px;
 }
-.timer_label{
-  font-size:30px;
+.timer_label {
+  font-size: 30px;
 }
 
- @media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .timer_section p:first-child,
   .timer div:last-child span {
     font-size: 21vw;
   }
-  .timer_label{
-    font-size:25px;
+  .timer_label {
+    font-size: 25px;
   }
   .timer div:first-child h2 {
     font-size: 45px;
     margin-bottom: 60px;
   }
-} 
-
+}

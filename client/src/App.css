@@ -1,43 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
-body{
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(to top, #070714,#071a30,#070714);
-    font-family: "Rajdhani", sans-serif;
-    font-weight: 400;
-    box-sizing: border-box;
-    color:#230730;
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap");
+body {
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to top, #070714, #071a30, #070714);
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+  color: #230730;
 }
 
-#mainlogo{
-    height:35px;
-    width:40px;
+#mainlogo {
+  height: 35px;
+  width: 40px;
 }
 
-.custom-toggler.navbar-toggler { 
-            border-color: rgba(118, 223, 255, 0.877);
-        }           
-        .custom-toggler .navbar-toggler-icon { 
-            background-image: url( 
-"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(118, 223, 255, 0.877)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
-        } 
-
-.dark-navbar{
-    background:#041b30d3;
-    margin:0%;
-    padding: 15px 0;
-    border-bottom:2px solid rgba(118, 223, 255, 0.877);
-    box-shadow: 0px 0px 30px #070714;
+.custom-toggler.navbar-toggler {
+  border-color: rgba(118, 223, 255, 0.877);
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(118, 223, 255, 0.877)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-li.nav__item a{
-    color:rgba(119, 215, 241, 0.726);
+.dark-navbar {
+  background: #041b30d3;
+  margin: 0%;
+  padding: 15px 0;
+  border-bottom: 2px solid rgba(118, 223, 255, 0.877);
+  box-shadow: 0px 0px 30px #070714;
 }
 
-li.nav__item a:hover{
-    color:rgba(118, 223, 255, 0.877);
-    text-decoration: none;
+li.nav__item a {
+  color: rgba(119, 215, 241, 0.726);
+}
+
+li.nav__item a:hover {
+  color: rgba(118, 223, 255, 0.877);
+  text-decoration: none;
 }
 
 .nav__item{
@@ -48,14 +47,13 @@ li.nav__item a:hover{
     font-family: 'Rajdhani', sans-serif;
 }
 
-.App{
-    min-height: 100vh;
+.App {
+  min-height: 100vh;
 }
 
 /*##### mobile view ###### */
 @media only screen and (max-width: 767px) {
-
-    #mainlogo{
-        display: none;
-    }
+  #mainlogo {
+    display: none;
+  }
 }

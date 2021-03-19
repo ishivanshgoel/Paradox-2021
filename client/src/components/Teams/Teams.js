@@ -20,26 +20,7 @@ function Teams() {
         <span className="bluecolor">Our</span> Team
       </h1>
       <div className="container teams__container">
-        <div className="member-2">
-          <Member
-            firstname={"firstname"}
-            lastname={"lastname"}
-            tagline={"tagline"}
-            email={""}
-            github={""}
-            linkedin={""}
-            image={""}
-          />
-          <Member
-            firstname={"firstname"}
-            lastname={"lastname"}
-            tagline={"tagline"}
-            email={""}
-            github={""}
-            linkedin={""}
-            image={""}
-          />
-        </div>
+       
         {team.map(
           ({
             firstname,
