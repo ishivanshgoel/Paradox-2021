@@ -11,7 +11,7 @@ function LoaderHook() {
     return (
         [
             (loading)?(
-                <Loader message={'Hold Back...'}/>
+                <Loader/>
             ):null,
             ()=>setLoading(true),
             ()=>setLoading(false)

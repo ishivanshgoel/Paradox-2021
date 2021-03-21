@@ -31,14 +31,18 @@
   box-shadow: none;
   border: none;
   transition: ease-out 0.2s;
-  opacity:0.7
+  opacity:0.8
   ;
 }
 .card-div:hover{
   opacity:1;
   cursor: pointer;
 }
-
+.copyright-teams{
+  text-align:center;
+  font-size:22px;
+  border-top: rgba(118, 223, 255, 0.877) 2px solid;
+}
 
 .card-div:hover .card-content{
   opacity:1;
