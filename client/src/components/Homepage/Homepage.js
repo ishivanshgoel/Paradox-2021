@@ -101,8 +101,8 @@ function Homepage() {
             <span className="highlight">PARADOX</span> is a two day online
             cryptic hunt organised by IEEE Computer Society of VIT Chennai. The
             2021 edition of PARADOX will be held from{" "}
-            <span className="highlight">20 march 2021 12:00 AM IST</span> to{" "}
-            <span className="highlight">21 march 2021 11:59 PM IST</span>. The
+            <span className="highlight">10 April 2021 12:00 AM IST</span> to{" "}
+            <span className="highlight">11 April 2021 11:59 PM IST</span>. The
             hunt consists of several questions in form of pictures and players
             would require to rack their brains to solve them and reach to an
             answer. <br />
@@ -177,7 +177,7 @@ function Footer() {
           
           <div className="contact-info col-12 col-md-4 my-4 my-md-0">
             <ul>
-              <h2>Contact Us</h2>
+              <h2 className="mb-2">Contact Us</h2>
               <li>
                 Samank Gupta
               </li>

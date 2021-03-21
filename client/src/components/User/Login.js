@@ -12,7 +12,7 @@ import "./login_css/loginstyle.css";
 import focus from '../focus';
 
 
-// Helper
+// Helper 
 import POST_Request from '../../Helper/PostRequest'
 import GET_Request from '../../Helper/GetRequest'
 import { setItem, getItem } from '../../Helper/LocalStorage'
@@ -101,7 +101,7 @@ function Login() {
         <form onSubmit={handleSubmit}>
           <div className="editor-field editor-field__textbox">
             <div className="editor-field__label-container">
-              <label className="editor-field__label">Name</label>
+              <label className="editor-field__label">Email</label>
             </div>
             <div className="editor-field__container">
               <input type="text" className="editor-field__input" placeholder="Email" required onChange={(event)=>setEmail(event.target.value)}/>

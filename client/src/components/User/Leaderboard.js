@@ -23,7 +23,7 @@ function Leaderboard() {
     useEffect(async ()=>{
         showLoader()
         const response = await GET_Request('leaderboard')
-        setData(response.data.leaderboard)
+        // setData(response.data.leaderboard)
         hideLoader()
     },[])
 

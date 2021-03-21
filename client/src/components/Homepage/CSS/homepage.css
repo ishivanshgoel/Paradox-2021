@@ -349,7 +349,7 @@ h2.about-heading:after {
     color:rgba(255, 255, 255, 0.6);
 }
 .contact-info h2, .social-panel h2{
-    color:c;
+    color:rgba(255, 255, 255, 0.8);
 }
 .contact-info ul{
     list-style: none;

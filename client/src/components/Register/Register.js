@@ -135,7 +135,7 @@ function Register() {
                 <label className="editor-field__label">Name</label>
               </div>
               <div className="editor-field__container">
-                <input type="text" className="editor-field__input" placeholder="John Doe" required onChange={(event) => setName(event.target.value)} />
+                <input type="text" className="editor-field__input" placeholder="Name" required onChange={(event) => setName(event.target.value)} />
               </div>
             </div>
             <div className="editor-field editor-field__textbox">
@@ -143,7 +143,7 @@ function Register() {
                 <label className="editor-field__label">Username</label>
               </div>
               <div className="editor-field__container">
-                <input type="text" className="editor-field__input" placeholder="john.doe" required onChange={(event) => setuserName(event.target.value)} />
+                <input type="text" className="editor-field__input" placeholder="Username" required onChange={(event) => setuserName(event.target.value)} />
               </div>
             </div>
             <div className="editor-field editor-field__textbox">
@@ -151,7 +151,7 @@ function Register() {
                 <label className="editor-field__label">Email</label>
               </div>
               <div className="editor-field__container">
-                <input type="email" className="editor-field__input" placeholder="john.doe@example.com" required onChange={(event) => setEmail(event.target.value)} />
+                <input type="email" className="editor-field__input" placeholder="emailid@example.com" required onChange={(event) => setEmail(event.target.value)} />
               </div>
             </div>
             <div className="editor-field editor-field__textbox">
@@ -175,7 +175,7 @@ function Register() {
                 <label className="editor-field__label">Password</label>
               </div>
               <div className="editor-field__container">
-                <input type="password" className="editor-field__input" placeholder="password" required onChange={(event) => setPassword(event.target.value)} />
+                <input type="password" className="editor-field__input" placeholder="Password" required onChange={(event) => setPassword(event.target.value)} />
               </div>
             </div>
             <div className="editor-field editor-field__textbox">
@@ -183,7 +183,7 @@ function Register() {
                 <label className="editor-field__label">Confirm Password</label>
               </div>
               <div className="editor-field__container">
-                <input type="password" className="editor-field__input" placeholder="password" required onChange={(event) => setcPassword(event.target.value)} />
+                <input type="password" className="editor-field__input" placeholder="Confirm Password" required onChange={(event) => setcPassword(event.target.value)} />
               </div>
             </div>
             <button type="submit" className="register__button">
