@@ -73,7 +73,7 @@ const team = [
     image: praneethsethumadhavan,
   },
   {
-    firstname: "Pratibha",
+    firstname: "Prathiba",
     lastname: "Narayan",
     tagline: "Graphic Designer",
     email: "prathiba642@gmail.com",
