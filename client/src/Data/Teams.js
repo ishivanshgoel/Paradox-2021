@@ -2,71 +2,84 @@
 import shivanshgoel from '../Static/shivanshgoel.jpeg'
 import sanikakulkarni from '../Static/sanikakulkarni.jpg'
 import tanaybhadula from '../Static/tanaybhadula.jpeg'
-import TejasVaichole from "../Static/tejasimage.jpeg";
+import TejasVaichole from "../Static/tejasimage.jpeg"
+import samankgupta from "../Static/samankgupta.jpeg"
+import prabhatsingh from "../Static/prabhatsingh.jpeg"
+import praneethsethumadhavan from "../Static/praneethsethumadhavan.jpeg"
+import pratibhanarayan from "../Static/pratibhanarayan.jpeg"
 
 const team = [
   {
     firstname: "Samank",
     lastname: "Gupta",
-    tagline: "Some quick example",
-    email: "example@gmail.com",
-    github: "example",
-    linkedin: "",
-    image: "",
+    tagline: "Event Coordinator",
+    email: "samankgupta@gmail.com",
+    github: "samankgupta",
+    linkedin: "samank-gupta-5b55b0195",
+    image: samankgupta,
   },
   {
     firstname: "Tanay",
     lastname: "Bhadula",
-    tagline: "Some quick example",
+    tagline: "Event Coordinator",
     email: "tanaybhadula2002@gmail.com",
     github: "TanayBhadula",
-    linkedin: "tejas-vaichole-049209196",
+    linkedin: "tanay-bhadula-238a88179",
     image: tanaybhadula,
   },
   {
     firstname: "Shivansh",
     lastname: "Goel",
-    tagline: "beAwesome();",
+    tagline: "Web Developer",
     email: "ishivanshgoel@gmail.com",
     github: "ishivanshgoel",
-    linkedin: "linkedin",
+    linkedin: "shivansh-goel-260019a7",
     image: shivanshgoel,
   },
   {
     firstname: "Tejas",
     lastname: "Vaichole",
-    tagline: "Some quick example",
+    tagline: "Web Designer",
     email: "tejasv515@gmail.com",
     github: "TejasV58",
-    linkedin: "",
+    linkedin: "tejas-vaichole-049209196",
     image: TejasVaichole,
   },
   {
     firstname: "Sanika",
     lastname: "Kulkarni",
-    tagline: "Some quick example",
+    tagline: "Web Designer",
     email: "sanika.k.goa@gmail.com",
     github: "saniikakulkarni",
-    linkedin: "",
+    linkedin: "sanika-kulkarni-34b403192",
     image: sanikakulkarni,
   },
   {
     firstname: "Prabhat",
     lastname: "Singh",
-    tagline: "Some quick example",
-    email: "example@gmail.com",
-    github: "example",
-    linkedin: "",
-    image: "",
+    tagline: "Web Developer",
+    email: "singh01prabhat@gmail.com",
+    github: "TestPrab",
+    linkedin: "prabhat-singh-463527190",
+    image: prabhatsingh,
   },
   {
     firstname: "Praneeth",
-    lastname: "",
-    tagline: "Some quick example",
-    email: "example@gmail.com",
-    github: "example",
-    linkedin: "",
-    image: "",
+    lastname: "Sethumadhavan",
+    tagline: "Web Developer",
+    email: "praneeth.sethumadhavan@gmail.com",
+    github: "PraneethGh",
+    linkedin: "praneeth-sethumadhavan-57398918b",
+    image: praneethsethumadhavan,
+  },
+  {
+    firstname: "Pratibha",
+    lastname: "Narayan",
+    tagline: "Graphic Designer",
+    email: "prathiba642@gmail.com",
+    github: "caramelpudding11",
+    linkedin: "prathiba-narayan-8432471b9",
+    image: pratibhanarayan,
   },
 ];
 
