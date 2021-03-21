@@ -31,31 +31,35 @@ function Homepage() {
     return (
       <div className="row m-0">
         <div className="col-12 homepage__top">
-          <div className="col-md-12 col-lg-12 d-flex justify-content-center">
+          <div className="row m-0">
             <div
-              className="paradox_logo_div d-flex justify-content-center"
+              className="paradox_logo_div"
               id="outer-logo-div"
             >
               <img
                 src={ParadoxLogo2}
-                className="Pradaox__logo"
+                className="Paradox__logo offset-md-1 col-md-2 img-fluid"
                 id="paradoxlogo"
                 alt=""
               />
-              <svg viewBox="0 0 100 100" className="paradox">
-                <text x="50%" y="50%" text-anchor="middle" id="paradox-text">
+              <svg viewBox="0 0 250 110" className="paradox offset-md-3 col-md-9 d-none d-md-block">
+                <text x="40%" y="45%" text-anchor="middle" id="paradox-text">
                   PARADOX
                 </text>
-                <text x="0%" y="60%" id="cryptic_hunt">
+                <text x="30%" y="52%" id="cryptic_hunt">
+                  The Cryptic Hunt
+                </text>
+              </svg>
+              <svg viewBox="0 0 100 100" className="paradox d-md-none col-12 p-0">
+                <text x="52%" y="50%" text-anchor="middle" id="paradox-text">
+                  PARADOX
+                </text>
+                <text x="-2%" y="60%" id="cryptic_hunt">
                   The Cryptic Hunt
                 </text>
               </svg>
             </div>
 
-            {/*<img
-              src={ParadoxLogoMobile}
-              className="ParadoxLogoMobile d-md-none my-5"
-            />*/}
           </div>
           <div className="d-md-flex justify-content-center ">
             <div className="col-12 col-md-3 col-lg-2 my-5 my-md-0 ">
@@ -146,7 +150,7 @@ function Homepage() {
           </div>
         </div>
         <Footer />
-        <p className="copyright">Made With ❤️ by Team PARADOX | © IEEE VITC </p>
+        <p className="copyright">Made With ❤️ by Team PARADOX | <span className="d-md-none"><br/></span>© IEEE VITC </p>
       </div>
     );
 }
@@ -175,17 +179,17 @@ function Footer() {
             <ul>
               <h2>Contact Us</h2>
               <li>
-                Samank Gupta - <em>cyclonite#5201</em>
+                Samank Gupta
               </li>
               <li>samankgupta@gmail.com</li>
               <hr />
               <li>
-                Tanay Bhadula - <em>davidsling#0162</em>
+                Tanay Bhadula 
               </li>
               <li>tanaybhadula2002@gmail.com </li>
               <hr />
               <li>
-                JS Abhishek - <em>JS ABHISHEK#7964</em>
+                JS Abhishek
               </li>
               <li>jsabhishek2001@gmail.com</li>
             </ul>
@@ -193,7 +197,7 @@ function Footer() {
 
           <div className="social-panel col-12 col-md-4 my-4 my-md-0">
             <h2>Social Links</h2>
-            <div className="d-flex justify-content-between px-lg-5">
+            <div className="d-flex justify-content-between socialmedialinks">
               <a
                 target="_BLANK"
                 href="https://www.linkedin.com/company/ieee-computer-society-vit-chennai"

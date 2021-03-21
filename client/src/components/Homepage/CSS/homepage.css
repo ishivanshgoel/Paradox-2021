@@ -10,13 +10,12 @@
     width: auto;
 }
 @font-face {
-  font-family: Robodron;
-  src: url(../Robodron.otf);
+    font-family: 'robodronregular';
+    src: url('../robodron-webfont.woff2') format('woff2'),
+         url('../robodron-webfont.woff') format('woff');
 }
 .paradox{
-  height: 45vh;
-  width: 725px;
-  font-family: Robodron;
+  font-family: 'robodronregular';
 }
 .paradox text{
     fill:#ffffffc5;
@@ -38,29 +37,21 @@
     stroke-dasharray: 70% 0%;
     cursor:pointer;
 }
-.Pradaox__logo{
-    height:112px;
-    width:120px;
-    margin:16% 0;
+.Paradox__logo{
+    position: absolute;
+    top: 8vw;
+    padding: 3vw;
     transition: .8s ease-in-out;
     transform: rotate(0deg);
     filter: invert(10%) sepia(100%) saturate(0%) hue-rotate(183deg) brightness(100%) contrast(80%);
 }
-#outer-logo-div:hover .Pradaox__logo{
+#outer-logo-div:hover .Paradox__logo{
     cursor:pointer;
     transform: rotate(-90deg);
     filter: none;
 }
-.paradox_logo{
-  height: 60vh;
-  width: 1000px;
-}
-.ParadoxLogoMobile{
-  height: 19vh;
-  width: 90vw;
-}
 #cryptic_hunt{
-     fill:rgba(0, 49, 65, 0);
+    fill:rgba(0, 49, 65, 0);
     font-weight: 600;
     letter-spacing: 0.5px;
     transition:linear 0.8s;
@@ -197,7 +188,7 @@ h2.about-heading:after {
 #sd-container {
     position:absolute;
     left:48%;
-    top:32rem;
+    bottom:4vw;
     margin:auto;
 }
 
@@ -364,11 +355,6 @@ h2.about-heading:after {
     list-style: none;
     padding:0;
 }
-
-.site-nav li a{
-    color:rgba(255, 255, 255, 0.527);
-    text-decoration: none;
-}
 .copyright{
     text-align:center;
     font-size:22px;
@@ -376,9 +362,11 @@ h2.about-heading:after {
 .social-logos{
     height:35px;
     width:35px;
-    margin: 80px 30px;
+    margin: 80px 10px;
 }
-
+.socialmedialinks{
+    margin: 0 70px;
+}
 .homepage__top{
     min-height: 90vh;
 }
@@ -388,40 +376,20 @@ h2.about-heading:after {
 
 
 @media (max-width: 1260px) {
-    .social-logos{
-        margin: 90px 1vw;
-    }
-    .paradox_logo_div{
-        display:none;
+    .socialmedialinks{
+        margin: 0 30px;
     }
 }
 
 @media (max-width: 1100px) {
-    .paradox{
-        height: 45vh;
-        width: 62vw;
+    .Paradox__logo{
+        top: 7vw;
+        padding: 3.2vw;
     }
-    .paradox text{
-        fill:#ffffffc5;
-        font-weight: 1000;
-        font-size:1.4vw;
-        stroke-width:0.7;
-    }
-    .Pradaox__logo{
-        height:27%;
-        width:12%;
-        margin:15% 0;
+    .socialmedialinks{
+        margin: 0 10px;
     }
 }
-
-@media (max-width: 900px) {
-    .Pradaox__logo{
-        height:22%;
-        width:12%;
-        margin:18% 0;
-    }
-}
-
 /*##### mobile view ###### */
 @media only screen and (max-width: 767px) {
     #DiscordLogo__text{
@@ -433,10 +401,7 @@ h2.about-heading:after {
     #footer_logo{
         width: 95vw;
     }
-    .paradox_logo_div{
-        display:none;
-    }
-    .Pradaox__logo{
+    .Paradox__logo{
         display:none;
     }
     .paradox{
@@ -444,14 +409,11 @@ h2.about-heading:after {
         width: 90vw;
     }
     .paradox text{
-        fill:#ffffffc5;
-        font-weight: 1000;
         font-size:2vw;
-        stroke-width:0.5;
         transform: scaleY(1.4) translateY(-10%);
     }
     #outer-logo-div:hover #paradox-text{
-        stroke-width:0.4;
+        stroke-width:0.1;
     }
     #cryptic_hunt{
         font-weight: 400;
@@ -470,46 +432,6 @@ h2.about-heading:after {
 }
 
 
-/* height */
-@media (max-height: 680px) {
-    .paradox{
-        height: 50vh;
-        width: 62vw;
-    }
-    .paradox text{
-        stroke-width:0.2;
-    }
-}
-@media (max-height: 630px) {
-    .paradox{
-        height: 55vh;
-        width: 62vw;
-    }
-    .paradox text{
-        stroke-width:0.1;
-    }
-}
-@media (max-height: 626px) {
-    #sd-container {
-       display:none;
-    }
-    .paradox{
-        height: 55vh;
-        width: 58vw;
-    }
-    .paradox text{
-        fill:#ffffffc5;
-        font-size:2vh;
-        stroke-width:0.1;
-        transform: scaleY(1.4) translateY(-10%);
-    }
-    .Pradaox__logo{
-        height:24%;
-        width:12%;
-        margin:15% 0;
-    }
-
-}
 
 /**
 @author: TejasV58, samankgupta
