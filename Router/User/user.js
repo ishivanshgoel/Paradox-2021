@@ -23,6 +23,7 @@ router.post('/login', async function (req, res, next) {
 
     try {
         const result = await LoginValidationSchema.validateAsync(req.body)
+        
         const user = await User.findOne({ email: result.email })
 
         if (!user) throw createError.NotFound("User is not registered")
@@ -47,7 +48,7 @@ router.post('/register', async function (req, res, next) {
     try {
 
         const result = await UserValidationSchema.validateAsync(req.body)
-
+        console.log(req.body)
         const ifExists = await User.find(
             {
                 $or: [
@@ -62,6 +63,7 @@ router.post('/register', async function (req, res, next) {
 
         const newuser = new User(
             {
+                name: req.body.name,
                 userName: req.body.userName,
                 email: req.body.email,
                 password: req.body.password,
@@ -74,6 +76,7 @@ router.post('/register', async function (req, res, next) {
         res.send({ accessToken })
 
     } catch (error) {
+        console.log(error)
         next(error)
     }
 
