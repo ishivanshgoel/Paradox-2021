@@ -43,7 +43,7 @@ function Register() {
   })
 
   function validatePassword() {
-    var regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,32}$/
+    var regex = /^[a-zA-Z]{8,32}$/
     if (regex.test(password)) {
       if (password !== cpassword)
         return 404
