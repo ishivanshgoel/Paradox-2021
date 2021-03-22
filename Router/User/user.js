@@ -48,7 +48,6 @@ router.post('/register', async function (req, res, next) {
     try {
 
         const result = await UserValidationSchema.validateAsync(req.body)
-        console.log(req.body)
         const ifExists = await User.find(
             {
                 $or: [
@@ -76,7 +75,7 @@ router.post('/register', async function (req, res, next) {
         res.send({ accessToken })
 
     } catch (error) {
-        console.log(error)
+        console.log("/register ", error)
         next(error)
     }
 
