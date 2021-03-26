@@ -15,14 +15,6 @@ const QuestionSchema = new mongoose.Schema({
     levelNumber: {
         type: Number,
         required: true
-    },
-    createdOn: {
-        type: Date,
-        default: Date.now
-    },
-    answeredBy: {
-        type: Number,
-        default: 0
     }
 });
 
