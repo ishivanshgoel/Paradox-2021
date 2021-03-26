@@ -57,7 +57,7 @@ function Member({firstname, lastname, tagline, email, github, linkedin, image})
       <img
         className="card-img-top member-image"
         src={image || DefaultMember}
-        alt="Card image cap"
+        alt={firstname+'-'+lastname+'-paradox-'+tagline}
       ></img>
       <div className="content-card">
         <h5 className="card-title card-name">

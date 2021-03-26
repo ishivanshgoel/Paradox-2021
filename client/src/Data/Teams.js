@@ -30,7 +30,7 @@ const team = [
   {
     firstname: "Shivansh",
     lastname: "Goel",
-    tagline: "Web Developer",
+    tagline: "Developer",
     email: "ishivanshgoel@gmail.com",
     github: "ishivanshgoel",
     linkedin: "shivansh-goel-260019a7",
