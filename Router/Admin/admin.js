@@ -35,31 +35,47 @@ router.post('/login', validateAdmin ,async function (req, res, next) {
 
 })
 
-router.get('/details', validateAdmin ,function (req, res) {
+router.post('/add', validateAdmin ,async function (req, res, next) {
+
+    console.log("Body ", req.body)
     
-    let auth = true // testing
-    
-    if(auth){
-        res.josn({message:'Success',data: ['123','234']})
-    } else{
-        res.json({message: 'Fail'})
+    try{
+
+        if(!req.body.imageUrl || !req.body.answer || !req.body.levelNumber) throw createError.BadRequest()
+
+        const ifExists = await Question.find(
+            {
+               levelNumber: req.body.levelNumber
+            }
+        )
+        console.log(ifExists)
+
+        if(ifExists.length > 0) throw createError.Conflict(`Level ${req.body.levelNumber} is already assigned to another question.`)
+
+        const question = new Question({
+            imageUrl: req.body.imageUrl,
+            answer: req.body.answer,
+            levelNumber: req.body.levelNumber
+        })
+
+        const savedQuestion = await question.save()
+
+        res.send({message: "Saved"})
+    } catch (error){
+        next(error)
     }
-    
+
 })
 
-router.post('/update', validateAdmin, function (req, res) {
+router.post('/update', validateAdmin, async function (req, res, next) {
     
-    let auth = true // testing
-    
-    if(auth){
+    try{
 
-        // read the field name and the field data to be updated from request body
-        // if(update==success)
-            res.josn({message:'Success'})
-        // else send 'Fail'
+        res.send(true)
 
-    } else{
-        res.json({message: 'Fail'})
+
+    } catch(error){
+        next(error)
     }
     
 })
