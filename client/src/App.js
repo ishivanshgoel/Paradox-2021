@@ -8,10 +8,14 @@ import {
 import {useSelector} from 'react-redux'
 
 //Bootstrap CSS
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 // Custom CSS
-import './App.css';
+import './App.css'
+
+// Notifications
+import ReactNotification from 'react-notifications-component'
+import 'react-notifications-component/dist/theme.css'
 
 // Level 1 Components
 import Homepage from './components/Homepage/Homepage'
@@ -36,6 +40,7 @@ function App() {
 
   return (
     <div className="App">
+      <ReactNotification />
       <Router>
         <nav className="navbar dark-navbar navbar-expand-md " role="navigation">
           <div className="container-fluid ">
