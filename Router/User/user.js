@@ -75,7 +75,6 @@ router.post('/register', async function (req, res, next) {
         res.send({ accessToken })
 
     } catch (error) {
-        console.log("/register ", error)
         next(error)
     }
 
