@@ -9,7 +9,6 @@ import LoaderHook from '../Loader/LoaderHook'
 // static
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./login_css/loginstyle.css";
-import focus from '../focus';
 
 
 // Helper 
@@ -24,8 +23,6 @@ import { setItem, getItem } from '../../Helper/LocalStorage'
  */
 
 function Login() {
-
-  focus()
 
   // fetch from store
   const user = useSelector(state => state.user)
@@ -120,6 +117,7 @@ function Login() {
             </button>
         </form>
         </div>
+        <script href="/focus.js"></script>
       </div>
   ) 
   

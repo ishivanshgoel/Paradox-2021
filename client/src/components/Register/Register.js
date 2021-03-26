@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./register_css/register.css"
-import focus from '../focus'
 
 // loading scrren
 import LoaderHook from '../Loader/LoaderHook'
@@ -16,8 +15,6 @@ import POST_Request from '../../Helper/PostRequest'
  */
 
 function Register() {
-
-  focus();
   //fetch from store
   const user = false
 
@@ -199,6 +196,7 @@ function Register() {
             </button>
           </form>
         </div>
+        <script href="/focus.js"></script>
       </div>
     ) : (
         <div>
