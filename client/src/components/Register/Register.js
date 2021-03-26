@@ -43,7 +43,7 @@ function Register() {
   })
 
   function validatePassword() {
-    var regex = /^[a-zA-Z]{8,32}$/
+    var regex = /^.{8,32}$/
     if (regex.test(password)) {
       if (password !== cpassword)
         return 404
@@ -85,7 +85,7 @@ function Register() {
       setMessage({
         display: true,
         color: 'red',
-        message: 'Your password is too weak. Please enter a new password.'
+        message: 'Password length should range b/w 8 to 32.'
       })
 
       hideLoader()
@@ -100,6 +100,14 @@ function Register() {
           color: 'green',
           message: 'Registered Successfully!!'
         })
+
+        showLoader()
+        // wait for 3 seconds and redirect to login page
+        setTimeout(function(){
+          hideLoader()
+          history.push("/user")
+        }, 3000);
+
       }
       else {
         setMessage({
