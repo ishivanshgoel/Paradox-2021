@@ -36,8 +36,6 @@ router.post('/login', validateAdmin ,async function (req, res, next) {
 })
 
 router.post('/add', validateAdmin ,async function (req, res, next) {
-
-    console.log("Body ", req.body)
     
     try{
 
@@ -54,7 +52,7 @@ router.post('/add', validateAdmin ,async function (req, res, next) {
 
         const question = new Question({
             imageUrl: req.body.imageUrl,
-            answer: req.body.answer,
+            answer: req.body.answer.toLowerCase(),
             levelNumber: req.body.levelNumber
         })
 

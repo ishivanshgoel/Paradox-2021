@@ -105,16 +105,24 @@ router.get('/getuser', verifyAccessToken, async function (req, res, next){
 router.post('/evaluate', verifyAccessToken,async function (req, res, next) {
     
     try {
-        const result = await EvaluateValidationSchema.validateAsync(req.body)
-        const question = await Question.findOne({id: result.id})
 
-        if(!question) throw createError.NotFound("Question id is invalid")
+        if(!req.body.answer) throw createError.BadRequest('answer not found')
+    
+        const user = await User.findOne({_id: req.payload.aud})
 
-        const isMatch = await user.isValidAnswer(result.answer)
+        if(!user) throw createError.BadRequest('user not loggedin')
+        
+        const question = await Question.findOne({levelNumber: user.score+1})
 
-        if(isMatch) res.send({message:'true'}) 
+        if(!question) throw createError.NotFound("Question Not Found")
 
-        else if(!isMatch) res.send({message:'false'})
+        const isMatch = await question.isValidAnswer(req.body.answer.toLowerCase())
+
+        if(isMatch){
+            res.send({message:'correct'}) 
+        }
+
+        else if(!isMatch) res.send({message:'wrong'})
 
     } catch (error) {
         next(error)
@@ -125,13 +133,16 @@ router.post('/evaluate', verifyAccessToken,async function (req, res, next) {
 router.get('/nextlevel', verifyAccessToken, async function (req, res, next) {
 
     try {
-        const user = await User.findOne({ _id: req.body.id })
+        const user = await User.findOne({ _id: req.payload.aud })
 
         const nextLevel = await Question.findOne({ levelNumber: user.score + 1 })
 
         if(!nextLevel) throw createError.NotFound("No Question found for this level.")
-        
-        res.send({ level: nextLevel })
+        const { imageUrl, levelNumber } = nextLevel
+        res.send({
+            imageUrl,
+            levelNumber
+        })
 
     } catch (error) {
         next(error)
