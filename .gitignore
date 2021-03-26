@@ -12,5 +12,5 @@ package-lock.json
 
 
 # Client
-#/client/node_modules
-#/client/package-lock.json
+/client/node_modules
+/client/package-lock.json
