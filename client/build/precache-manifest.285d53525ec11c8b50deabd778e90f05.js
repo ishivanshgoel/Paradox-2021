@@ -92,12 +92,12 @@ self.__precacheManifest = [
     "url": "/static/media/demo.6ae32332.jpg"
   },
   {
-    "revision": "4155c2ae1b2c90a225bec3ffce1c28d7",
-    "url": "/static/media/robodron-webfont.4155c2ae.woff2"
-  },
-  {
     "revision": "d4e0ec7bc6c6690da0e66c13c917c414",
     "url": "/static/media/robodron-webfont.d4e0ec7b.woff"
+  },
+  {
+    "revision": "4155c2ae1b2c90a225bec3ffce1c28d7",
+    "url": "/static/media/robodron-webfont.4155c2ae.woff2"
   },
   {
     "revision": "4718be3958c17aab2844369d1f60ce18",
