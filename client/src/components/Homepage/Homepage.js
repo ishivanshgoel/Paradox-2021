@@ -42,7 +42,15 @@ function Homepage() {
                 id="paradoxlogo"
                 alt=""
               />
-              <svg viewBox="0 0 250 110" className="paradox offset-md-3 col-md-9 d-none d-md-block">
+              <svg viewBox="0 0 250 110" className="paradox offset-md-3 col-md-9 d-none d-md-block logo-normal">
+                <text x="40%" y="45%" text-anchor="middle" id="paradox-text">
+                  PARADOX
+                </text>
+                <text x="30%" y="52%" id="cryptic_hunt">
+                  The Cryptic Hunt
+                </text>
+              </svg>
+              <svg viewBox="0 0 250 95" className="paradox offset-md-3 col-md-9 d-none logo-height">
                 <text x="40%" y="45%" text-anchor="middle" id="paradox-text">
                   PARADOX
                 </text>

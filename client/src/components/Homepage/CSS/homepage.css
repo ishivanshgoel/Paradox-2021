@@ -374,6 +374,17 @@ h2.about-heading:after {
     width: 400px;
 }
 
+@media (min-width: 767px) and (max-height: 700px) {
+    .logo-normal{
+        display: none!important;
+    }
+    .logo-height{
+        display: block!important;
+    }
+    .Paradox__logo{
+        top: 5.6vw;
+    }
+}
 
 @media (max-width: 1260px) {
     .socialmedialinks{
