@@ -11,7 +11,9 @@ const endPoints = {
     login: "/userServer/login",
     register: "/userServer/register",
     evaluate: "/userServer/evaluate",
-    alogin: "/adminServer/login"
+    alogin: "/adminServer/login",
+    add: "/adminServer/add",
+    update: "/adminServer/update"
 
 }
 
@@ -22,24 +24,21 @@ function urlBuilder(endPoint, id = null) {
     else return BASE_URL + endPoints[endPoint]
 }
 
-function POST_Request(endPoint, data, id = null) {
+async function POST_Request(endPoint, data, id = null) {
 
     let token = getItem('token')
 
-    if(endPoint === 'alogin'){
+    if(endPoint === 'alogin' || endPoint === 'add' || endPoint === 'update'){
         token = ADMINTOKEN
     }
-   
-    console.log("Request URL ", urlBuilder(endPoint, id))
-
-    console.log("Data ", data)
 
     return axios.post(urlBuilder(endPoint, id), data, {
         headers: { 'Authorization': token ? `Bearer ${token}` : '', 'Content-Type': 'application/json' }
     }).then((response) => {
         return response
     }).catch((err) => {
-        return err
+        if(err.response && err.response.data) return err.response.data.error.message
+        return "Error Occured"
     });
 
 }
