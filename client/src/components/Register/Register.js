@@ -50,7 +50,7 @@ function Register() {
   }
 
   function validateDiscord() {
-    var regex = /^(?!discordtag|everyone|here)([^(@)(#)(:)(```)]){2,32}#\d{4}$/
+    var regex = /^([^(@)(#)(:)(`)]){2,32}#\d{4}$/
     if (regex.test(discord)) {
       return true
     }
