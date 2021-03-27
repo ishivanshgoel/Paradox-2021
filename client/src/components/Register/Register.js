@@ -73,11 +73,8 @@ function Register() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
 
     if (validateDiscord() === false) {
-      setMessage({
-        display: true,
-        color: 'red',
-        message: 'Discord username is incorrect. (Format: Username#1234).'
-      })
+
+      Notification("Warning", "Discord username is incorrect. (Format: Username#1234).", "warning")
 
       hideLoader()
       return
