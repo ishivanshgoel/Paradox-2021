@@ -73,18 +73,26 @@ const Playarea = () => {
                 loading ? (
                     <section className="Playarea_heading">
                         <section className="play">
-                            <div className="profile_level">
-                                Level: 10
+                            <div className="editor-field-playarea editor-field__textbox">
+                                <div className="editor-field__label-container">
+                                    <label className="editor-field__label">Level</label>
+                                </div>
+                                <div className="editor-field__container-playarea">
+                                    <p className="editor-field__input"> 10 </p>
+                                </div>
                             </div>
-
                             <section className="play_question">
                                 <div className="play_img img-fluid">
                                     <img src={imageUrl || demo} alt="paradox-level" />
                                 </div>
                             </section>
-
-                            <div className="profile_rank">
-                                Rank: 20
+                            <div class="dropdown playarea-btn">
+                                <button class="btn btn-secondary dropdown-toggle playarea-btn-back" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    saniikakulkarni
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Logout</a>
+                                </div>
                             </div>
                         </section>
 
