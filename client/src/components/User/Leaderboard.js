@@ -18,6 +18,8 @@ function Leaderboard() {
 
     //fetch from store
     const user = useSelector(state => state.user)
+    const id = useSelector((state)=>state.id)
+
     const history = useHistory()
 
     const [data,setData] = useState([{}])
@@ -49,11 +51,18 @@ function Leaderboard() {
                                 <th scope="col">Username</th>
                                 <th scope="col">Level</th>
                             </tr>
-                            <tr className="Current_user Leaderboard_row">
-                                <td scope="row">1</td>
-                                <td>Mark</td>
-                                <td>50</td>
-                            </tr>
+                            {
+                                data && data.map((member,index)=>{
+                                    if(member._id == id)
+                                        return(
+                                        <tr className="Current_user Leaderboard_row">
+                                            <td scope="row">{index+1}</td>
+                                            <td>{member.userName}</td>
+                                            <td>{member.score}</td>
+                                        </tr>
+                                )
+                                })
+                            }
                             {
                                 data && data.map((member,index)=>{
                                     return(
