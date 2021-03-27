@@ -11,7 +11,7 @@ import Playarea from './Playarea'
 
 function Play() {
 
-    const user = useSelector(state => state.user)
+    const user = true
     const history = useHistory()
 
 
