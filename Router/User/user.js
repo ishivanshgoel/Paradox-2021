@@ -33,7 +33,10 @@ router.post('/login', async function (req, res, next) {
         if (!isMatch) throw createError.Unauthorized('Username/password not valid')
 
         const accessToken = await signAcessToken(user.id)
-        res.send({ accessToken })
+        res.send({ accessToken: accessToken,
+                    id: user.id,
+                    username: user.userName 
+                })
 
     } catch (error) {
         if (error.isJoi == true) return next(createError.BadRequest("Invalid Username/Password"))
