@@ -9,6 +9,9 @@ import LoaderHook from '../Loader/LoaderHook'
 // Requests
 import POST_Request from '../../Helper/PostRequest'
 
+// Notification
+import Notification from '../Notifications/Notification'
+
 /**
  * Level 1 Route - /register
  * @author TanayBhadula, ishivanshgoel, samankgupta
@@ -31,13 +34,6 @@ function Register() {
 
   // loading screen
   const [loading, showLoader, hideLoader] = LoaderHook()
-
-  //messages
-  const [message, setMessage] = useState({
-    display: false,
-    color: 'red',
-    message: ''
-  })
 
   function validatePassword() {
     var regex = /^.{8,32}$/
@@ -69,21 +65,14 @@ function Register() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
 
     if (validatePassword() === 404) {
-      setMessage({
-        display: true,
-        color: 'yellow',
-        message: 'Password and confirm password does not match.'
-      })
 
+      Notification("Warning", "Password and confirm password does not match.", "warning")
 
       hideLoader()
       return
     } else if (validatePassword() === false) {
-      setMessage({
-        display: true,
-        color: 'red',
-        message: 'Password length should range b/w 8 to 32.'
-      })
+
+      Notification("Warning", "Password length should range b/w 8 to 32.", "danger")
 
       hideLoader()
       return
@@ -92,11 +81,8 @@ function Register() {
     try {
       const response = await POST_Request('register', data);
       if (response.data && response.data.accessToken) {
-        setMessage({
-          display: true,
-          color: 'green',
-          message: 'Registered Successfully!!'
-        })
+      
+        Notification("Success", "Registered Successfully!!", "success")
 
         showLoader()
         // wait for 3 seconds and redirect to login page
@@ -106,19 +92,14 @@ function Register() {
         }, 3000);
 
       }
-      else {
-        setMessage({
-          display: true,
-          color: 'red',
-          message: 'You are already registered or Some Internal Server Error !!'
-        })
+      else if(response=="User Already Exists") {
+        Notification("Warning", "You are already registered!!", "warning")
+      }
+      else{
+        Notification("Error", "Cannot register!!", "danger")
       }
     } catch (err) {
-      setMessage({
-        display: true,
-        color: 'red',
-        message: 'Sorry, We are facing some Internal Server Error.'
-      })
+      Notification("Sorry", "We are facing some Internal Server Error.", "warning")
     }
     hideLoader()
   }
@@ -132,9 +113,6 @@ function Register() {
         <div className="btn--primary">
           <form onSubmit={handleSubmit}>
             <h1>REGISTER</h1>
-            {
-              message.display ? (<p style={{ color: message.color }}>{message.message}</p>) : (null)
-            }
             <div className="editor-field editor-field__textbox">
               <div className="editor-field__label-container">
                 <label className="editor-field__label">Name</label>

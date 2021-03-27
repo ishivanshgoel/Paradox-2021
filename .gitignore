@@ -7,8 +7,8 @@ package-lock.json
 #/Database/Config/credentials.json 
 
 # Constants
-#/client/src/Helper/Constants.js
-#/Router/Admin/constants.js
+/client/src/Helper/Constants.js
+/Router/Admin/constants.js
 
 
 # Client

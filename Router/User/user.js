@@ -58,7 +58,7 @@ router.post('/register', async function (req, res, next) {
             }
         )
 
-        if (ifExists.length > 0) throw createError.Conflict(`${req.body.email} or ${req.body.userName} or ${req.body.discord} is already registered with another account`)
+        if (ifExists.length > 0) throw createError.Conflict("User Already Exists")
 
         const newuser = new User(
             {
@@ -119,6 +119,8 @@ router.post('/evaluate', verifyAccessToken,async function (req, res, next) {
         const isMatch = await question.isValidAnswer(req.body.answer.toLowerCase())
 
         if(isMatch){
+            user.score += 1
+            await user.save()
             res.send({message:'correct'}) 
         }
 

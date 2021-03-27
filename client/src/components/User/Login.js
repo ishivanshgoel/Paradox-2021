@@ -16,6 +16,9 @@ import POST_Request from '../../Helper/PostRequest'
 import GET_Request from '../../Helper/GetRequest'
 import { setItem, getItem } from '../../Helper/LocalStorage'
 
+// Notification
+import Notification from '../Notifications/Notification'
+
 
 /**
  * Level 1 Route - /user
@@ -68,21 +71,20 @@ function Login() {
     // start loading screen
     showLoader()
 
-    let data = {
+    const response = await POST_Request('login',{
       email,
       password
-    }
-
-    const response = await POST_Request('login', data);
+    });
 
     if (response.data && response.data.accessToken) {
+      // set to local storage
       setItem('token', response.data.accessToken)
       dispatch({
         type: SETUSER,
         token: response.data.accessToken
       })
     } else {
-      alert('error logging you in')
+      Notification("Warning", "Invalid Username/ Password", "danger")
     }
 
     // hide loader
