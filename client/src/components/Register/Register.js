@@ -45,6 +45,14 @@ function Register() {
     else return false;
   }
 
+  function validateDiscord() {
+    var regex = /^([^(@)(#)(:)(`)]){2,32}#\d{4}$/
+    if (regex.test(discord)) {
+      return true
+    }
+    else return false;
+  }
+
   // handle form submission
   let handleSubmit = async (event) => {
     event.preventDefault()
@@ -63,6 +71,17 @@ function Register() {
 
     // scroll to top of page
     window.scrollTo({ top: 0, behavior: 'smooth' })
+
+    if (validateDiscord() === false) {
+      setMessage({
+        display: true,
+        color: 'red',
+        message: 'Discord username is incorrect. (Format: Username#1234).'
+      })
+
+      hideLoader()
+      return
+    }
 
     if (validatePassword() === 404) {
 
