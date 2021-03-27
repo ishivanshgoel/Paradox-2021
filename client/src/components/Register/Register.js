@@ -80,7 +80,7 @@ function Register() {
       setMessage({
         display: true,
         color: 'red',
-        message: 'Discord username is incorrect.'
+        message: 'Discord username is incorrect. Format: Username#1234.'
       })
 
       hideLoader()
