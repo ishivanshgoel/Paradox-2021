@@ -27,7 +27,6 @@ function urlBuilder(endPoint, id = null) {
 async function POST_Request(endPoint, data, id = null) {
 
     let token = getItem('token')
-    console.log("URL ",urlBuilder(endPoint, id))
 
     if(endPoint === 'alogin' || endPoint === 'add' || endPoint === 'update'){
         token = ADMINTOKEN

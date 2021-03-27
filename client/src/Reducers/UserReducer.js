@@ -14,13 +14,17 @@ function UserReducer(state = initialState, action) {
            
             return {
                 ...state,
-                user: action.token
+                user: action.token,
+                username: action.username,
+                id: action.id
             }
         case REMOVEUSER:
             
             return {
                 ...state,
-                user: false
+                user: false,
+                username: false,
+                id: false
             }
         case SETADMIN:
 

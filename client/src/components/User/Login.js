@@ -45,6 +45,8 @@ function Login() {
     // start loading screen
     showLoader()
     let token = getItem('token')
+    let username = getItem('username')
+    let id = getItem('id')
 
     // verify token
     if(token){
@@ -54,7 +56,9 @@ function Login() {
       if(leaderboard.data){
          dispatch({
         type: SETUSER,
-        token: token
+        token: token,
+        username: username,
+        id: id
         })
       }
     }
@@ -79,9 +83,14 @@ function Login() {
     if (response.data && response.data.accessToken) {
       // set to local storage
       setItem('token', response.data.accessToken)
+      setItem('username', response.data.username)
+      setItem('id', response.data.id)
+
       dispatch({
         type: SETUSER,
-        token: response.data.accessToken
+        token: response.data.accessToken,
+        username: response.data.username,
+        id: response.data.id
       })
     } else {
       Notification("Warning", "Invalid Username/ Password", "danger")

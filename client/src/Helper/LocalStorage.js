@@ -1,5 +1,7 @@
 const names = {
-    token : 'paradox-user-token'
+    token : 'paradox-user-token',
+    username : 'paradox-user-username',
+    id : 'paradox-user-id'
 }
 
 
@@ -12,5 +14,9 @@ let setItem = (name, value)=>{
     localStorage.setItem(names[name], value)
 }
 
+let removeItem = (name, value)=>{
+    localStorage.removeItem(names[name], value)
+}
+
 export default {}
-export { setItem, getItem }
+export { setItem, getItem, removeItem }

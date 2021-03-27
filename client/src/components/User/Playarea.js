@@ -3,6 +3,9 @@ import './Playarea.css'
 import demo from './demo.jpg';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 
+import { useSelector, useDispatch } from 'react-redux'
+import { REMOVEUSER } from '../../Reducers/ActionTypes'
+
 // Request
 import GET_Request from '../../Helper/GetRequest'
 import POST_Request from '../../Helper/PostRequest'
@@ -12,6 +15,9 @@ import LoaderHook from '../../components/Loader/LoaderHook'
 
 // Notification
 import Notification from '../Notifications/Notification'
+
+// local storage
+import { removeItem } from '../../Helper/LocalStorage'
 
 /**
  * @author ishivanshgoel, sanikakulkarni 
@@ -24,6 +30,10 @@ const Playarea = () => {
     const [loading, setloading] = useState(false)
     const [imageUrl, setImageUrl] = useState(null)
     const [answer, setAnswer] = useState(null)
+
+    const username = useSelector((state)=>state.username)
+    
+    const dispatch = useDispatch()
 
     // loading screen
     const [loadingscreen, showLoadingScreen, hideLoadingScreen] = LoaderHook()
@@ -70,6 +80,15 @@ const Playarea = () => {
         hideLoadingScreen()
     }
 
+    // logout
+    let handleLogout = (event)=>{
+        event.preventDefault()
+        removeItem('token')
+        dispatch({
+            type: REMOVEUSER
+        })
+    }
+
     // static js
     function add_class() {
         let input_tag = document.getElementsByClassName("play_input")[0];
@@ -82,6 +101,9 @@ const Playarea = () => {
             input_tag.classList.remove("has-content");
         }
     }
+
+
+    // JSX
     return (
         <div>
             {loadingscreen}
@@ -104,10 +126,12 @@ const Playarea = () => {
                             </section>
                             <div className="dropdown playarea-btn">
                                 <button className="btn btn-secondary dropdown-toggle playarea-btn-back" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    saniikakulkarni
+                                    {username}
                                 </button>
                                 <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a className="dropdown-item" href="#">Logout</a>
+                                    <form onSubmit={handleLogout}>
+                                        <button type="submit" className="dropdown-item logout-button">Logout</button>
+                                    </form>
                                 </div>
                             </div>
                         </section>
