@@ -34,6 +34,8 @@ const Playarea = () => {
             const { imageUrl } = response.data
             setImageUrl(imageUrl)
         }
+        else if(response=="No Question found for this level.")
+            Notification("Congratulations", "You have crossed all the levels", "info")
         setloading(true)
     })
 
@@ -44,8 +46,22 @@ const Playarea = () => {
         const response = await POST_Request('evaluate', { answer })
 
         if (response.data && response.data.message) {
-            if (response.data.message == "correct")
+            if (response.data.message == "correct"){
                 Notification("Success", "Correct Answer", "success")
+
+                // next question
+                setloading(false)
+                const response = await GET_Request('nextlevel')
+                console.log(response)
+                if (response.data) {
+                    const { imageUrl } = response.data
+                    setImageUrl(imageUrl)
+                }
+                else if(response=="No Question found for this level.")
+                    Notification("Congratulations", "You have crossed all the levels", "info")
+                setloading(true)
+            }
+                
             else Notification("Try Again", "Wrong Answer", "danger")
         } else {
             Notification("Error", "Some Error Occured", "danger")
@@ -86,12 +102,12 @@ const Playarea = () => {
                                     <img src={imageUrl || demo} alt="paradox-level" />
                                 </div>
                             </section>
-                            <div class="dropdown playarea-btn">
-                                <button class="btn btn-secondary dropdown-toggle playarea-btn-back" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div className="dropdown playarea-btn">
+                                <button className="btn btn-secondary dropdown-toggle playarea-btn-back" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     saniikakulkarni
                                 </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Logout</a>
+                                <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a className="dropdown-item" href="#">Logout</a>
                                 </div>
                             </div>
                         </section>
