@@ -50,7 +50,7 @@ function Register() {
   }
 
   function validateDiscord() {
-    var regex = /^(?!discordtag|everyting|here)([^(@)(#)(:)(```)]){2,32}#\d{4}$/
+    var regex = /^(?!discordtag|everyone|here)([^(@)(#)(:)(```)]){2,32}#\d{4}$/
     if (regex.test(discord)) {
       return true
     }
@@ -80,7 +80,7 @@ function Register() {
       setMessage({
         display: true,
         color: 'red',
-        message: 'Discord username is incorrect. Format: Username#1234.'
+        message: 'Discord username is incorrect. (Format: Username#1234).'
       })
 
       hideLoader()
