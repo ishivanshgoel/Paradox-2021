@@ -6,6 +6,10 @@ const role = {
     ADMIN : 'admin'
 }
 
+/**
+ * @param hookEnabled if true then invoke 'save' middleware
+ */
+
 const UserSchema = new mongoose.Schema({
     name: { 
         type: String, 
@@ -59,10 +63,19 @@ const UserSchema = new mongoose.Schema({
     role: {
         type: String,
         default: role.USER
+    },
+    hookEnabled: {
+        type: Boolean,
+        default: true
     }
 });
 
 UserSchema.pre('save',async function(next){
+
+    if(!this.hookEnabled){
+        this.hookEnabled = true
+        next()
+    }
 
     try{
         const salt = await bcrypt.genSalt(10)
