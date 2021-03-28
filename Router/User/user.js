@@ -123,6 +123,7 @@ router.post('/evaluate', verifyAccessToken,async function (req, res, next) {
 
         if(isMatch){
             user.score += 1
+            user.hookEnabled = false
             await user.save()
             res.send({message:'correct'}) 
         }
