@@ -29,6 +29,7 @@ const Playarea = () => {
 
     const [loading, setloading] = useState(false)
     const [imageUrl, setImageUrl] = useState(null)
+    const [level, setLevel] = useState(null)
     const [answer, setAnswer] = useState(null)
 
     const username = useSelector((state)=>state.username)
@@ -41,8 +42,9 @@ const Playarea = () => {
     useEffect(async () => {
         const response = await GET_Request('nextlevel')
         if (response.data) {
-            const { imageUrl } = response.data
+            const { imageUrl, levelNumber } = response.data
             setImageUrl(imageUrl)
+            setLevel(levelNumber)
         }
         else if(response=="No Question found for this level.")
             Notification("Congratulations", "You have crossed all the levels", "info")
@@ -62,7 +64,7 @@ const Playarea = () => {
                 // next question
                 setloading(false)
                 const response = await GET_Request('nextlevel')
-                console.log(response)
+               
                 if (response.data) {
                     const { imageUrl } = response.data
                     setImageUrl(imageUrl)
@@ -116,7 +118,7 @@ const Playarea = () => {
                                     <label className="editor-field__label">Level</label>
                                 </div>
                                 <div className="editor-field__container-playarea">
-                                    <p className="editor-field__input"> 10 </p>
+                                    <p className="editor-field__input"> {level} </p>
                                 </div>
                             </div>
                             <section className="play_question">
