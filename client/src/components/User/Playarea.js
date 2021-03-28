@@ -144,7 +144,9 @@ const Playarea = () => {
                                 <label>Your Answer Here</label>
                                 <span className="focus-border"></span>
                             </div>
-                            <button className="play_btn" type="submit" onClick={handleSubmit}>Submit</button>
+                            <form onSubmit={handleSubmit}>
+                                <button className="play_btn" type="submit">Submit</button>
+                            </form>
                         </section>
                     </section>
                 ) : (
