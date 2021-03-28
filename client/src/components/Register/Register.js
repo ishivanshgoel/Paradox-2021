@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import "bootstrap/dist/css/bootstrap.min.css"
-import "./register_css/register.css"
+import "./CSS/register.css"
 
 // loading scrren
 import LoaderHook from '../Loader/LoaderHook'

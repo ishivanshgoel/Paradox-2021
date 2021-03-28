@@ -1,14 +1,15 @@
 import React from "react";
-// css import
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./teams.css";
+// css
+import "./CSS/teams.css";
 
-//images and logos
-import DefaultMember from "../TeamMembers-images/member-default1.png"
+//logos
 import GithubLogo from "../logos/github-logo.png";
 import EmailLogo from "../logos/email-logo.png";
 import LinkedLogo from "../logos/linkedin-logo.png";
+
+// dafault avatar
+import DefaultMember from "../../Static/paradox-default-team-member.png"
 
 //team data
 import team from "../../Data/Teams"
@@ -66,13 +67,13 @@ function Member({firstname, lastname, tagline, email, github, linkedin, image})
         <p className="card-text ">{tagline} </p>
         <div className="social-links">
           <a href={`mailto:${email}`}>
-            <img src={EmailLogo} className="social-logo" alt={email} />
+            <img src={EmailLogo} className="social-logo" alt={`${firstname}-${email}`} />
           </a>
           <a href={`https://github.com/${github}`} target="_blank">
-            <img src={GithubLogo} className="social-logo" alt={github} />
+            <img src={GithubLogo} className="social-logo" alt={`${firstname}-${github}`} />
           </a>
           <a href={`https://www.linkedin.com/in/${linkedin}`} target="_blank">
-            <img src={LinkedLogo} className="social-logo" alt={linkedin} />
+            <img src={LinkedLogo} className="social-logo" alt={`${firstname}-${linkedin}`} />
           </a>
         </div>
       </div>
