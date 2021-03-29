@@ -30,12 +30,9 @@ const Playarea = () => {
     const [level, setLevel] = useState(null)
     const [answer, setAnswer] = useState(null)
     const username = useSelector((state)=>state.username)
-    
     const dispatch = useDispatch()
-
     // loading screen
     const [loadingscreen, showLoadingScreen, hideLoadingScreen] = LoaderHook()
-
     useEffect(async () => {
         const response = await GET_Request('nextlevel')
         if (response.data) {
@@ -47,7 +44,6 @@ const Playarea = () => {
             Notification("Congratulations", "You have crossed all the levels", "info")
         setloading(true)
     })
-
     // handle answer submission
     let handleSubmit = async (event) => {
         event.preventDefault()
@@ -118,11 +114,6 @@ const Playarea = () => {
                                     <p className="editor-field__input"> {level} </p>
                                 </div>
                             </div>
-                            <section className="play_question">
-                                <div className="play_img">
-                                    <img src={imageUrl || demo} alt="paradox-level" />
-                                </div>
-                            </section>
                             <div className="dropdown playarea-btn">
                                 <button className="btn btn-secondary dropdown-toggle playarea-btn-back" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     {username}
@@ -134,11 +125,13 @@ const Playarea = () => {
                                 </div>
                             </div>
                         </section>
-
+                        <div className="play_img">
+                            <img width="100%" height="100%" src={imageUrl || demo} alt="paradox-level" />
+                        </div>
                         <section className="play_answer">
                             <div className="input_div input-effect" onBlur={add_class}>
                                 <input className="play_input" type="text" onChange={(event) => setAnswer(event.target.value)} style={{ textTransform: "lowercase" }} required />
-                                <label>Your Answer Here</label>
+                                <label className="Playarea-placeholder">Your Answer Here</label>
                                 <span className="focus-border"></span>
                             </div>
                             <form onSubmit={handleSubmit}>

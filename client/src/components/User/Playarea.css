@@ -13,19 +13,11 @@
     color:white;
     font-size:25px;
 }
-.play_question{
-   margin:1%;
-   padding:1%;
-   margin-left:2%;
-   align-items: center;
-   font-size:20px;
-}
 .play_img{
-    margin:1%;
-    margin-bottom:0;
-    height:600px;
-    width:400px;
-    background-size:contain;
+    align-items: center;
+    width:35%;
+    margin:0 auto;
+    height:30%;
 }
 .play_answer{
     align-items: center;
@@ -49,6 +41,7 @@
     font-size:18px;
     width:130px;
     text-align: center;
+    margin-bottom:30px;
 }
 .play_btn:hover{
     border: 1px solid;
@@ -218,4 +211,39 @@
 }
 .playarea-btn-back:hover,.playarea-btn-back:focus{
   background-color: #018594;
+}
+@media screen and (max-width: 767px)
+{
+  .editor-field-playarea {
+  width: 75px;
+}
+.play_btn{
+    width:100px;
+    font-size:10px;
+  }
+  .dropdown-menu{
+    min-width:80px;
+  }
+  .logout-button{
+    width:100%;
+  }
+  .playarea-btn
+{
+  width:100px;
+  height:100%;
+}
+}
+@media screen and (max-width:460px)
+{
+  .Playarea-placeholder
+  {
+    font-size:11px;
+  }
+}
+@media screen and (max-width:330px)
+{
+  .Playarea-placeholder
+  {
+    font-size:9px;
+  }
 }

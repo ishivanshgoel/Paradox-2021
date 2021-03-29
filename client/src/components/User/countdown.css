@@ -5,31 +5,31 @@
   width: 100%;
   height: 90vh;
 }
-.Countdown-txt
-{
-  color:white;
-  font-size:40px;
+.Countdown-txt {
+  color: white;
+  font-size: 40px;
   white-space: nowrap;
 }
-.Countdown-txt:after{
-  content:"]";
+.Countdown-txt:after {
+  content: "]";
 }
-.Countdown-txt:before{
-  content:"[";
+.Countdown-txt:before {
+  content: "[";
 }
-.Countdown-txt:after, .Countdown-txt:before {
+.Countdown-txt:after,
+.Countdown-txt:before {
   color: rgba(118, 223, 255, 0.877);
   font-size: 48px;
   -webkit-animation-name: opacity;
   -webkit-animation-duration: 1s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-name: opacity;
-          animation-name: opacity;
+  animation-name: opacity;
   -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-duration: 1s;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-          margin:0 50px;
+  animation-iteration-count: infinite;
+  margin: 0 50px;
 }
 .timer {
   display: flex;
@@ -57,90 +57,93 @@
   margin: 0 auto;
   text-align: center;
 }
-.timer_section p:first-child{
+.timer_section p:first-child {
   font-size: 100px;
   font-weight: 700;
-  margin:0 15px;
-  border-bottom:2px solid white;
-  height:125px;
+  margin: 0 15px;
+  border-bottom: 2px solid white;
+  height: 125px;
   padding-bottom: 1%;
 }
 .timer_label {
   font-size: 20px;
-  margin:0 15px;
-  color:rgba(255,255,255,0.6);
+  margin: 0 15px;
+  color: rgba(255, 255, 255, 0.6);
 }
 @media screen and (max-width: 545px) {
-  .timer_section p:first-child{
+  .timer_section p:first-child {
     font-size: 70px;
-    margin:0 10px;
+    margin: 0 10px;
     padding-bottom: 1%;
-    height:80px;
+    height: 80px;
   }
   .Countdown-txt {
     font-size: 30px;
     text-align: center;
   }
-  .Countdown-txt:after, .Countdown-txt:before{
-      font-size: 35px;
+  .Countdown-txt:after,
+  .Countdown-txt:before {
+    font-size: 35px;
   }
   .timer_label {
-      font-size: 18px;
-      margin:0 10px;
+    font-size: 18px;
+    margin: 0 10px;
   }
 }
 @media screen and (max-width: 392px) {
-  .timer_section p:first-child{
+  .timer_section p:first-child {
     font-size: 50px;
-     margin:0 5px;
-     padding-bottom: 2px;
-     height:60px;
+    margin: 0 5px;
+    padding-bottom: 2px;
+    height: 60px;
   }
   .Countdown-txt {
     font-size: 25px;
   }
-  .Countdown-txt:after, .Countdown-txt:before{
-      font-size: 30px;
+  .Countdown-txt:after,
+  .Countdown-txt:before {
+    font-size: 30px;
   }
   .timer_label {
-      font-size: 18px;
-      margin:0 5px;
+    font-size: 18px;
+    margin: 0 5px;
   }
 }
 @media screen and (max-width: 355px) {
-  .timer_section p:first-child{
+  .timer_section p:first-child {
     font-size: 50px;
-     margin:0 5px;
-     padding-bottom: 2px;
-     height:60px;
+    margin: 0 5px;
+    padding-bottom: 2px;
+    height: 60px;
   }
   .Countdown-txt {
     font-size: 20px;
   }
-  .Countdown-txt:after, .Countdown-txt:before{
-      font-size: 15px;
+  .Countdown-txt:after,
+  .Countdown-txt:before {
+    font-size: 15px;
   }
   .timer_label {
-      font-size: 13px;
-      margin:0 5px;
+    font-size: 13px;
+    margin: 0 5px;
   }
 }
 @media screen and (max-width: 320px) {
-  .timer_section p:first-child{
+  .timer_section p:first-child {
     font-size: 35px;
-     margin:0 3px;
-     padding-bottom: 2px;
-     height:40px;
+    margin: 0 3px;
+    padding-bottom: 2px;
+    height: 40px;
   }
   .Countdown-txt {
     font-size: 10px;
   }
-  .Countdown-txt:after, .Countdown-txt:before{
-      font-size: 15px;
+  .Countdown-txt:after,
+  .Countdown-txt:before {
+    font-size: 15px;
   }
   .timer_label {
-      font-size: 8px;
-      margin:0 5px;
+    font-size: 8px;
+    margin: 0 5px;
   }
 }
-
