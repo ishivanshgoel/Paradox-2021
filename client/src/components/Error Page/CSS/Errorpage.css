@@ -76,3 +76,36 @@ path#XMLID_11_ ,path#XMLID_2_ {
   75%{r:15;opacity:0.1;}
   100% {r:20;opacity:0;}
 }
+
+@media screen and (max-width: 420px) {
+  .message{
+    font-size:20px;
+  }
+  .message:after, .message:before {
+    font-size: 25px;
+  }
+  .play_btn{
+    width:90px;
+    font-size:15px;
+  }
+  .Errorpage-svg{
+  width: 250px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 330px) {
+  .message{
+    font-size:12px;
+  }
+  .message:after, .message:before {
+    font-size: 17px;
+  }
+  .play_btn{
+    width:60px;
+    font-size:12px;
+  }
+  .Errorpage-svg{
+  width: 200px;
+    height: 200px;
+  }
+}

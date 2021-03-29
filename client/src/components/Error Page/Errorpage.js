@@ -2,15 +2,12 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 import './CSS/Errorpage.css'
 
-
 function Errorpage() {
-
     let history = useHistory()
 
     let handleRedirect = ()=>{
         history.push("/")
     }
-
     return(
         <div className="Errorpage_heading">
             <div id="container">

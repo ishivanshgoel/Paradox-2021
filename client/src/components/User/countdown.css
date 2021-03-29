@@ -79,6 +79,7 @@
   }
   .Countdown-txt {
     font-size: 30px;
+    text-align: center;
   }
   .Countdown-txt:after, .Countdown-txt:before{
       font-size: 35px;
