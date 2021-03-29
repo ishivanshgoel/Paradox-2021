@@ -360,10 +360,10 @@ h2.about-heading:after {
   text-align: center;
   font-size: 22px;
 }
-.social-logos {
-  height: 35px;
-  width: 35px;
-  margin: 80px 10px;
+.social-logos{
+    height:40px;
+    width:40px;
+    margin: 80px 10px;
 }
 .socialmedialinks {
   margin: 0 70px;

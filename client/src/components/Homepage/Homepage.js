@@ -7,14 +7,12 @@ import './CSS/homepage.css'
 
 // images and logos import
 import { ReactComponent as DiscordLogo } from '../logos/discord.svg'
-import { ReactComponent as ParadoxLogo } from "../logos/logoTagline.svg";
 import ParadoxLogo1 from "../logos/homepage_logo.svg";
 import ParadoxLogo2 from "../logos/logo6.png";
-import ParadoxLogoMobile from "../logos/logo1_wobg1.png";
 import IEEElogo from '../logos/IEEE_CS1.png';
 import instagram from "../logos/instagram.png";
 import github from "../logos/github.png";
-import linkedin from "../logos/linkedin.png"; 
+import linkedin from "../logos/linked-in.png"; 
 import ieeecsvit from "../logos/ieeecsvit.png";
 
 /**
