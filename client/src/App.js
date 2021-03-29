@@ -24,6 +24,7 @@ import Rules from './components/Homepage/Rules'
 import Login from './components/User/Login'
 import Register from './components/Register/Register'
 import Alogin from './components/Admin/Alogin'
+import Errorpage from './components/Error Page/Errorpage'
 
 // Level 2 Components
 import Play from './components/User/Play'
@@ -110,7 +111,9 @@ function App() {
             <Route exact path="/teams">
               <Teams />
             </Route>
-
+            <Route exact path="/error">
+                <Errorpage />
+            </Route>
             {/* level 2 routes */}
             <Route exact path="/user/play">
               <Play />

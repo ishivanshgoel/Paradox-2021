@@ -1,0 +1,78 @@
+.st0{font-family:'FootlightMTLight';}
+.st1{font-size:83.0285px;}
+.st2{fill:gray;}
+.Errorpage-svg{
+  width: 400px;
+    height: 400px;
+    text-align: center;
+    fill: rgba(118, 223, 255, 0.877);
+}
+path#XMLID_5_ {
+    fill: rgba(118, 223, 255, 0.877);
+    filter: url(#blurFilter4);
+}
+path#XMLID_11_ ,path#XMLID_2_ {
+    fill: rgba(118, 223, 255, 0.877);
+}
+.circle{
+  animation: out 2s infinite ease-out;
+  fill: rgba(118, 223, 255, 0.877);
+}
+#container{
+    
+    text-align:center;
+}
+.message{
+    margin-top:-4%;
+    margin-bottom:3%;
+  color:white;
+  font-size:30px;
+}
+.message:after{
+  content:"]";
+}
+.message:before{
+  content:"[";
+}
+.message:after, .message:before {
+  color: rgba(118, 223, 255, 0.877);
+  font-size: 35px;
+  -webkit-animation-name: opacity;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: opacity;
+          animation-name: opacity;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+          margin:0 50px;
+}
+.errorlogo{
+    color:rgba(118, 223, 255, 0.877);
+    align-items:center;
+}
+
+@-webkit-keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes out {
+  0% {r:1;  opacity: 0.9 ;}
+  25%{r:5;  opacity: 0.3 ;}
+  50%{r:10; opacity: 0.2 ;}
+  75%{r:15;opacity:0.1;}
+  100% {r:20;opacity:0;}
+}

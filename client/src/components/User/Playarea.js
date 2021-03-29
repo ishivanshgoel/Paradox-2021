@@ -122,7 +122,7 @@ const Playarea = () => {
                                 </div>
                             </div>
                             <section className="play_question">
-                                <div className="play_img img-fluid">
+                                <div className="play_img">
                                     <img src={imageUrl || demo} alt="paradox-level" />
                                 </div>
                             </section>
