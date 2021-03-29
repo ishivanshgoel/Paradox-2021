@@ -114,15 +114,15 @@ const Playarea = () => {
                                     <p className="editor-field__input"> {level} </p>
                                 </div>
                             </div>
-                            <div className="dropdown playarea-btn">
-                                <button className="btn btn-secondary dropdown-toggle playarea-btn-back" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    {username}
-                                </button>
+                            <div className="dropdown playarea-btn dropdown">
                                 <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <form onSubmit={handleLogout}>
                                         <button type="submit" className="dropdown-item logout-button">Logout</button>
                                     </form>
                                 </div>
+                                <button className="btn btn-secondary dropdown-toggle playarea-btn-back" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Sanikakulkarni
+                                </button>
                             </div>
                         </section>
                         <div className="play_img">
