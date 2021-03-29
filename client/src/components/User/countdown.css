@@ -63,19 +63,83 @@
   margin:0 15px;
   border-bottom:2px solid white;
   height:125px;
-  padding-bottom: 5px;
+  padding-bottom: 1%;
 }
 .timer_label {
   font-size: 20px;
   margin:0 15px;
   color:rgba(255,255,255,0.6);
 }
-@media screen and (max-width: 480px) {
-  .timer_section p:first-child,{
-    font-size: 21vw;
+@media screen and (max-width: 545px) {
+  .timer_section p:first-child{
+    font-size: 70px;
+    margin:0 10px;
+    padding-bottom: 1%;
+    height:80px;
   }
-  .timer div:first-child h2 {
-    font-size: 45px;
-    margin-bottom: 60px;
+  .Countdown-txt {
+    font-size: 30px;
+  }
+  .Countdown-txt:after, .Countdown-txt:before{
+      font-size: 35px;
+  }
+  .timer_label {
+      font-size: 18px;
+      margin:0 10px;
   }
 }
+@media screen and (max-width: 392px) {
+  .timer_section p:first-child{
+    font-size: 50px;
+     margin:0 5px;
+     padding-bottom: 2px;
+     height:60px;
+  }
+  .Countdown-txt {
+    font-size: 25px;
+  }
+  .Countdown-txt:after, .Countdown-txt:before{
+      font-size: 30px;
+  }
+  .timer_label {
+      font-size: 18px;
+      margin:0 5px;
+  }
+}
+@media screen and (max-width: 355px) {
+  .timer_section p:first-child{
+    font-size: 50px;
+     margin:0 5px;
+     padding-bottom: 2px;
+     height:60px;
+  }
+  .Countdown-txt {
+    font-size: 20px;
+  }
+  .Countdown-txt:after, .Countdown-txt:before{
+      font-size: 15px;
+  }
+  .timer_label {
+      font-size: 13px;
+      margin:0 5px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .timer_section p:first-child{
+    font-size: 35px;
+     margin:0 3px;
+     padding-bottom: 2px;
+     height:40px;
+  }
+  .Countdown-txt {
+    font-size: 10px;
+  }
+  .Countdown-txt:after, .Countdown-txt:before{
+      font-size: 15px;
+  }
+  .timer_label {
+      font-size: 8px;
+      margin:0 5px;
+  }
+}
+
