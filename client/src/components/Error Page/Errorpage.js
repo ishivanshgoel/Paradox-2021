@@ -44,7 +44,7 @@ function Errorpage() {
                     Page not found
                 </div>
                 <div className="errorlogo">
-                    <button className="play_btn" onClick={handleRedirect}>Go back home</button>
+                    <button className="error_btn" onClick={handleRedirect}>Go back home</button>
                 </div>   
             </div>
         </div>
