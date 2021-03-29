@@ -24,14 +24,11 @@ import { removeItem } from '../../Helper/LocalStorage'
  * @LoaderHook const [loadingscreen, showLoadingScreen, hideLoadingScreen] = LoaderHook()
  * @Notificaton Notification('Wonderfull', 'you have crossed the level', 'success')
  */
-
 const Playarea = () => {
-
     const [loading, setloading] = useState(false)
     const [imageUrl, setImageUrl] = useState(null)
     const [level, setLevel] = useState(null)
     const [answer, setAnswer] = useState(null)
-
     const username = useSelector((state)=>state.username)
     
     const dispatch = useDispatch()

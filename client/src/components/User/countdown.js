@@ -1,8 +1,6 @@
 import React, {useEffect,useRef,useState} from 'react'
-
 //CSS
 import './countdown.css'
-
 /**
  * @author Sanika
  */
@@ -53,27 +51,22 @@ const Countdown = ({countdownDate}) => {
     return (
         <section className="Countdown_heading">
             <section className="timer">
-                <div>
-                    <h2>Paradox is coming soon...</h2>
+                <div className="Countdown-txt">
+                    Coming Soon
                 </div>
-                <div>
+                <div className="clock-timer">
                     <section className="timer_section">
                         <p>{timerDays}</p>
                         <p><small className="timer_label">Days</small></p>
                     </section>
-                    <span>:</span>
                     <section className="timer_section">
                         <p>{timerHours}</p>
                         <p><small className="timer_label">Hours</small></p>
                     </section>
-
-                    <span>:</span>
                     <section className="timer_section">
                         <p>{timerMinutes}</p>
                         <p><small className="timer_label">Minutes</small></p>
                     </section>
-
-                    <span>:</span>
                     <section className="timer_section">
                         <p>{timerSeconds}</p>
                         <p><small className="timer_label">Seconds</small></p>
