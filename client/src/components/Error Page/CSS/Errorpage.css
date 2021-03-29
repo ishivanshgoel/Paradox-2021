@@ -19,14 +19,14 @@ path#XMLID_11_ ,path#XMLID_2_ {
   fill: rgba(118, 223, 255, 0.877);
 }
 #container{
-    
     text-align:center;
 }
 .message{
     margin-top:-4%;
     margin-bottom:3%;
-  color:white;
-  font-size:30px;
+    color:white;
+    font-size:30px;
+    white-space: nowrap;
 }
 .message:after{
   content:"]";

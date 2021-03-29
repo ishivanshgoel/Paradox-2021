@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import Countdown from './Countdown'
+import Countdown from './countdown'
 import Playarea from './Playarea'
 
 /**
@@ -11,7 +11,7 @@ import Playarea from './Playarea'
 
 function Play() {
 
-    const user = true
+    const user = useSelector((state)=>(state.user))
     const history = useHistory()
 
 

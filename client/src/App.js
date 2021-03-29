@@ -111,9 +111,7 @@ function App() {
             <Route exact path="/teams">
               <Teams />
             </Route>
-            <Route exact path="/error">
-                <Errorpage />
-            </Route>
+            
             {/* level 2 routes */}
             <Route exact path="/user/play">
               <Play />
@@ -125,6 +123,9 @@ function App() {
             <Route exact path="/admin/dashboard">
               <Dashboard />
             </Route>
+
+            {/* Not found */}
+            <Route component={Errorpage}/>
           </Switch>
         </div>
       </Router>

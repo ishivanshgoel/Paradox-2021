@@ -1,49 +1,48 @@
-import React, {useEffect,useRef,useState} from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 //CSS
 import './countdown.css'
 /**
  * @author Sanika
  */
-const Countdown = ({countdownDate}) => {
-    const [timerDays,setTimerDays]=useState('00');
-    const[timerHours,setTimerHours]=useState('00');
-    const[timerMinutes,setTimerMinutes]=useState('00');
-    const[timerSeconds,setTimerSeconds]=useState('00');
-    let interval=useRef();
-    const startTimer= () => {
-        interval=setInterval(()=>{
-            var now =new Date().getTime();
-            var distance=countdownDate-now;
-            var days=String(Math.floor(distance/(1000*60*60*24)));
-            var hours=String(Math.floor((distance%(1000*60 *60*24)/(1000*60*60))));
-            var minutes=String(Math.floor((distance%(1000*60 *60))/(1000*60)));
-            var seconds=String(Math.floor((distance%(1000*60))/1000));
-            if(days.length===1)
-            days="0"+days;
-            if(hours.length===1)
-            hours="0"+hours;
-            if(minutes.length===1)
-            minutes="0"+minutes;
-            if(seconds.length===1)
-            seconds="0"+seconds;
-            if(distance<0){
+const Countdown = ({ countdownDate }) => {
+    const [timerDays, setTimerDays] = useState('00');
+    const [timerHours, setTimerHours] = useState('00');
+    const [timerMinutes, setTimerMinutes] = useState('00');
+    const [timerSeconds, setTimerSeconds] = useState('00');
+    let interval = useRef();
+    const startTimer = () => {
+        interval = setInterval(() => {
+            var now = new Date().getTime();
+            var distance = countdownDate - now;
+            var days = String(Math.floor(distance / (1000 * 60 * 60 * 24)));
+            var hours = String(Math.floor((distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))));
+            var minutes = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
+            var seconds = String(Math.floor((distance % (1000 * 60)) / 1000));
+            if (days.length === 1)
+                days = "0" + days;
+            if (hours.length === 1)
+                hours = "0" + hours;
+            if (minutes.length === 1)
+                minutes = "0" + minutes;
+            if (seconds.length === 1)
+                seconds = "0" + seconds;
+            if (distance < 0) {
                 //stop timer and load Play Area
                 clearInterval(interval.current);
                 window.location.reload();
             }
-            else
-            {
+            else {
                 //update timer
                 setTimerDays(days);
                 setTimerHours(hours);
                 setTimerMinutes(minutes);
                 setTimerSeconds(seconds);
             }
-        },1000);
+        }, 1000);
     }
-    useEffect(()=>{
+    useEffect(() => {
         startTimer();
-        return ()=>{
+        return () => {
             clearInterval(interval.current);
         };
     })
