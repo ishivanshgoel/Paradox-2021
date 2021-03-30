@@ -75,6 +75,13 @@ const Playarea = () => {
         hideLoadingScreen()
     }
 
+    let handleSubmitEnterkey = async (event) => {
+        if (event.keyCode == 13)
+        {
+            handleSubmit(event);
+        }
+    };
+
     // logout
     let handleLogout = (event)=>{
         event.preventDefault()
@@ -100,54 +107,81 @@ const Playarea = () => {
 
     // JSX
     return (
-        <div>
-            {loadingscreen}
-            {
-                loading ? (
-                    <section className="Playarea_heading">
-                        <section className="play">
-                            <div className="editor-field-playarea editor-field__textbox">
-                                <div className="editor-field__label-container">
-                                    <label className="editor-field__label">Level</label>
-                                </div>
-                                <div className="editor-field__container-playarea">
-                                    <p className="editor-field__input"> {level} </p>
-                                </div>
-                            </div>
-                            <div className="dropdown playarea-btn dropdown">
-                                <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <form onSubmit={handleLogout}>
-                                        <button type="submit" className="dropdown-item logout-button">Logout</button>
-                                    </form>
-                                </div>
-                                <button className="btn btn-secondary dropdown-toggle playarea-btn-back" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Sanikakulkarni
-                                </button>
-                            </div>
-                        </section>
-                        <div className="play_img">
-                            <img width="100%" height="100%" src={imageUrl || demo} alt="paradox-level" />
-                        </div>
-                        <section className="play_answer">
-                            <div className="input_div input-effect" onBlur={add_class}>
-                                <input className="play_input" type="text" onChange={(event) => setAnswer(event.target.value)} style={{ textTransform: "lowercase" }} required />
-                                <label className="Playarea-placeholder">Your Answer Here</label>
-                                <span className="focus-border"></span>
-                            </div>
-                            <form onSubmit={handleSubmit}>
-                                <button className="play_btn" type="submit">Submit</button>
-                            </form>
-                        </section>
-                    </section>
-                ) : (
-                    <SkeletonTheme color="#202020" highlightColor="#444">
-                        <p style={{ margin: "50px" }}>
-                            <Skeleton count={12} />
-                        </p>
-                    </SkeletonTheme >
-                )
-            }
-        </div >
+      <div>
+        {loadingscreen}
+        {loading ? (
+          <section className="Playarea_heading">
+            <section className="play">
+              <div className="editor-field-playarea editor-field__textbox">
+                <div className="editor-field__label-container">
+                  <label className="editor-field__label">Level</label>
+                </div>
+                <div className="editor-field__container-playarea">
+                  <p className="editor-field__input"> {level} </p>
+                </div>
+              </div>
+              <div className="dropdown playarea-btn dropdown">
+                <div
+                  className="dropdown-menu"
+                  aria-labelledby="dropdownMenuButton"
+                >
+                  <form onSubmit={handleLogout}>
+                    <button
+                      type="submit"
+                      className="dropdown-item logout-button"
+                    >
+                      Logout
+                    </button>
+                  </form>
+                </div>
+                <button
+                  className="btn btn-secondary dropdown-toggle playarea-btn-back"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Sanikakulkarni
+                </button>
+              </div>
+            </section>
+            <div className="play_img">
+              <img
+                width="100%"
+                height="100%"
+                src={imageUrl || demo}
+                alt="paradox-level"
+              />
+            </div>
+            <section className="play_answer">
+              <div className="input_div input-effect" onBlur={add_class}>
+                <input
+                  className="play_input"
+                  type="text"
+                  onKeyDown={handleSubmitEnterkey}
+                  onChange={(event) => setAnswer(event.target.value)}
+                  style={{ textTransform: "lowercase" }}
+                  required
+                />
+                <label className="Playarea-placeholder">Your Answer Here</label>
+                <span className="focus-border"></span>
+              </div>
+              <form onSubmit={handleSubmit}>
+                <button className="play_btn" type="submit">
+                  Submit
+                </button>
+              </form>
+            </section>
+          </section>
+        ) : (
+          <SkeletonTheme color="#202020" highlightColor="#444">
+            <p style={{ margin: "50px" }}>
+              <Skeleton count={12} />
+            </p>
+          </SkeletonTheme>
+        )}
+      </div>
     );
 }
 export default Playarea;
