@@ -14,8 +14,8 @@ const LoginValidationSchema = require('../../Database/Validation Schemas/Login')
  */
 
 // define the home page route
-router.post('/login', validateAdmin ,async function (req, res, next) { 
-  
+router.post('/login', validateAdmin, async function (req, res, next) {
+
     try {
         const result = await LoginValidationSchema.validateAsync(req.body)
         const user = await User.findOne({ email: result.email })
@@ -35,20 +35,20 @@ router.post('/login', validateAdmin ,async function (req, res, next) {
 
 })
 
-router.post('/add', validateAdmin ,async function (req, res, next) {
-    
-    try{
+router.post('/add', validateAdmin, async function (req, res, next) {
 
-        if(!req.body.imageUrl || !req.body.answer || !req.body.levelNumber) throw createError.BadRequest()
+    try {
+
+        if (!req.body.imageUrl || !req.body.answer || !req.body.levelNumber) throw createError.BadRequest()
 
         const ifExists = await Question.find(
             {
-               levelNumber: req.body.levelNumber
+                levelNumber: req.body.levelNumber
             }
         )
-        console.log(ifExists)
+        // console.log(ifExists)
 
-        if(ifExists.length > 0) throw createError.Conflict(`Level ${req.body.levelNumber} is already assigned to another question.`)
+        if (ifExists.length > 0) throw createError.Conflict(`Level ${req.body.levelNumber} is already assigned to another question.`)
 
         const question = new Question({
             imageUrl: req.body.imageUrl,
@@ -58,26 +58,37 @@ router.post('/add', validateAdmin ,async function (req, res, next) {
 
         const savedQuestion = await question.save()
 
-        res.send({message: "Saved"})
-    } catch (error){
+        res.send({ message: "Saved" })
+    } catch (error) {
         next(error)
     }
 
 })
 
-router.post('/update', validateAdmin, async function (req, res, next) {
-    
-    try{
+router.put('/update', validateAdmin, async function (req, res, next) {
 
-        res.send(true)
+    try {
+        if (!req.body.imageUrl || !req.body.answer || !req.body.levelNumber) throw createError.BadRequest()
+        const ifExists = await Question.find(
+            {
+                levelNumber: req.body.levelNumber
+            }
+        )
+        const question = new Question({
+            imageUrl: req.body.imageUrl,
+            answer: req.body.answer.toLowerCase(),
+            levelNumber: req.body.levelNumber
+        })
 
 
-    } catch(error){
+        if (ifExists.length < 0) throw createError.Conflict(`Level ${req.body.levelNumber} is not present in the database.`)
+        Question.updateOne({ levelNumber: req.body.levelNumber }, question)
+        res.send({message:"Updated Successfully "})
+
+
+    } catch (error) {
         next(error)
     }
-    
+
 })
-
-
-
 module.exports = router
