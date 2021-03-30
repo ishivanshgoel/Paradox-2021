@@ -31,7 +31,7 @@ async function GET_Request(endPoint, id = null) {
         }).then((response) => {
             return response
         }).catch((err) => {
-            if(err.response && err.response.data) return err.response.data.error.message
+            if(err.response && err.response.data && err.response.data.error) return err.response.data.error.message
             return "Error Occured"
         })
 

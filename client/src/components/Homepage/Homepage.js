@@ -7,14 +7,12 @@ import './CSS/homepage.css'
 
 // images and logos import
 import { ReactComponent as DiscordLogo } from '../logos/discord.svg'
-import { ReactComponent as ParadoxLogo } from "../logos/logoTagline.svg";
 import ParadoxLogo1 from "../logos/homepage_logo.svg";
 import ParadoxLogo2 from "../logos/logo6.png";
-import ParadoxLogoMobile from "../logos/logo1_wobg1.png";
 import IEEElogo from '../logos/IEEE_CS1.png';
 import instagram from "../logos/instagram.png";
 import github from "../logos/github.png";
-import linkedin from "../logos/linkedin.png"; 
+import linkedin from "../logos/linked-in.png"; 
 import ieeecsvit from "../logos/ieeecsvit.png";
 
 /**
@@ -69,13 +67,13 @@ function Homepage() {
             </div>
 
           </div>
-          <div className="d-md-flex justify-content-center ">
-            <div className="col-12 col-md-3 col-lg-2 my-5 my-md-0 ">
+          <div className="row justify-content-center px-2">
+            <div className="col-12 col-md-9 col-lg-2 my-4 my-lg-0 ">
               <button className=" homebtn" onClick={handleRedirect} name="user">
                 LOGIN
               </button>
             </div>
-            <div className="col-12 col-md-3 col-lg-2 my-5 my-md-0 ">
+            <div className="col-12 col-md-9 col-lg-2 my-4 my-lg-0 ">
               <button
                 className=" homebtn d-flex justify-content-center"
                 id="discord"
@@ -84,7 +82,7 @@ function Homepage() {
                 JOIN DISCORD
               </button>
             </div>
-            <div className="col-12 col-md-3 col-lg-2 my-5 my-md-0 ">
+            <div className="col-12 col-md-9 col-lg-2 my-4 my-lg-0 ">
               <button
                 className=" homebtn"
                 onClick={handleRedirect}
@@ -180,7 +178,7 @@ function Footer() {
       <footer id="contact" className="footer text-center">
         <div className="footer-main row m-0">
           <div className="panel-1 d-flex justify-content-center col-12 col-md-4 my-4 my-md-0">
-            <img src={ParadoxLogo1} id="footer_logo" alt="" />
+            <img src={ParadoxLogo1} id="footer_logo" alt="" className="img-fluid" />
           </div>
           
           <div className="contact-info col-12 col-md-4 my-4 my-md-0">
