@@ -65,26 +65,41 @@ router.post('/add', validateAdmin, async function (req, res, next) {
 
 })
 
-router.put('/update', validateAdmin, async function (req, res, next) {
+router.post('/update', validateAdmin, async function (req, res, next) {
 
+    // incoming request can only contain new answer not the current answer (coz. password is not being rendered on client side from any of the routes)
+    // so the incoming request body may or may not contain answer field
+    // but having levelNumber is must
     try {
-        if (!req.body.imageUrl || !req.body.answer || !req.body.levelNumber) throw createError.BadRequest()
-        const ifExists = await Question.find(
+        if (!req.body.levelNumber) throw createError.BadRequest()
+    
+        let question = await Question.find(
             {
                 levelNumber: req.body.levelNumber
             }
         )
-        const question = new Question({
-            imageUrl: req.body.imageUrl,
-            answer: req.body.answer.toLowerCase(),
-            levelNumber: req.body.levelNumber
-        })
+        
+        // not found or multiple questions found with same level
+        if (question.length == 0 || question.length > 1 ) throw createError.Conflict(`Cannot Update Level ${req.body.levelNumber}`)
 
+        // first element from the array
+        question = question[0]
 
-        if (ifExists.length < 0) throw createError.Conflict(`Level ${req.body.levelNumber} is not present in the database.`)
-        Question.updateOne({ levelNumber: req.body.levelNumber }, question)
+        if(req.body.answer){
+            // hookEnabled field will be true by default
+            // keep it true as we want to hash the answer again before saving.
+            question.answer = req.body.answer.toLowerCase()
+            await question.save()
+        }
+
+        if(req.body.imageUrl){
+            // here hookEnabled is false to prevent already existing answer to re-hash itself before save
+            question.imageUrl = req.body.imageUrl
+            question.hookEnabled = false
+            await question.save()
+        }
+
         res.send({message:"Updated Successfully "})
-
 
     } catch (error) {
         next(error)
