@@ -13,7 +13,6 @@ const LoginValidationSchema = require('../../Database/Validation Schemas/Login')
  * @author ishivanshgoel
  */
 
-// define the home page route
 router.post('/login', validateAdmin, async function (req, res, next) {
 
     try {
@@ -30,6 +29,20 @@ router.post('/login', validateAdmin, async function (req, res, next) {
 
     } catch (error) {
         if (error.isJoi == true) return next(createError.BadRequest("Invalid Username/Password"))
+        next(error)
+    }
+
+})
+
+router.get('/getall', validateAdmin, async function (req, res, next) {
+
+    try {
+        
+        await Question.find({}, { _id: 1, imageUrl: 1, levelNumber: 1 }).exec(function (err, questions) {
+            res.send({ questions });
+        })
+        
+    } catch (error) {
         next(error)
     }
 
