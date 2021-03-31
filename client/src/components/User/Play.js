@@ -10,13 +10,11 @@ import Playarea from './Playarea'
  */
 
 function Play() {
-
-    const user = useSelector((state)=>(state.user))
+    const user = true
     const history = useHistory()
-
-
     //##### countodown-timer #####
     const countdownDate = new Date('March 20, 2021 00:00:00').getTime()
+
     const now = new Date().getTime()
     const distance = countdownDate - now
     //##### end countdown-timer #####

@@ -159,10 +159,10 @@ h2.about-heading:after {
   background: rgb(115, 121, 207);
   outline: none;
   color: rgba(10, 10, 10, 0.829);
-  border-radius: 5px;
+  border-radius: 3px;
   font-weight: 600;
   transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
-  padding: 4% 1%;
+  padding: 5% 1%;
 }
 
 #DiscordLogo {
@@ -387,6 +387,34 @@ h2.about-heading:after {
   }
 }
 
+/* ipad */
+@media (max-width: 1140px) and (min-height: 700px){
+  .Paradox__logo {
+    margin-top: 50px;
+  }
+  .paradox_logo_div {
+    margin: 50px 0;
+  }
+}
+
+/* phone rotated */
+@media (max-width: 960px) and (max-height: 576px){
+  .Paradox__logo {
+    margin-top: 20px;
+  }
+  .paradox_logo_div {
+    margin: 40px 0;
+  }
+  #sd-container {
+    display: none;
+  }
+  .homebtn{
+    padding: 3% 0%;
+  }
+  #discord{
+    padding: 3% 0;
+  }
+}
 @media (max-width: 1260px) {
   .socialmedialinks {
     margin: 0 30px;

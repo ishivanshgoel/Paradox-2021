@@ -2,15 +2,12 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 import './CSS/Errorpage.css'
 
-
 function Errorpage() {
-
     let history = useHistory()
 
     let handleRedirect = ()=>{
         history.push("/")
     }
-
     return(
         <div className="Errorpage_heading">
             <div id="container">
@@ -47,7 +44,7 @@ function Errorpage() {
                     Page not found
                 </div>
                 <div className="errorlogo">
-                    <button className="play_btn" onClick={handleRedirect}>Go back home</button>
+                    <button className="error_btn" onClick={handleRedirect}>Go back home</button>
                 </div>   
             </div>
         </div>
