@@ -15,12 +15,21 @@ const QuestionSchema = new mongoose.Schema({
     levelNumber: {
         type: Number,
         required: true
+    },
+    hookEnabled: {
+        type: Boolean,
+        default: true
     }
 });
 
 QuestionSchema.pre('save',async function(next){
 
     try{
+        if(!this.hookEnabled){
+            this.hookEnabled = true
+            next()
+        }
+
         const salt = await bcrypt.genSalt(10)
         const hashedAnswer = await bcrypt.hash(this.answer, salt)
         this.answer = hashedAnswer
