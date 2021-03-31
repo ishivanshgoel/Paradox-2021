@@ -1,24 +1,27 @@
-import React from 'react'
+import React,{ useState , useEffect} from 'react'
 import ImageView from './ImageView'
 
-function ViewQuestions() {
+// requests
+import GET_Request from '../../Helper/GetRequest'
+import POST_Request from '../../Helper/PostRequest'
 
-    const questions = [
-        {
-            id:"123",
-            link: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg",
-        },
-        {
-            id:"124",
-            link: "https://cdn.pixabay.com/photo/2019/02/15/11/04/book-3998252__340.jpg",
-        },
-        {
-            id:"125",
-            link: "https://www.gettyimages.in/gi-resources/images/500px/983794168.jpg",
-        }
-    ]
+// notification
+import Notification from '../Notifications/Notification'
+
+function ViewQuestions() {
+    
+    const[loading, setLoading] = useState(null)
+
+    const [questions, setQuestions] = useState(null)
+
+    useEffect(async()=>{
+        const response = await GET_Request('all')
+        setQuestions(response.data.questions)
+        setLoading(true)
+    },[])
 
     return (
+        loading ? (
         <div className="admin__viewquestion" style={{padding:"20px"}}>
             <div className="row">
                 <div className="col-sm-2 col-12">
@@ -29,7 +32,7 @@ function ViewQuestions() {
                                     id={`list-${index}-list`} data-bs-toggle="list" 
                                     href={`#list-${index}`} role="tab" 
                                     aria-controls={`#list-${index}`}>
-                                        {`Level-${index+1}`}
+                                        {`Level-${question.levelNumber}`}
                                 </a>
                             )})
                         }
@@ -44,7 +47,7 @@ function ViewQuestions() {
                                     aria-labelledby={`list-${index}-list`} >
                                 <ImageView 
                                     id={question.id} 
-                                    link={question.link} 
+                                    link={question.imageUrl} 
                                 />
                                 </div>
                             )})
@@ -54,6 +57,7 @@ function ViewQuestions() {
                 </div>
             </div>
         </div>
+        ):(null)
     )
 }
 

@@ -10,7 +10,10 @@ const endPoints = {
     // user auth
     leaderboard: "/userServer/leaderboard",
     logout: "/userServer/logout",
-    nextlevel: "/userServer/nextlevel"
+    nextlevel: "/userServer/nextlevel",
+
+    // admin
+    all: "/adminServer/getall"
 }
 
 var urlBuilder = (endPoint, id = null) => {
@@ -25,6 +28,10 @@ var urlBuilder = (endPoint, id = null) => {
 async function GET_Request(endPoint, id = null) {
 
     let token = getItem('token')
+
+    if(endPoint === 'all'){
+        token = ADMINTOKEN
+    }
     
     return axios.get(urlBuilder(endPoint, id),{
             headers: { 'Authorization': token ? `Bearer ${token}` : '', 'Content-Type': 'application/json' }
