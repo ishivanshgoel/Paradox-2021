@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
+
 import './Playarea.css'
-import demo from './demo.jpg';
+import demo from '../../Static/demo.jpg';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 
 import { useSelector, useDispatch } from 'react-redux'

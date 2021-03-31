@@ -7,7 +7,6 @@ import { SETUSER } from '../../Reducers/ActionTypes'
 import LoaderHook from '../Loader/LoaderHook'
 
 // static
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./login_css/loginstyle.css";
 
 

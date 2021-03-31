@@ -16,7 +16,7 @@ function Play() {
 
 
     //##### countodown-timer #####
-    const countdownDate = new Date('March 30, 2021 00:00:00').getTime()
+    const countdownDate = new Date('March 20, 2021 00:00:00').getTime()
     const now = new Date().getTime()
     const distance = countdownDate - now
     //##### end countdown-timer #####
