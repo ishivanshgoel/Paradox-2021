@@ -107,7 +107,7 @@ function Register() {
         }, 3000);
 
       }
-      else if(response=="User Already Exists") {
+      else if(response==="User Already Exists") {
         Notification("Warning", "You are already registered!!", "warning")
       }
       else{

@@ -41,7 +41,7 @@ const Playarea = () => {
             setImageUrl(imageUrl)
             setLevel(levelNumber)
         }
-        else if(response=="No Question found for this level.")
+        else if(response==="No Question found for this level.")
             Notification("Congratulations", "You have crossed all the levels", "info")
         setloading(true)
     })
@@ -52,7 +52,7 @@ const Playarea = () => {
         const response = await POST_Request('evaluate', { answer })
 
         if (response.data && response.data.message) {
-            if (response.data.message == "correct"){
+            if (response.data.message === "correct"){
                 Notification("Success", "Correct Answer", "success")
 
                 // next question
@@ -63,7 +63,7 @@ const Playarea = () => {
                     const { imageUrl } = response.data
                     setImageUrl(imageUrl)
                 }
-                else if(response=="No Question found for this level.")
+                else if(response==="No Question found for this level.")
                     Notification("Congratulations", "You have crossed all the levels", "info")
                 setloading(true)
             }
@@ -77,7 +77,7 @@ const Playarea = () => {
     }
 
     let handleSubmitEnterkey = async (event) => {
-        if (event.keyCode == 13)
+        if (event.keyCode === 13)
         {
             handleSubmit(event);
         }
@@ -143,7 +143,7 @@ const Playarea = () => {
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  Sanikakulkarni
+                  {username}
                 </button>
               </div>
             </section>

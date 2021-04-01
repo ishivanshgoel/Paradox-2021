@@ -10,7 +10,7 @@ import Playarea from './Playarea'
  */
 
 function Play() {
-    const user = true
+    const user = useSelector((state)=>state.user)
     const history = useHistory()
     //##### countodown-timer #####
     const countdownDate = new Date('March 20, 2021 00:00:00').getTime()
