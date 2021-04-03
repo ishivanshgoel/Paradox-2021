@@ -48,11 +48,11 @@ function ViewQuestions() {
                                 <ImageView 
                                     id={question.id} 
                                     link={question.imageUrl} 
+                                    levelNumber={question.levelNumber}
                                 />
                                 </div>
                             )})
                         }
-                       
                     </div>
                 </div>
             </div>
