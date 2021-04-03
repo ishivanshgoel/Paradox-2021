@@ -375,7 +375,21 @@ h2.about-heading:after {
   width: 400px;
 }
 
-@media (min-width: 767px) and (max-height: 700px) {
+/* screens with low height */
+@media (min-width: 992px) and (max-height: 700px) {
+  .logo-normal {
+    display: none !important;
+  }
+  .logo-height {
+    display: block !important;
+  }
+  .Paradox__logo {
+    top: 5.6vw;
+  }
+}
+
+/* screens with large width */
+@media (min-width: 1670px) and (min-height: 800px) {
   .logo-normal {
     display: none !important;
   }
