@@ -5,7 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import {useSelector} from 'react-redux'
+
 
 //Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -37,18 +37,15 @@ import Mainlogo from './components/logos/logo6.png'
 
 function App() {
 
-  // fetch user from store
-  const user = useSelector(state => state.user)
-
   return (
     <div className="App">
       <ReactNotification />
       <Router>
         <nav className="navbar dark-navbar navbar-expand-md " role="navigation">
           <div className="container-fluid ">
-            <a className="navbar-brand ml-3 d-md-none" href="/">
-              <img src={Mainlogo} height="50" alt="" />
-            </a>
+            <Link className="navbar-brand ml-3 d-md-none" to="/">
+              <img src={Mainlogo} height="50" alt="paradox-2021-logo" />
+            </Link>
             <button
               data-toggle="collapse"
               className="navbar-toggler mr-3 custom-toggler"
