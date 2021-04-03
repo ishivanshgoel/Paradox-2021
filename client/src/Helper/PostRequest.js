@@ -37,7 +37,7 @@ async function POST_Request(endPoint, data, id = null) {
     }).then((response) => {
         return response
     }).catch((err) => {
-        if(err.response && err.response.data) return err.response.data.error.message
+        if(err.response && err.response.data && err.response.error) return err.response.data.error.message
         return "Error Occured"
     });
 

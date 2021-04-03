@@ -9,6 +9,7 @@ import {useSelector} from 'react-redux'
 
 //Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle'
 
 // Custom CSS
 import './App.css'
