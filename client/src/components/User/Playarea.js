@@ -44,7 +44,8 @@ const Playarea = () => {
         else if(response==="No Question found for this level.")
             Notification("Congratulations", "You have crossed all the levels", "info")
         setloading(true)
-    })
+    },[])
+
     // handle answer submission
     let handleSubmit = async (event) => {
         event.preventDefault()
