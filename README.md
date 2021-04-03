@@ -1,4 +1,5 @@
 # Paradox-2021
+![npm package](/client/public/paradox-event-icon.png)
 
 PARADOX - A two-day online cryptic hunt organized by IEEE Computer Society of VIT Chennai.
 
