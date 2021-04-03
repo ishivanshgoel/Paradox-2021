@@ -112,7 +112,7 @@ router.post('/update', validateAdmin, async function (req, res, next) {
             await question.save()
         }
 
-        res.send({message:"Updated Successfully "})
+        res.send({message:"Updated Successfully"})
 
     } catch (error) {
         next(error)
