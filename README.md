@@ -1,47 +1,83 @@
-# Cryptic Hunt Website
+# Paradox-2021
 
-### Client Setup
-In order to to start the Development , clone the repository change to your branch (keep the branch name as your page on which you are working)
- After cloning the repo in your system do the following-:
- <ol>
-  <li>Change to Client Folder</li>
-  <li>Do npm install</li>
-  <li> npm Start to start the live preview </li>
-  </ol>
-  <br></br>
-   <h3>After opening the Homepage on the browser use your Route to preview your changes.</h3>
-  <br></br>
-  <ol>
-  <li> /rules for Rules</li>
-  <li> /user/play for Play Area</li>
-  <li> /user/leaderboard for Leader board</li>
-  <li> /admin for Admin section </li>
-  </ol>
+PARADOX - A two-day online cryptic hunt organized by IEEE Computer Society of VIT Chennai.
 
-### Server Setup
+## Installation
+- Clone the repository
+- Add all the files required for [ setting up the project. ](#Setting-Up-credentials-and-adding-secrets)
+- Install all the [ dependencies ](#Installing-dependencies)
+- Start [ backend server ](#Start-backend-server)
+- Start the [ frontend development server ](#Start-Frontend-server)
 
-#### Requirements
+## File Structure
+---
 
-For development, you will only need ```Node.js``` and a node global package, ```npm```, installed in your environement.
+### Setting Up credentials and adding secrets
 
-#### Project Dependecnies
-* express
-* mongoose
-* bcrypt
+| File name  | Location | Description |
+| ------------- | ------------- |------------- |
+| credentials.json  | /Database/Config/credentials.json   | file containing credentials of the database.
+| constants.js  | /Router/Admin/constants.js  | secret string/ codes used on server side.
+| Constants.json | /client/src/Helper/Constants.js| secret string/ codes used on client side.|
+- Refer to these [ file structures ](#File-Structures)
 
-#### Development Dependencies
-* nodemon
+### Installing dependencies
+- In the root directory ```npm install``` this installs all the dependencies required on the server-side.
+- Move to client directory ```cd client```
+- In Client Directory ```npm install``` this installs all the dependencies required on the client-side.
 
-#### Install
+### Start backend server
+- In root directory ```npm start```
+- The node server will start at port ```5000```
+- ``` Express app listening at port  5000 Connected to database!! ``` message in the console indicates that the backend server is up and running successfully on your local machine.  
 
-    $ git clone https://github.com/ishivanshgoel/Cryptic-Hunt
-    $ cd Cryptic-Hunt
-    $ npm install
+### Start Frontend server
+-  Move to the client directory by writing ```cd client``` in the console and give another command ```npm start``` to start the server.
 
-## Running the project for development
+### File Structures
+- credentials.json
 
-    $ npm run dev
+```json
+{
+    "username": "data_base_username",
+    "password": "password_of_database",
+    "collection": "collection_name"
+}
+```
+- constants.js
+```js
+const ADMINTOKEN = 'admin_token'
 
-## Running the project for production
+module.exports = ADMINTOKEN
+```
+- Constants.js
+```js
+// do not push this file to git
 
-    $ npm start
+const EVENTDATE = 2 // starting date of event
+const ADMINTOKEN = 'admin_token'
+
+export default {}
+export { EVENTDATE, ADMINTOKEN }
+```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## The Team
+
+### Event Coordinator
+- Samank Gupta
+- Tanay Bhadula
+
+### Developers
+- Shivansh Goel
+- Tejas Vaichole
+- Sanika Kulkarni
+- Prabhat Singh
+- Praneeth Sethumadhavan
+
+### Graphic Designer
+- Prathiba Narayan 
