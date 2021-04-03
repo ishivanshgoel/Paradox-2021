@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "02b7c46a906e05772fb0",
-    "url": "/static/css/main.eb4557b1.chunk.css"
+    "revision": "753177104801f4b1f68b",
+    "url": "/static/css/main.3f15925a.chunk.css"
   },
   {
-    "revision": "02b7c46a906e05772fb0",
-    "url": "/static/js/main.982ecc50.chunk.js"
+    "revision": "753177104801f4b1f68b",
+    "url": "/static/js/main.2fe9c573.chunk.js"
   },
   {
     "revision": "045145bf3cf672816da6",
     "url": "/static/js/runtime~main.4cb1fac7.js"
   },
   {
-    "revision": "c43e6d3cc9046407cc60",
+    "revision": "06c0ef585c690f9aea80",
     "url": "/static/css/2.1b99cc22.chunk.css"
   },
   {
-    "revision": "c43e6d3cc9046407cc60",
-    "url": "/static/js/2.f3cc4417.chunk.js"
+    "revision": "06c0ef585c690f9aea80",
+    "url": "/static/js/2.96bdc090.chunk.js"
   },
   {
     "revision": "b06d6fcfeb0df96d0c02",
@@ -36,16 +36,20 @@ self.__precacheManifest = [
     "url": "/static/media/IEEE_CS1.564741cd.png"
   },
   {
-    "revision": "4ce4d4ecdb30d7a184f0211b9f59fec1",
-    "url": "/static/media/instagram.4ce4d4ec.png"
+    "revision": "61e160bc82379b5e2927c35e372b01c1",
+    "url": "/static/media/instagram.61e160bc.png"
   },
   {
     "revision": "b8e090c3d4ebf071ebac5f81dafce61c",
     "url": "/static/media/github.b8e090c3.png"
   },
   {
-    "revision": "6c34acef638c34d9900b17b8c9c0e24c",
-    "url": "/static/media/ieeecsvit.6c34acef.png"
+    "revision": "76308b1137b8f73c71ae134b5b3fea09",
+    "url": "/static/media/linked-in.76308b11.png"
+  },
+  {
+    "revision": "5a02e7547cab16cece5a3aa47c5d81b0",
+    "url": "/static/media/ieeecsvit.5a02e754.png"
   },
   {
     "revision": "64cae93602dd6e569155b4a0a99eab7a",
@@ -100,19 +104,11 @@ self.__precacheManifest = [
     "url": "/static/media/robodron-webfont.d4e0ec7b.woff"
   },
   {
-    "revision": "4718be3958c17aab2844369d1f60ce18",
-    "url": "/static/media/logo1_wobg1.4718be39.png"
-  },
-  {
     "revision": "05f8617d5abf39bed2b3babfa13fe0de",
     "url": "/static/media/discord.05f8617d.svg"
   },
   {
-    "revision": "97f6ed238effa6300c9119f1e18a721f",
-    "url": "/static/media/logoTagline.97f6ed23.svg"
-  },
-  {
-    "revision": "c1cffd5cc183d59ebd1416b89d0270e7",
+    "revision": "9111f0117b974c35acdc3c6257d4c00a",
     "url": "/index.html"
   }
 ];
