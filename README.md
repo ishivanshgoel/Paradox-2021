@@ -3,6 +3,11 @@
 
 PARADOX - A two-day online cryptic hunt organized by IEEE Computer Society of VIT Chennai.
 
+- [ Installation Setup ](#Installation)
+- [ File Structure ](#File-Structure)
+- [ How to Contribute ](#Contributing)
+- [ The Team ](#The-Team)  
+
 ## Installation
 - Clone the repository
 - Add all the files required for [ setting up the project. ](#Setting-Up-credentials-and-adding-secrets)
