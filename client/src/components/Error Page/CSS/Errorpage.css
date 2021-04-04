@@ -1,82 +1,92 @@
-.st0{font-family:'FootlightMTLight';}
-.st1{font-size:83.0285px;}
-.st2{fill:gray;}
-.Errorpage-svg{
+.st0 {
+  font-family: "FootlightMTLight";
+}
+.st1 {
+  font-size: 83.0285px;
+}
+.st2 {
+  fill: gray;
+}
+.Errorpage-svg {
   width: 400px;
-    height: 400px;
-    text-align: center;
-    fill: rgba(118, 223, 255, 0.877);
+  height: 400px;
+  text-align: center;
+  fill: rgba(118, 223, 255, 0.877);
 }
 path#XMLID_5_ {
-    fill: rgba(118, 223, 255, 0.877);
-    filter: url(#blurFilter4);
+  fill: rgba(118, 223, 255, 0.877);
+  filter: url(#blurFilter4);
 }
-path#XMLID_11_ ,path#XMLID_2_ {
-    fill: rgba(118, 223, 255, 0.877);
+path#XMLID_11_,
+path#XMLID_2_ {
+  fill: rgba(118, 223, 255, 0.877);
 }
-.circle{
+.circle {
   animation: out 2s infinite ease-out;
   fill: rgba(118, 223, 255, 0.877);
 }
-#container{
-    text-align:center;
+#container {
+  text-align: center;
 }
-.message{
-    margin-top:-4%;
-    margin-bottom:3%;
-    color:white;
-    font-size:30px;
-    white-space: nowrap;
+.message {
+  margin-top: -4%;
+  margin-bottom: 3%;
+  color: white;
+  font-size: 30px;
+  white-space: nowrap;
 }
-.message:after{
-  content:"]";
+.message:after {
+  content: "]";
 }
-.message:before{
-  content:"[";
+.message:before {
+  content: "[";
 }
-.message:after, .message:before {
+.message:after,
+.message:before {
   color: rgba(118, 223, 255, 0.877);
   font-size: 35px;
   -webkit-animation-name: opacity;
   -webkit-animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-name: opacity;
-          animation-name: opacity;
+  animation-name: opacity;
   -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-          margin:0 50px;
+  animation-iteration-count: infinite;
+  margin: 0 50px;
 }
-.errorlogo{
-    color:rgba(118, 223, 255, 0.877);
-    align-items:center;
+.errorlogo {
+  color: rgba(118, 223, 255, 0.877);
+  align-items: center;
 }
-.error_btn{
-    border: 0 solid;
-    padding:0.5%;
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
-    outline: 1px solid;
-    outline-color: rgba(44, 197, 243, 0.877);
-    outline-offset: 0px;
-    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
-    color:white;
-    background-color:rgba(44, 197, 243, 0.877);
-    font-size:18px;
-    width:150px;
-    text-align: center;
-    margin-bottom:50px;
+.error_btn {
+  border: 0 solid;
+  padding: 0.5%;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-color: rgba(44, 197, 243, 0.877);
+  outline-offset: 0px;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  color: white;
+  background-color: rgba(44, 197, 243, 0.877);
+  font-size: 18px;
+  width: 150px;
+  text-align: center;
+  margin-bottom: 50px;
 }
-.error_btn:hover{
-    border: 1px solid;
-    box-shadow: 0 0 10px rgba(116, 227, 255, 0.966), 0 0 20px rgba(43, 3, 95, 0.24);
-    outline-color: rgba(255, 255, 255, 0);
-    outline-offset: 15px;
-    color : rgba(213, 247, 255, 0.966);
+.error_btn:hover {
+  border: 1px solid;
+  box-shadow: 0 0 10px rgba(116, 227, 255, 0.966),
+    0 0 20px rgba(43, 3, 95, 0.24);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  color: rgba(213, 247, 255, 0.966);
 }
 
 @-webkit-keyframes opacity {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0;
   }
   50% {
@@ -84,7 +94,8 @@ path#XMLID_11_ ,path#XMLID_2_ {
   }
 }
 @keyframes opacity {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0;
   }
   50% {
@@ -92,44 +103,61 @@ path#XMLID_11_ ,path#XMLID_2_ {
   }
 }
 @keyframes out {
-  0% {r:1;  opacity: 0.9 ;}
-  25%{r:5;  opacity: 0.3 ;}
-  50%{r:10; opacity: 0.2 ;}
-  75%{r:15;opacity:0.1;}
-  100% {r:20;opacity:0;}
+  0% {
+    r: 1;
+    opacity: 0.9;
+  }
+  25% {
+    r: 5;
+    opacity: 0.3;
+  }
+  50% {
+    r: 10;
+    opacity: 0.2;
+  }
+  75% {
+    r: 15;
+    opacity: 0.1;
+  }
+  100% {
+    r: 20;
+    opacity: 0;
+  }
 }
 
 @media screen and (max-width: 420px) {
-  .message{
-    font-size:20px;
+  .message {
+    font-size: 20px;
   }
-  .message:after, .message:before {
+  .message:after,
+  .message:before {
     font-size: 25px;
   }
-  .error_btn{
-    width:60vw;
-    font-size:15px;
-    padding:2%;
-    margin:5% auto;
+  .error_btn {
+    width: 60vw;
+    font-size: 15px;
+    padding: 2%;
+    margin: 5% auto;
   }
-  .Errorpage-svg{
+  .Errorpage-svg {
     width: 250px;
     height: 250px;
   }
 }
 @media screen and (max-width: 330px) {
-  .message{
-    font-size:12px;
+  .message {
+    font-size: 12px;
   }
-  .message:after, .message:before {
+  .message:after,
+  .message:before {
     font-size: 17px;
   }
-  .error_btn{
-    width:60vw;
-    font-size:12px;
+  .error_btn {
+    width: 60vw;
+    font-size: 12px;
   }
-  .Errorpage-svg{
-  width: 200px;
+  .Errorpage-svg {
+    width: 200px;
     height: 200px;
   }
 }

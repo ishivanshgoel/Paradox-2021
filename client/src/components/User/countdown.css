@@ -64,18 +64,20 @@
   border-bottom: 2px solid white;
   height: 125px;
   padding-bottom: 1%;
+  width:120px;
 }
 .timer_label {
   font-size: 20px;
   margin: 0 15px;
   color: rgba(255, 255, 255, 0.6);
 }
-@media screen and (max-width: 545px) {
+@media screen and (max-width: 610px) {
   .timer_section p:first-child {
     font-size: 70px;
     margin: 0 10px;
     padding-bottom: 1%;
     height: 80px;
+    width:95px;
   }
   .Countdown-txt {
     font-size: 30px;
@@ -90,12 +92,18 @@
     margin: 0 10px;
   }
 }
-@media screen and (max-width: 392px) {
+@media screen and (max-width: 490px) {
+  .timer_section p:first-child {
+     width:80px;
+  }
+}
+@media screen and (max-width: 420px) {
   .timer_section p:first-child {
     font-size: 50px;
     margin: 0 5px;
     padding-bottom: 2px;
-    height: 60px;
+    height: 63px;
+    width:70px;
   }
   .Countdown-txt {
     font-size: 25px;
@@ -114,7 +122,7 @@
     font-size: 50px;
     margin: 0 5px;
     padding-bottom: 2px;
-    height: 60px;
+    height: 63px;
   }
   .Countdown-txt {
     font-size: 20px;
@@ -130,10 +138,11 @@
 }
 @media screen and (max-width: 320px) {
   .timer_section p:first-child {
-    font-size: 35px;
+    font-size: 40px;
     margin: 0 3px;
     padding-bottom: 2px;
-    height: 40px;
+    height: 48px;
+    width:55px;
   }
   .Countdown-txt {
     font-size: 10px;

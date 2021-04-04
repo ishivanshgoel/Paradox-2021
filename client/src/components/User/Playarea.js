@@ -122,9 +122,9 @@ const Playarea = () => {
                   <p className="editor-field__input"> {level} </p>
                 </div>
               </div>
-              <div className="dropdown playarea-btn dropdown">
+              <div className="dropdown playarea-btn dropleft">
                 <div
-                  className="dropdown-menu"
+                  className="dropdown-menu dropback"
                   aria-labelledby="dropdownMenuButton"
                 >
                   <form onSubmit={handleLogout}>
