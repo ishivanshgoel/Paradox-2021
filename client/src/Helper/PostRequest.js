@@ -4,7 +4,7 @@ import { getItem } from './LocalStorage'
 // admin token
 import { ADMINTOKEN } from './Constants'
 
-const BASE_URL = "http://localhost:5000"
+const BASE_URL = ""
 
 const endPoints = {
 
