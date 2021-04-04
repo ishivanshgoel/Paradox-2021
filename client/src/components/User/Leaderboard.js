@@ -65,6 +65,9 @@ function Leaderboard() {
                     })
                     setData(response.data.leaderboard)
                 }
+            } else{
+                console.log("Token not found")
+                history.push("/user")
             }
 
             //hide loading screen
