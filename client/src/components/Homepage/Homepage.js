@@ -24,8 +24,7 @@ function Homepage() {
 
   // fetch user from store
   const user = useSelector((state)=>state.user)
-  console.log(user)
-
+  
   const history = useHistory()
 
   let handleRedirect = (event) => {
