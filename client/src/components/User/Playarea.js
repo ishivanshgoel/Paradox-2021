@@ -56,6 +56,9 @@ const Playarea = () => {
             if (response.data.message === "correct"){
                 Notification("Success", "Correct Answer", "success")
 
+                // update level locally
+                setLevel(level+1)
+
                 // next question
                 setloading(false)
                 const response = await GET_Request('nextlevel')
