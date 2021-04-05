@@ -52,10 +52,6 @@ const UserSchema = new mongoose.Schema({
         type: Date,
         default: null
     },
-    levelsPlayed:{
-        type: Object,
-        default: []
-    },
     isActive: {
         type: Boolean,
         default: true

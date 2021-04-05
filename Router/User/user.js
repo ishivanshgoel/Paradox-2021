@@ -86,7 +86,7 @@ router.post('/register', async function (req, res, next) {
 router.get('/leaderboard', verifyAccessToken, async function (req, res, next) {
 
     try {
-        await User.find({}, { score: 1, userName: 1, _id: 1 }).sort({ score: 'desc' }).exec(function (err, leaderboard) {
+        await User.find({}, { score: 1, userName: 1, _id: 1 ,lastPlayed:1 }).sort({ score: 'desc',lastPlayed:'asc' }).exec(function (err, leaderboard) {
             res.send({ leaderboard });
         })
     } catch (error) {
@@ -123,6 +123,7 @@ router.post('/evaluate', verifyAccessToken,async function (req, res, next) {
 
         if(isMatch){
             user.score += 1
+            user.lastPlayed=Date.now();
             user.hookEnabled = false
             await user.save()
             res.send({message:'correct'}) 
