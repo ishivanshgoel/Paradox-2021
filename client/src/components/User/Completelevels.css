@@ -2,12 +2,13 @@
     text-align: center;
     width:80%;
     padding:1% 0;
-    margin:2% auto;
+    margin:1% auto;
 }
 .complete{
     color:rgba(118, 223, 255, 0.877);
     align-items:center;
 }
+
 .complete_btn{
     border: 0 solid;
     padding:0.5%;
@@ -31,6 +32,27 @@
     color : rgba(213, 247, 255, 0.966);
 }
 
+.trophy_img{
+    height:200px;
+    width:180px;
+}
+#complete-logout
+{
+  width:150px;
+  padding:0.5%;
+}
+.complete_section{
+  width:100%;
+  display:flex;
+  justify-content:flex-end;
+}
+
+#completelevel-btn{
+  width:160px;
+  margin:0;
+}
+
+
 @media screen and (max-width: 420px) {
   .complete_btn{
     width:60vw;
@@ -38,6 +60,9 @@
     padding:2%;
     margin:5% auto;
   }
+  .Completelevels_heading div{
+    margin:8% auto;
+}
 }
 @media screen and (max-width: 330px) {
   .complete_btn{
@@ -47,8 +72,4 @@
 .Completehead{
     font-size:32px;
 }
-}
-.trophy_img{
-    height:200px;
-    width:180px;
 }
