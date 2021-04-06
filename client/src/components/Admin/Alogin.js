@@ -44,6 +44,8 @@ function ALogin() {
 
     const response = await POST_Request('alogin', data)
 
+    console.log(response.data)
+
     if (response.data) {
       dispatch({
         type: SETADMIN,

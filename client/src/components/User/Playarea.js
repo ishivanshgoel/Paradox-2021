@@ -57,11 +57,18 @@ const Playarea = () => {
     // handle answer submission
     let handleSubmit = async (event) => {
         event.preventDefault()
+
+        if(!answer){
+          Notification("Warning", "Please type something", "warning")
+          return
+        }
+
         showLoadingScreen()
         const response = await POST_Request('evaluate', { answer })
 
         if (response.data && response.data.message) {
             if (response.data.message === "correct"){
+                setAnswer(null)
                 Notification("Success", "Correct Answer", "success")
 
                 // update level locally

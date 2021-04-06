@@ -12,9 +12,8 @@ import ViewQuestions from './ViewQuestions'
 
 function Dashboard() {
 
-    // const admin = useSelector((state) => state.admin)
-    const admin = true
-
+    const admin = useSelector((state) => state.admin)
+    
     const history = useHistory()
 
     if (admin)

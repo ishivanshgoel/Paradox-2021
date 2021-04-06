@@ -4,7 +4,7 @@ import { getItem } from './LocalStorage'
 // admin token
 import { ADMINTOKEN } from './Constants'
 
-const BASE_URL = ""
+const BASE_URL = "https://paradox21.azurewebsites.net"
 
 const endPoints = {
 
