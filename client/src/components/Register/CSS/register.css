@@ -97,7 +97,7 @@
   display: flex;
   line-height: 10px;
   color: #dedff4;
-  margin: 40px auto 80px;
+  margin: 40px auto 30px;
 }
  .btn--primary:hover .register__button {
   background: #34389f;
@@ -119,6 +119,24 @@
   justify-content: center;
   align-items: center;
   clip-path: polygon(0% 0%, calc(100% - 8px) 0, 100% 8px, 100% 100%, 95% 100%, calc(0% + 8px) 100%, 0% calc(100% - 8px), 0% 20%);
+}
+div.login-bottom:before,
+div.login-bottom:after {
+  background-color: rgba(38, 204, 255, 0.856);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+  text-shadow: 0px 0px 50px 20px rgb(3, 121, 121), 0px 0px 50px 30px #0ff;
+}
+.Blue__color,.Blue__color:hover{
+  color:#56c9d6;
+  cursor: pointer;
+}
+.authenticate-redirect{
+  opacity: 0.7;
 }
 
 /**

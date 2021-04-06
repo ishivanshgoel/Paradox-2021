@@ -119,86 +119,131 @@ function Register() {
     hideLoader()
   }
 
-  return (
+   let handleRedirect = (event) => {
+     history.push(`/${event.target.name}`);
+   };
 
-    !user ? (
-
-      <div className="register_container">
-        {loading}
-        <div className="btn--primary">
-          <form onSubmit={handleSubmit}>
-            <h1>REGISTER</h1>
-            <div className="editor-field editor-field__textbox">
-              <div className="editor-field__label-container">
-                <label className="editor-field__label">Name</label>
-              </div>
-              <div className="editor-field__container">
-                <input type="text" className="editor-field__input" placeholder="Name" required onChange={(event) => setName(event.target.value)} />
-              </div>
+  return !user ? (
+    <div className="register_container">
+      {loading}
+      <div className="btn--primary">
+        <form onSubmit={handleSubmit}>
+          <h1>REGISTER</h1>
+          <div className="editor-field editor-field__textbox">
+            <div className="editor-field__label-container">
+              <label className="editor-field__label">Name</label>
             </div>
-            <div className="editor-field editor-field__textbox">
-              <div className="editor-field__label-container">
-                <label className="editor-field__label">Username</label>
-              </div>
-              <div className="editor-field__container">
-                <input type="text" className="editor-field__input" placeholder="Username" required onChange={(event) => setuserName(event.target.value)} />
-              </div>
+            <div className="editor-field__container">
+              <input
+                type="text"
+                className="editor-field__input"
+                placeholder="Name"
+                required
+                onChange={(event) => setName(event.target.value)}
+              />
             </div>
-            <div className="editor-field editor-field__textbox">
-              <div className="editor-field__label-container">
-                <label className="editor-field__label">Email</label>
-              </div>
-              <div className="editor-field__container">
-                <input type="email" className="editor-field__input" placeholder="emailid@example.com" required onChange={(event) => setEmail(event.target.value)} />
-              </div>
+          </div>
+          <div className="editor-field editor-field__textbox">
+            <div className="editor-field__label-container">
+              <label className="editor-field__label">Username</label>
             </div>
-            <div className="editor-field editor-field__textbox">
-              <div className="editor-field__label-container">
-                <label className="editor-field__label">Discord Username</label>
-              </div>
-              <div className="editor-field__container">
-                <input type="text" className="editor-field__input" placeholder="username#1234" required onChange={(event) => setDiscord(event.target.value)} />
-              </div>
+            <div className="editor-field__container">
+              <input
+                type="text"
+                className="editor-field__input"
+                placeholder="Username"
+                required
+                onChange={(event) => setuserName(event.target.value)}
+              />
             </div>
-            <div className="editor-field editor-field__textbox">
-              <div className="editor-field__label-container">
-                <label className="editor-field__label">Institution Name</label>
-              </div>
-              <div className="editor-field__container">
-                <input type="text" className="editor-field__input" placeholder="VIT Chennai" required onChange={(event) => setinstitutionName(event.target.value)} />
-              </div>
+          </div>
+          <div className="editor-field editor-field__textbox">
+            <div className="editor-field__label-container">
+              <label className="editor-field__label">Email</label>
             </div>
-            <div className="editor-field editor-field__textbox">
-              <div className="editor-field__label-container">
-                <label className="editor-field__label">Password</label>
-              </div>
-              <div className="editor-field__container">
-                <input type="password" className="editor-field__input" placeholder="Password" required onChange={(event) => setPassword(event.target.value)} />
-              </div>
+            <div className="editor-field__container">
+              <input
+                type="email"
+                className="editor-field__input"
+                placeholder="emailid@example.com"
+                required
+                onChange={(event) => setEmail(event.target.value)}
+              />
             </div>
-            <div className="editor-field editor-field__textbox">
-              <div className="editor-field__label-container">
-                <label className="editor-field__label">Confirm Password</label>
-              </div>
-              <div className="editor-field__container">
-                <input type="password" className="editor-field__input" placeholder="Confirm Password" required onChange={(event) => setcPassword(event.target.value)} />
-              </div>
+          </div>
+          <div className="editor-field editor-field__textbox">
+            <div className="editor-field__label-container">
+              <label className="editor-field__label">Discord Username</label>
             </div>
-            <button type="submit" className="register__button">
-              Register
-            </button>
-          </form>
+            <div className="editor-field__container">
+              <input
+                type="text"
+                className="editor-field__input"
+                placeholder="username#1234"
+                required
+                onChange={(event) => setDiscord(event.target.value)}
+              />
+            </div>
+          </div>
+          <div className="editor-field editor-field__textbox">
+            <div className="editor-field__label-container">
+              <label className="editor-field__label">Institution Name</label>
+            </div>
+            <div className="editor-field__container">
+              <input
+                type="text"
+                className="editor-field__input"
+                placeholder="VIT Chennai"
+                required
+                onChange={(event) => setinstitutionName(event.target.value)}
+              />
+            </div>
+          </div>
+          <div className="editor-field editor-field__textbox">
+            <div className="editor-field__label-container">
+              <label className="editor-field__label">Password</label>
+            </div>
+            <div className="editor-field__container">
+              <input
+                type="password"
+                className="editor-field__input"
+                placeholder="Password"
+                required
+                onChange={(event) => setPassword(event.target.value)}
+              />
+            </div>
+          </div>
+          <div className="editor-field editor-field__textbox">
+            <div className="editor-field__label-container">
+              <label className="editor-field__label">Confirm Password</label>
+            </div>
+            <div className="editor-field__container">
+              <input
+                type="password"
+                className="editor-field__input"
+                placeholder="Confirm Password"
+                required
+                onChange={(event) => setcPassword(event.target.value)}
+              />
+            </div>
+          </div>
+          <button type="submit" className="register__button">
+            Register
+          </button>
+        </form>
+        <div className="login-bottom"></div>
+        <div className="muted text-center mb-5 pu-1 authenticate-redirect">
+          Already Have an account?
+          <a className="Blue__color mx-1" onClick={handleRedirect} name="user">
+            Login Here
+          </a>
         </div>
-        <script href="/focus.js"></script>
       </div>
-    ) : (
-        <div>
-          {
-            history.push("/user/play")
-          }
-        </div>
-      )
-  )
+      <script href="/focus.js"></script>
+    </div>
+  ) : (
+    <div>{history.push("/user/play")}</div>
+  );
 }
 
 export default Register
