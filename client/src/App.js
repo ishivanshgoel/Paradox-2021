@@ -29,7 +29,6 @@ import Errorpage from './components/Error Page/Errorpage'
 
 // Level 2 Components
 import Play from './components/User/Play'
-import Completelevels from './components/User/Completelevels'
 import Leaderboard from './components/User/Leaderboard'
 import Dashboard from './components/Dashboard/Dashboard'
 
@@ -114,9 +113,6 @@ function App() {
             {/* level 2 routes */}
             <Route exact path="/user/play">
               <Play />
-            </Route>
-            <Route exact path="/user/complete">
-              <Completelevels />
             </Route>
             <Route exact path="/user/leaderboard">
               <Leaderboard />

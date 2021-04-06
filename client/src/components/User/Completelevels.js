@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { REMOVEUSER } from "../../Reducers/ActionTypes";
@@ -50,7 +50,7 @@ function Completelevels() {
               aria-haspopup="true"
               aria-expanded="false"
             >
-              saniikakulkarni
+              {username}
             </button>
           </div>
       </section>
