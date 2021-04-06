@@ -2,6 +2,7 @@
 node_modules
 .env
 package-lock.json
+paradox21/
 
 # Database credentials
 #/Database/Config/credentials.json 

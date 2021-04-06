@@ -15,6 +15,10 @@ import instagram from "../logos/instagram.png";
 import github from "../logos/github.png";
 import linkedin from "../logos/linked-in.png";
 import ieeecsvit from "../logos/ieeecsvit.png";
+import taskade from "../logos/taskade.png";
+import interviewcake from "../logos/interviewcake.jpg";
+import badelog from "../logos/badelog.png";
+import givemycertificate from "../logos/givemycertificate.png";
 
 /**
 ***@author TejasV58, samankgupta
@@ -23,8 +27,8 @@ import ieeecsvit from "../logos/ieeecsvit.png";
 function Homepage() {
 
   // fetch user from store
-  const user = useSelector((state)=>state.user)
-  
+  const user = useSelector((state) => state.user)
+
   const history = useHistory()
 
   let handleRedirect = (event) => {
@@ -60,11 +64,11 @@ function Homepage() {
                 The Cryptic Hunt
                 </text>
             </svg>
-            <svg viewBox="0 0 100 100" className="paradox d-md-none col-12 p-0">
+            <svg viewBox="0 0 105 100" className="paradox d-md-none col-12 p-0">
               <text x="52%" y="50%" text-anchor="middle" id="paradox-text">
                 PARADOX
                 </text>
-              <text x="-2%" y="60%" id="cryptic_hunt">
+              <text x="0%" y="60%" id="cryptic_hunt">
                 The Cryptic Hunt
                 </text>
             </svg>
@@ -82,13 +86,15 @@ function Homepage() {
             }
           </div>
           <div className="col-12 col-md-9 col-lg-2 my-4 my-lg-0 ">
-            <button
-              className=" homebtn d-flex justify-content-center"
-              id="discord"
-            >
-              <DiscordLogo id="DiscordLogo" className="colorchange" />
+            <a href="https://discord.gg/xYTHpkv6UJ" style={{textDecoration: "none"}} target="_BLANK" >
+              <button
+                className=" homebtn d-flex justify-content-center"
+                id="discord"
+              >
+                <DiscordLogo id="DiscordLogo" className="colorchange" />
                 JOIN DISCORD
               </button>
+            </a>
           </div>
           <div className="col-12 col-md-9 col-lg-2 my-4 my-lg-0 ">
             {
@@ -154,31 +160,25 @@ function Homepage() {
           <span>SPONSORS</span>
         </h2>
         <div className="sponsors-section text-wrap">
-          <a href="" id="ieee-link" className="col-12">
-            <div className="card sponsor-tiles" id="ieeelogo">
-              <img src={IEEElogo} alt="" />
-              {/*<h3>Title sponsor</h3>*/}
-            </div>
-          </a>
-          <Sponsors src={ParadoxLogo1}></Sponsors>
-          <Sponsors src={ParadoxLogo1}></Sponsors>
-          <Sponsors src={ParadoxLogo1}></Sponsors>
-          <Sponsors src={ParadoxLogo1}></Sponsors>
-          <Sponsors src={ParadoxLogo1}></Sponsors>
-          <Sponsors src={ParadoxLogo1}></Sponsors>
+          <Sponsors src={taskade} href={"https://www.taskade.com/"} ></Sponsors>
+          <Sponsors src={interviewcake} href={"https://www.interviewcake.com/"} ></Sponsors>
+          <Sponsors src={givemycertificate} href={"https://givemycertificate.com/"} ></Sponsors>
+          <Sponsors src={badelog} href={"https://badelog.in/"} id="sponsor-transparent"></Sponsors>
+          {/* <Sponsors src={ParadoxLogo1}></Sponsors>
+          <Sponsors src={ParadoxLogo1}></Sponsors> */}
         </div>
       </div>
       <Footer />
-      <p className="copyright">Made With ❤️ by Team PARADOX | <span className="d-md-none"><br /></span>© IEEE VITC </p>
+      <p className="copyright">Made With ❤️ by Team PARADOX | <span className="d-md-none"><br /></span>© IEEE CS VITC </p>
     </div>
   );
 }
 
 function Sponsors(props) {
   return (
-    <a href="">
-      <div className="card sponsor-tiles">
-        <img src={props.src} alt="" />
+    <a href={props.href} target="_BLANK" >
+      <div className="card sponsor-tiles my-2 my-sm-1" id={props.id}>
+        <img src={props.src} alt=""/>
       </div>
     </a>
   );

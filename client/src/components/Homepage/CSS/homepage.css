@@ -319,22 +319,25 @@ h2.about-heading:after {
 }
 
 .sponsor-tiles {
-  width: 16rem;
-  padding: 1%;
+  width: 24rem;
+  padding: 1% 2rem;
+  height: 5.8rem;
   justify-content: center;
-  background: transparent;
-  opacity: 0.5;
-  transition: 0.3s ease-in-out;
+  /* background: transparent; */
+  opacity: 0.8;
+  transition: 0.2s ease-in-out;
   border: none;
-  filter: saturate(0) brightness(2);
   box-shadow: none;
   color: #eee;
 }
 
 .sponsor-tiles:hover {
   opacity: 1;
-  transform: scale(1.1);
   filter: none;
+}
+
+#sponsor-transparent {
+  background: transparent;
 }
 
 .footer {
@@ -429,7 +432,10 @@ h2.about-heading:after {
     padding: 3% 0;
   }
 }
-@media (max-width: 1260px) {
+@media (max-width: 1297px) {
+  .sponsor-tiles {
+    width: 20rem;
+  }  
   .socialmedialinks {
     margin: 0 30px;
   }

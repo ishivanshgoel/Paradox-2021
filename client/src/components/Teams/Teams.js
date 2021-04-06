@@ -46,7 +46,7 @@ function Teams() {
           }
         )}
       </div>
-      <p className="copyright-teams py-3">Made With ❤️ by Team PARADOX | <span className="d-md-none"><br/></span>© IEEE VITC </p>
+      <p className="copyright-teams py-3">Made With ❤️ by Team PARADOX | <span className="d-md-none"><br/></span>© IEEE CS VITC </p>
     </div>
   );
 }
