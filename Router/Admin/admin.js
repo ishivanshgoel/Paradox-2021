@@ -23,9 +23,9 @@ router.post('/login', validateAdmin, async function (req, res, next) {
 
         const isMatch = await user.isValidPassword(result.password)
 
-        if (!isMatch || !user.role == 'admin') throw createError.Unauthorized('Username/password not valid')
-
-        res.send(true)
+        if (!isMatch || !user.role == 'admin') res.send(false)
+        else 
+            res.send(true)
 
     } catch (error) {
         if (error.isJoi == true) return next(createError.BadRequest("Invalid Username/Password"))
