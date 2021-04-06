@@ -4,13 +4,13 @@ node_modules
 package-lock.json
 
 # Database credentials
-/Database/Config/credentials.json 
+#/Database/Config/credentials.json 
 
 # Constants
-/client/src/Helper/Constants.js
-/Router/Admin/constants.js
+#/client/src/Helper/Constants.js
+#/Router/Admin/constants.js
 
 
 # Client
-/client/node_modules
-/client/package-lock.json
+#/client/node_modules
+#/client/package-lock.json

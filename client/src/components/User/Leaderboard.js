@@ -44,6 +44,7 @@ function Leaderboard() {
             setData(response.data.leaderboard)
             hideLoader()
             setLoaded(true)
+            console.log(response.data.leaderboard)
         } else {
             // start loading screen
             showLoader()
@@ -64,7 +65,9 @@ function Leaderboard() {
                         id: id
                     })
                     setData(response.data.leaderboard)
+                   
                 }
+
             } else{
                 console.log("Token not found")
                 history.push("/user")
