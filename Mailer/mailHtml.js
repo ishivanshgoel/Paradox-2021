@@ -520,7 +520,7 @@ ul {mso-special-format:bullet;}
                                                                 <tbody><tr>
                                                                     <td width="auto" valign="middle" bgcolor="#0092ff" align="center" height="40" style="font-size:18px; font-family:Arial,Helvetica,sans-serif; color:#ffffff; font-weight:normal; padding-left:20px; padding-right:20px; vertical-align: middle; background-color:#0092ff;border-radius:4px;border-top:0px None #000;border-right:0px None #000;border-bottom:0px None #000;border-left:0px None #000;">
                                                                         <span style="color:#ffffff; font-weight:normal;">
-                                                                                <a style="text-decoration:none; color:#ffffff; font-weight:normal;" target="_blank" href="https://cryptic-bayou-42346.herokuapp.com/">Visit Paradox Website</a>
+                                                                                <a style="text-decoration:none; color:#ffffff; font-weight:normal;" target="_blank" href="https://paradox21.tech/">Visit Paradox Website</a>
                                                                             </span>
                                                                     </td>
                                                                 </tr></tbody></table>
