@@ -8,8 +8,8 @@ const LoginValidationSchema = require('../../Database/Validation Schemas/Login')
 const EvaluateValidationSchema = require('../../Database/Validation Schemas/Evaluate')
 const jwt_helper = require('./jwt_helper')
 const { signAcessToken, verifyAccessToken } = require('./jwt_helper')
-
-
+// const mailer = require('../../Mailer/mailer')
+const mailer = require('../../Mailer/mailer')
 /**
  * @param {/login}
  * @param {/register}
@@ -72,9 +72,10 @@ router.post('/register', async function (req, res, next) {
                 discord: req.body.discord,
                 institutionName: req.body.institutionName
             })
-
+        
         const savedUser = await newuser.save()
         const accessToken = await jwt_helper.signAcessToken(savedUser.id)
+        const response = await mailer(savedUser.email, savedUser.name)
         res.send({ accessToken })
 
     } catch (error) {

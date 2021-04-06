@@ -8,8 +8,9 @@ const mongoose = require('mongoose')
 const connection = require('./Database/Config/connection')
 const user = require('./Router/User/user')
 const admin = require('./Router/Admin/admin')
-const path = require('path');
+const path = require('path')
 const app = express()
+
 
 //connect to database
 connection()
