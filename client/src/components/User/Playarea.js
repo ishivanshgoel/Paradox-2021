@@ -4,6 +4,8 @@ import './Playarea.css'
 import demo from '../../Static/demo.jpg';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 
+import Completelevels from './Completelevels'
+
 import { useSelector, useDispatch } from 'react-redux'
 import { REMOVEUSER } from '../../Reducers/ActionTypes'
 
@@ -30,6 +32,9 @@ const Playarea = () => {
     const [imageUrl, setImageUrl] = useState(null)
     const [level, setLevel] = useState(null)
     const [answer, setAnswer] = useState(null)
+    const [isComplete, setComplete] = useState(null)
+
+
     const username = useSelector((state)=>state.username)
     const dispatch = useDispatch()
     // loading screen
@@ -41,8 +46,11 @@ const Playarea = () => {
             setImageUrl(imageUrl)
             setLevel(levelNumber)
         }
-        else if(response==="No Question found for this level.")
-            Notification("Congratulations", "You have crossed all the levels", "info")
+        else if(response==="No Question found for this level."){
+          setComplete(true)
+          Notification("Congratulations", "You have crossed all the levels", "info")
+        }
+            
         setloading(true)
     },[])
 
@@ -67,8 +75,11 @@ const Playarea = () => {
                     const { imageUrl } = response.data
                     setImageUrl(imageUrl)
                 }
-                else if(response==="No Question found for this level.")
-                    Notification("Congratulations", "You have crossed all the levels", "info")
+                else if(response==="No Question found for this level."){
+                  setComplete(true)
+                  Notification("Congratulations", "You have crossed all the levels", "info")
+                }
+                    
                 setloading(true)
             }
                 
@@ -109,12 +120,11 @@ const Playarea = () => {
         }
     }
 
-
     // JSX
     return (
       <div>
         {loadingscreen}
-        {loading ? (
+        { loading && isComplete ? <Completelevels/> :  loading ? (
           <section className="Playarea_heading">
             <section className="play">
               <div className="editor-field-playarea editor-field__textbox">
