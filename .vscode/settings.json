@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/88a0f06a-d976-4cc8-a0d0-bc609f5cb3cc/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/paradox21",
+    "appService.deploySubpath": "."
+}
