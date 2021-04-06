@@ -100,18 +100,28 @@ function Login() {
 
   }
 
+   let handleRedirect = (event) => {
+     history.push(`/${event.target.name}`);
+   };
+
   if(!user) return (
     <div className="login_container">
-        {loader}
-        <h1>LOGIN</h1>
-        <div className="btn--primary">
+      {loader}
+      <h1>LOGIN</h1>
+      <div className="btn--primary">
         <form onSubmit={handleSubmit}>
           <div className="editor-field editor-field__textbox">
             <div className="editor-field__label-container">
               <label className="editor-field__label">Email</label>
             </div>
             <div className="editor-field__container">
-              <input type="text" className="editor-field__input" placeholder="Email" required onChange={(event)=>setEmail(event.target.value)}/>
+              <input
+                type="text"
+                className="editor-field__input"
+                placeholder="Email"
+                required
+                onChange={(event) => setEmail(event.target.value)}
+              />
             </div>
           </div>
           <div className="editor-field editor-field__textbox">
@@ -119,17 +129,35 @@ function Login() {
               <label className="editor-field__label">Password</label>
             </div>
             <div className="editor-field__container">
-              <input type="password" className="editor-field__input" placeholder="Password" required onChange={(event)=>setPassword(event.target.value)} />
+              <input
+                type="password"
+                className="editor-field__input"
+                placeholder="Password"
+                required
+                onChange={(event) => setPassword(event.target.value)}
+              />
             </div>
           </div>
           <button type="submit" className="register__button">
             Login
-            </button>
+          </button>
         </form>
+        <div className="login-bottom"></div>
+        <div className="muted text-center mb-5 mt-1 authenticate-redirect">
+          Don't Have an account?
+          <a
+            className="Blue__color mx-1"
+            onClick={handleRedirect}
+            name="register"
+          >
+            Register Here
+          </a>
         </div>
-        <script href="/focus.js"></script>
+        
       </div>
-  ) 
+      <script href="/focus.js"></script>
+    </div>
+  ); 
   
   // redirect to play
   history.push("/user/play")
