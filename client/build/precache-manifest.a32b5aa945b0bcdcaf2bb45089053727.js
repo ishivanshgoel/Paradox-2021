@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "604706fce3888c6990b9",
-    "url": "/static/css/main.e6e3c599.chunk.css"
+    "revision": "8073dad8f249e1c0caca",
+    "url": "/static/css/main.c4723545.chunk.css"
   },
   {
-    "revision": "604706fce3888c6990b9",
+    "revision": "8073dad8f249e1c0caca",
     "url": "/static/js/main.aa843174.chunk.js"
   },
   {
@@ -112,12 +112,12 @@ self.__precacheManifest = [
     "url": "/static/media/trophy_img.95cb0f3f.png"
   },
   {
-    "revision": "d4e0ec7bc6c6690da0e66c13c917c414",
-    "url": "/static/media/robodron-webfont.d4e0ec7b.woff"
-  },
-  {
     "revision": "4155c2ae1b2c90a225bec3ffce1c28d7",
     "url": "/static/media/robodron-webfont.4155c2ae.woff2"
+  },
+  {
+    "revision": "d4e0ec7bc6c6690da0e66c13c917c414",
+    "url": "/static/media/robodron-webfont.d4e0ec7b.woff"
   },
   {
     "revision": "564741cda237264a2fe3ea35d2cda78a",
@@ -128,7 +128,7 @@ self.__precacheManifest = [
     "url": "/static/media/discord.05f8617d.svg"
   },
   {
-    "revision": "42a7f34f2112e6e8c7196c4a5a280ab2",
+    "revision": "5289f032f4f1a020898720e34f20141f",
     "url": "/index.html"
   }
 ];

@@ -121,7 +121,11 @@ function Leaderboard() {
                     </div>
                 </div>
             </div>
-        ) : (null)
+        ) : (<>
+            {
+                history.push("/user")
+            }
+        </>)
     )
 }
 
