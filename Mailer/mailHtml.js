@@ -395,7 +395,7 @@ ul {mso-special-format:bullet;}
                                                             <table border="0" valign="top" cellspacing="0" cellpadding="0" width="100%" align="left" class="rnb-col-1">
 
                                                                 <tbody><tr>
-                                                                    <td style="font-size:14px; font-family:Arial,Helvetica,sans-serif, sans-serif; color:#3c4858;"><div><span style="font-size:18px;"><span style="color:#FFF0F5;"><strong>&nbsp;Dear</strong>&nbsp;&nbsp;</span></span><span style="font-size:17px;"><strong><span style="color:#FFF0F5;"><span style="font-size:18px;">${name}</span></span></strong> </span></div>
+                                                                    <td style="font-size:14px; font-family:Arial,Helvetica,sans-serif, sans-serif; color:#3c4858;"><div><span style="font-size:18px;"><span style="color:#FFF0F5;"><strong>&nbsp;Dear</strong>&nbsp;</span></span><span style="font-size:17px;"><strong><span style="color:#FFF0F5;"><span style="font-size:18px;">${name}</span></span></strong> </span></div>
 </td>
                                                                 </tr>
                                                                 </tbody></table>
