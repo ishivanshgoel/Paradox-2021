@@ -1,4 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { useHistory } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { REMOVEUSER } from "../../Reducers/ActionTypes";
+// local storage
+import { removeItem } from "../../Helper/LocalStorage";
 //CSS
 import './countdown.css'
 /**
@@ -46,7 +51,14 @@ const Countdown = ({ countdownDate }) => {
             clearInterval(interval.current);
         };
     })
-
+    const dispatch = useDispatch();
+    let handleLogout = (event)=>{
+            event.preventDefault()
+            removeItem('token')
+            dispatch({
+                type: REMOVEUSER
+            })
+        }
     return (
         <section className="Countdown_heading">
             <section className="timer">
@@ -71,7 +83,14 @@ const Countdown = ({ countdownDate }) => {
                         <p><small className="timer_label">Seconds</small></p>
                     </section>
                 </div>
-            </section>
+                <div className="complete">
+                    <form onSubmit={handleLogout}>
+                        <button className="complete_btn ">
+                            Logout
+                        </button>
+                    </form>       
+                </div>
+            </section>    
         </section>
     )
 }

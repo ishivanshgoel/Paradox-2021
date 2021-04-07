@@ -50,7 +50,7 @@
 .timer div:first-child h2 {
   font-size: 40px;
 }
-.timer div:last-child {
+.timer div:nth-child(2) {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 1%;
@@ -117,6 +117,7 @@
     margin: 0 5px;
   }
 }
+
 @media screen and (max-width: 355px) {
   .timer_section p:first-child {
     font-size: 50px;
