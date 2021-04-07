@@ -491,6 +491,11 @@ h2.about-heading:after {
   }
 }
 
+.sponsortime-img
+{
+  background:contain;
+}
+
 /**
 @author: TejasV58, samankgupta
 **/
