@@ -320,8 +320,8 @@ h2.about-heading:after {
 
 .sponsor-tiles {
   width: 380px;
-  padding: 1% 2rem;
-  height: 5.8rem;
+  padding: 1% 30px;
+  height: 92px;
   justify-content: center;
   /* background: transparent; */
   opacity: 0.8;
