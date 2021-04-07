@@ -319,7 +319,7 @@ h2.about-heading:after {
 }
 
 .sponsor-tiles {
-  width: 24rem;
+  width: 380px;
   padding: 1% 2rem;
   height: 5.8rem;
   justify-content: center;
@@ -434,7 +434,7 @@ h2.about-heading:after {
 }
 @media (max-width: 1297px) {
   .sponsor-tiles {
-    width: 20rem;
+    width: 290px;
   }  
   .socialmedialinks {
     margin: 0 30px;
