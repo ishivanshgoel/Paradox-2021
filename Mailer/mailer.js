@@ -4,8 +4,8 @@ const nodemailer = require('nodemailer')
 var mailer = async (to, name)=>{
 
     const message = mailHtml(name)
-    const user = 'admin@paradox21.tech'
-    const pass = 'dNkky$B5'
+    const user = 'ieeecomputersociety@vit.ac.in'
+    const pass = 'pdsjnspcdwxgdppj'
 
     const transporter = nodemailer.createTransport({
         service: 'gmail',
