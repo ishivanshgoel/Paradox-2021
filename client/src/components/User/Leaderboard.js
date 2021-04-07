@@ -37,6 +37,10 @@ function Leaderboard() {
     // loading screen
     const [loading, showLoader, hideLoader] = LoaderHook()
 
+    const redirect = ()=>{
+        history.push("/")
+    }
+
     useEffect(async () => {
         if (user) {
             showLoader()
@@ -78,9 +82,9 @@ function Leaderboard() {
     }, [user])
 
     return (
-        (loaded && user) ? (
+        user?(
+        loaded?(
             <div>
-                {loading}
                 <div className="Leaderboard_heading">
                     <div className="Leaderboard_text">
                         <span className="blueheading">Leader</span><span>board</span>
@@ -121,11 +125,12 @@ function Leaderboard() {
                     </div>
                 </div>
             </div>
-        ) : (<>
-            {
-                history.push("/user")
-            }
-        </>)
+        ):(<div>{loading}</div>)):(
+            <div>
+                {redirect}
+                {null}
+            </div>
+            )
     )
 }
 
