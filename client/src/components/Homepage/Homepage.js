@@ -178,7 +178,7 @@ function Sponsors(props) {
   return (
     <a href={props.href} target="_BLANK" >
       <div className="card sponsor-tiles my-2 my-sm-1" id={props.id}>
-        <img width="100%" height="100%" src={props.src} alt=""/>
+        <img width="100%" height="auto" src={props.src} alt=""/>
       </div>
     </a>
   );
