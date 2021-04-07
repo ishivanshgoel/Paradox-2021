@@ -128,7 +128,7 @@ self.__precacheManifest = [
     "url": "/static/media/discord.05f8617d.svg"
   },
   {
-    "revision": "3125df0f0ecc21db9c42fbf0acf0ee91",
+    "revision": "16d8b9faefc7248a21f327fc12563819",
     "url": "/index.html"
   }
 ];
