@@ -50,14 +50,18 @@ const Countdown = ({ countdownDate }) => {
         return () => {
             clearInterval(interval.current);
         };
-    })
-    const dispatch = useDispatch();
+    },[])
+
+    const dispatch = useDispatch()
+    const history = useHistory()
+
     let handleLogout = (event)=>{
             event.preventDefault()
             removeItem('token')
             dispatch({
                 type: REMOVEUSER
             })
+            history.push("/user")
         }
     return (
         <section className="Countdown_heading">

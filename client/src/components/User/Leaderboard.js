@@ -81,6 +81,8 @@ function Leaderboard() {
         }
     }, [user])
 
+    if(!user) history.push("/user")
+
     return (
         user?(
         loaded?(
@@ -128,7 +130,6 @@ function Leaderboard() {
         ):(<div>{loading}</div>)):(
             <div>
                 {redirect}
-                {null}
             </div>
             )
     )
