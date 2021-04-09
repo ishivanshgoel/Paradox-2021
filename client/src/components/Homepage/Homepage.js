@@ -18,6 +18,7 @@ import ieeecsvit from "../logos/ieeecsvit.png";
 import taskade from "../logos/taskade.png";
 import interviewcake from "../logos/interviewcake.jpg";
 import badelog from "../logos/badelog.png";
+import codeasylums from "../logos/codeasylums.png";
 import givemycertificate from "../logos/givemycertificate.png";
 
 /**
@@ -160,6 +161,7 @@ function Homepage() {
           <span>SPONSORS</span>
         </h2>
         <div className="sponsors-section text-wrap">
+          <Sponsors src={codeasylums} href={"http://www.codeasylums.com/"}></Sponsors>
           <Sponsors src={taskade} href={"https://www.taskade.com/"} ></Sponsors>
           <Sponsors src={interviewcake} href={"https://www.interviewcake.com/"} ></Sponsors>
           <Sponsors src={givemycertificate} href={"https://givemycertificate.com/"} ></Sponsors>
