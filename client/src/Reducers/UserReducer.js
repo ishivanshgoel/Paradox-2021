@@ -29,7 +29,7 @@ function UserReducer(state = initialState, action) {
         case SETADMIN:
 
             return{
-                ... state,
+                ...state,
                 admin: action.token
             }
         case REMOVEADMIN:

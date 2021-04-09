@@ -67,7 +67,7 @@ const Countdown = ({ countdownDate }) => {
         <section className="Countdown_heading">
             <section className="timer">
                 <div className="Countdown-txt">
-                    Coming Soon
+                    Almost There
                 </div>
                 <div className="clock-timer">
                     <section className="timer_section">
