@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "a002d9284626bca3bb20",
-    "url": "/static/css/main.c4723545.chunk.css"
+    "revision": "c9247fbac541f234228e",
+    "url": "/static/css/main.9d5c8a6d.chunk.css"
   },
   {
-    "revision": "a002d9284626bca3bb20",
-    "url": "/static/js/main.81421c1d.chunk.js"
+    "revision": "c9247fbac541f234228e",
+    "url": "/static/js/main.0f04f897.chunk.js"
   },
   {
     "revision": "f07bef9e92253f8c99bd",
@@ -112,12 +112,12 @@ self.__precacheManifest = [
     "url": "/static/media/trophy_img.95cb0f3f.png"
   },
   {
-    "revision": "4155c2ae1b2c90a225bec3ffce1c28d7",
-    "url": "/static/media/robodron-webfont.4155c2ae.woff2"
-  },
-  {
     "revision": "d4e0ec7bc6c6690da0e66c13c917c414",
     "url": "/static/media/robodron-webfont.d4e0ec7b.woff"
+  },
+  {
+    "revision": "4155c2ae1b2c90a225bec3ffce1c28d7",
+    "url": "/static/media/robodron-webfont.4155c2ae.woff2"
   },
   {
     "revision": "564741cda237264a2fe3ea35d2cda78a",
@@ -128,7 +128,7 @@ self.__precacheManifest = [
     "url": "/static/media/discord.05f8617d.svg"
   },
   {
-    "revision": "16d8b9faefc7248a21f327fc12563819",
+    "revision": "baa458fd191e0ffa59a60fba7788b15a",
     "url": "/index.html"
   }
 ];
