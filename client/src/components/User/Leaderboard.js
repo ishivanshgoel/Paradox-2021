@@ -26,7 +26,8 @@ function Leaderboard() {
     const [loaded, setLoaded] = useState(false)
 
     //fetch from store
-    const user = useSelector(state => state.user)
+    const user = true
+    // const user = useSelector(state => state.user)
     const id = useSelector((state) => state.id)
 
     const history = useHistory()

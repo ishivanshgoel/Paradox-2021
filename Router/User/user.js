@@ -84,7 +84,7 @@ router.post('/register', async function (req, res, next) {
 
 })
 
-router.get('/leaderboard', verifyAccessToken, async function (req, res, next) {
+router.get('/leaderboard', async function (req, res, next) {
 
     try {
         await User.find({}, { score: 1, userName: 1, _id: 1 }).sort({ score: 'desc', lastPlayed:'asc' }).exec(function (err, leaderboard) {
