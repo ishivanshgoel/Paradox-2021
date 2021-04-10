@@ -9,7 +9,7 @@ module.exports = {
             }
             const secret = 'some super secret'
             const options = {
-                expiresIn : '1h',
+                expiresIn : '1d',
                 issuer: "paradox2021",
                 audience: userId
             }

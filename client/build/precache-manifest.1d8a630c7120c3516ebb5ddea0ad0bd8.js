@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "c9247fbac541f234228e",
-    "url": "/static/css/main.9d5c8a6d.chunk.css"
+    "revision": "d3a28758c32a985c1e39",
+    "url": "/static/css/main.3b2fe234.chunk.css"
   },
   {
-    "revision": "c9247fbac541f234228e",
-    "url": "/static/js/main.0f04f897.chunk.js"
+    "revision": "d3a28758c32a985c1e39",
+    "url": "/static/js/main.fd8d3eeb.chunk.js"
   },
   {
     "revision": "f07bef9e92253f8c99bd",
     "url": "/static/js/runtime~main.a3b125e9.js"
   },
   {
-    "revision": "051bd6ab3dd8eabebab8",
+    "revision": "cc965a48eeaa1250dd49",
     "url": "/static/css/2.5bcb26e4.chunk.css"
   },
   {
-    "revision": "051bd6ab3dd8eabebab8",
-    "url": "/static/js/2.0fc7edc7.chunk.js"
+    "revision": "cc965a48eeaa1250dd49",
+    "url": "/static/js/2.9bba114b.chunk.js"
   },
   {
     "revision": "3081d10c3ce331bb5027",
@@ -58,6 +58,10 @@ self.__precacheManifest = [
   {
     "revision": "2b53a8c9e4f3b7e72fd9a2e0e8334783",
     "url": "/static/media/badelog.2b53a8c9.png"
+  },
+  {
+    "revision": "7e79ea743e58ad25f4aee6a2ed24c0da",
+    "url": "/static/media/codeasylums2.7e79ea74.png"
   },
   {
     "revision": "25053ecd6395c3cc4d0d367d328cd492",
@@ -120,15 +124,11 @@ self.__precacheManifest = [
     "url": "/static/media/robodron-webfont.4155c2ae.woff2"
   },
   {
-    "revision": "564741cda237264a2fe3ea35d2cda78a",
-    "url": "/static/media/IEEE_CS1.564741cd.png"
-  },
-  {
     "revision": "05f8617d5abf39bed2b3babfa13fe0de",
     "url": "/static/media/discord.05f8617d.svg"
   },
   {
-    "revision": "baa458fd191e0ffa59a60fba7788b15a",
+    "revision": "2c1e53fb238c6067971e3b8de68a0f32",
     "url": "/index.html"
   }
 ];
