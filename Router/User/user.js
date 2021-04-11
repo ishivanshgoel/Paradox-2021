@@ -111,6 +111,8 @@ router.post('/evaluate', verifyAccessToken,async function (req, res, next) {
     try {
 
         if(!req.body.answer) throw createError.BadRequest('answer not found')
+
+        res.send({message:'wrong'})
     
         const user = await User.findOne({_id: req.payload.aud})
 
