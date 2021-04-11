@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import Countdown from './countdown'
 import Playarea from './Playarea'
+import Eventended from './Eventended'
 
 /**
  * @author Sanika, ishivanshgoel
@@ -29,9 +30,10 @@ function Play() {
             </div>
         ) : (
                 <div>
-                    {
+                    {/* {
                         distance < 0 ? <Playarea /> : <Countdown countdownDate={countdownDate} />
-                    }
+                    } */}
+                    <Eventended />
                 </div>
             )
     )
