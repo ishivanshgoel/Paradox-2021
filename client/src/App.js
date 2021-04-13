@@ -26,6 +26,7 @@ import Login from './components/User/Login'
 import Register from './components/Register/Register'
 import Alogin from './components/Admin/Alogin'
 import Errorpage from './components/Error Page/Errorpage'
+import Eventended from './components/User/Eventended'
 
 // Level 2 Components
 import Play from './components/User/Play'
@@ -116,6 +117,9 @@ function App() {
             </Route>
             <Route exact path="/user/leaderboard">
               <Leaderboard />
+            </Route>
+            <Route exact path="/user/event">
+              <Eventended />
             </Route>
 
             <Route exact path="/admin/dashboard">
