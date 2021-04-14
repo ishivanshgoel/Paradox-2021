@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "1846651c1278d6418cb3",
-    "url": "/static/css/main.3b2fe234.chunk.css"
+    "revision": "c53a96772d114640703f",
+    "url": "/static/css/main.2f5a29a7.chunk.css"
   },
   {
-    "revision": "1846651c1278d6418cb3",
-    "url": "/static/js/main.7658e5ce.chunk.js"
+    "revision": "c53a96772d114640703f",
+    "url": "/static/js/main.b8d85691.chunk.js"
   },
   {
     "revision": "411ed6ef03c41f01a477",
@@ -108,16 +108,16 @@ self.__precacheManifest = [
     "url": "/static/media/pratibhanarayan.b378eaec.jpeg"
   },
   {
+    "revision": "d124128e23130c713d657afa7b1fe8e8",
+    "url": "/static/media/ended.d124128e.png"
+  },
+  {
     "revision": "6ae32332d26216358625508a16d91a66",
     "url": "/static/media/demo.6ae32332.jpg"
   },
   {
     "revision": "95cb0f3f56241109ce51446ba941d231",
     "url": "/static/media/trophy_img.95cb0f3f.png"
-  },
-  {
-    "revision": "d124128e23130c713d657afa7b1fe8e8",
-    "url": "/static/media/ended.d124128e.png"
   },
   {
     "revision": "4155c2ae1b2c90a225bec3ffce1c28d7",
@@ -132,7 +132,7 @@ self.__precacheManifest = [
     "url": "/static/media/discord.05f8617d.svg"
   },
   {
-    "revision": "a5df77a9a55a882fad0eb73f289f460e",
+    "revision": "6a8ec3bc353ac6d00b1a5a7f4c062351",
     "url": "/index.html"
   }
 ];
