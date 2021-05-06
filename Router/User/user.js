@@ -125,7 +125,7 @@ router.post('/evaluate', verifyAccessToken,async function (req, res, next) {
         const isMatch = await question.isValidAnswer(req.body.answer.toLowerCase())
 
         if(isMatch){
-            user.score += 1
+            // user.score += 1
             user.lastPlayed=Date.now();
             user.hookEnabled = false
             await user.save()
