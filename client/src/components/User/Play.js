@@ -30,10 +30,10 @@ function Play() {
             </div>
         ) : (
                 <div>
-                    {/* {
+                    {
                         distance < 0 ? <Playarea /> : <Countdown countdownDate={countdownDate} />
-                    } */}
-                    <Eventended />
+                    }
+                    {/* <Eventended /> */}
                 </div>
             )
     )
