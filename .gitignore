@@ -9,9 +9,10 @@ paradox21/
 
 # Constants
 /client/src/Helper/Constants.js
-/Router/Admin/constants.js
 
 
 # Client
 /client/node_modules
 /client/package-lock.json
+
+.vscode

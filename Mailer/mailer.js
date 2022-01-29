@@ -4,21 +4,19 @@ const nodemailer = require('nodemailer')
 var mailer = async (to, name)=>{
 
     const message = mailHtml(name)
-    const user = 'ieeecomputersociety@vit.ac.in'
-    const pass = 'pdsjnspcdwxgdppj'
 
     const transporter = nodemailer.createTransport({
-        service: 'gmail',
+        service: process.env.SERVICE,
         auth: {
-            user: user,
-            pass: pass
+            user: process.env.EMAIL,
+            pass: process.env.PASSWORD
         }
     })
     
     const mailoptions = {
         from: user,
         to: to,
-        subject: 'PARADOX 2021 - Registration Successful!',
+        subject: process.env.SUBJECT,
         html: message
       }
     
