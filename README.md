@@ -49,6 +49,9 @@ DB_URI =
 # admin verification token
 ADMIN_TOKEN = 
 
+# user token
+TOKEN_SECRET = 
+
 # mailer setup
 EMAIL = 
 PASSWORD = 

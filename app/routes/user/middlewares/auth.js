@@ -7,7 +7,7 @@ module.exports = {
             const payload = {
                
             }
-            const secret = 'some super secret'
+            const secret = process.env.TOKEN_SECRET
             const options = {
                 expiresIn : '1d',
                 issuer: "paradox2021",
@@ -31,7 +31,7 @@ module.exports = {
 
         const bearerToken = authHeader.split(' ')
         const token = bearerToken[1]
-        JWT.verify(token, 'some super secret', (err, payload)=>{
+        JWT.verify(token, process.env.TOKEN_SECRET, (err, payload)=>{
             if(err) {
                 const message = 'JsonWebTokenError' ? 'Unauthorized' : err.message
                 return next(createError.Unauthorized(message))
