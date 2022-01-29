@@ -37,6 +37,6 @@
     "vanta": "^0.5.21"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.15"
   }
 }
