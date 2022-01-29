@@ -22,8 +22,7 @@ PARADOX - A two-day online cryptic hunt organized by IEEE Computer Society of VI
 
 | File name  | Location | Description |
 | ------------- | ------------- |------------- |
-| credentials.json  | /Database/Config/credentials.json   | file containing credentials of the database.
-| constants.js  | /Router/Admin/constants.js  | secret string/ codes used on server side.
+| .env  | root  | secret string/ codes used on server side.
 | Constants.json | /client/src/Helper/Constants.js| secret string/ codes used on client side.|
 - Refer to these [ file structures ](#File-Structures)
 
@@ -41,21 +40,22 @@ PARADOX - A two-day online cryptic hunt organized by IEEE Computer Society of VI
 -  Move to the client directory by writing ```cd client``` in the console and give another command ```npm start``` to start the server.
 
 ### File Structures
-- credentials.json
+- .env
 
-```json
-{
-    "username": "data_base_username",
-    "password": "password_of_database",
-    "collection": "collection_name"
-}
 ```
-- constants.js
-```js
-const ADMINTOKEN = 'admin_token'
+# database uri
+DB_URI = 
 
-module.exports = ADMINTOKEN
+# admin verification token
+ADMIN_TOKEN = 
+
+# mailer setup
+EMAIL = 
+PASSWORD = 
+SERVICE = 
+SUBJECT = PARADOX 2021 - Registration Successful!
 ```
+
 - Constants.js
 ```js
 // do not push this file to git
