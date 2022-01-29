@@ -1,15 +1,14 @@
 const express = require('express')
 const router = express.Router()
 const createError = require('http-errors')
-const User = require('../../Database/Models/User')
-const Question = require('../../Database/Models/Question')
-const UserValidationSchema = require('../../Database/Validation Schemas/User') 
-const LoginValidationSchema = require('../../Database/Validation Schemas/Login')
-const EvaluateValidationSchema = require('../../Database/Validation Schemas/Evaluate')
-const jwt_helper = require('./jwt_helper')
-const { signAcessToken, verifyAccessToken } = require('./jwt_helper')
-// const mailer = require('../../Mailer/mailer')
-const mailer = require('../../Mailer/mailer')
+const User = require('../../db/Models/User')
+const Question = require('../../db/Models/Question')
+const UserValidationSchema = require('../../db/Validation Schemas/User') 
+const LoginValidationSchema = require('../../db/Validation Schemas/Login')
+const EvaluateValidationSchema = require('../../db/Validation Schemas/Evaluate')
+const { signAcessToken, verifyAccessToken } = require('./middlewares/auth')
+
+const mailer = require('../../mailer/mailer')
 /**
  * @param {/login}
  * @param {/register}
@@ -74,7 +73,7 @@ router.post('/register', async function (req, res, next) {
             })
         
         const savedUser = await newuser.save()
-        const accessToken = await jwt_helper.signAcessToken(savedUser.id)
+        const accessToken = await signAcessToken(savedUser.id)
         const response = await mailer(savedUser.email, savedUser.name)
         res.send({ accessToken })
 

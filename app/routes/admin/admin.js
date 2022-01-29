@@ -1,10 +1,10 @@
 const express = require('express')
 const router = express.Router()
 const createError = require('http-errors')
-const User = require('../../Database/Models/User')
-const Question = require('../../Database/Models/Question')
-const validateAdmin = require('./validateAdmin')
-const LoginValidationSchema = require('../../Database/Validation Schemas/Login')
+const User = require('../../db/Models/User')
+const Question = require('../../db/Models/Question')
+const validateAdmin = require('./middlewares/verify')
+const LoginValidationSchema = require('../../db/Validation Schemas/Login')
 
 /**
  * @param {/login} 

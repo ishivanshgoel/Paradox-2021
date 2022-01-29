@@ -1,8 +1,7 @@
-const express = require('express')
 const createError = require('http-errors')
 
 // secret admin token
-const ADMINTOKEN = require('./constants')
+const ADMINTOKEN = process.env.ADMIN_TOKEN
 
 const validateAdmin = async (req, res, next)=>{
     
