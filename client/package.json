@@ -17,7 +17,7 @@
     "jquery": "^3.5.1",
     "quart": "^0.5.0",
     "react": "^17.0.1",
-    "react-bootstrap": "^1.5.2",
+    "react-bootstrap": "^2.2.1",
     "react-dom": "^17.0.1",
     "react-loading-skeleton": "^3.0.2",
     "react-notifications-component": "^3.1.0",
