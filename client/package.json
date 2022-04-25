@@ -24,7 +24,7 @@
     "react-redux": "^7.2.2",
     "react-router-dom": "^6.2.1",
     "react-scripts": "^2.0.5",
-    "redux": "^4.0.5",
+    "redux": "^4.2.0",
     "vanta": "^0.5.21",
     "web-vitals": "^2.1.4"
   },
